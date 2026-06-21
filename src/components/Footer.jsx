@@ -31,7 +31,7 @@ export default function Footer() {
               <li><Link to="/nuestra-historia">Nuestra historia</Link></li>
               <li><Link to="/nuestra-cultura">Nuestra cultura</Link></li>
               <li><Link to="/presupuesto">Pedir presupuesto</Link></li>
-              <li><a href="/brandbook">Manual de marca</a></li>
+              <li><a href="/brandbook/">Manual de marca</a></li>
             </ul>
           </div>
           <div className="footer-col">
