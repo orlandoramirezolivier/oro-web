@@ -1,5 +1,5 @@
 // Catálogo completo de servicios — Oro Constructores
-// 141 micro-servicios · 14 verticales (A–N)
+// 153 micro-servicios · 15 verticales (A–O)
 // Estados: ACT=Activo | CAP=Capacidad disponible | ESP=Especialización | INV=Pendiente investigación
 
 export const VERTICALES = [
@@ -284,6 +284,28 @@ export const VERTICALES = [
       { codigo: 'N15', nombre: 'Reforma de almacén o cuarto frío', estado: 'CAP', precio: 'Presupuesto a medida' },
     ]
   },
+  {
+    codigo: 'O',
+    nombre: 'Carpintería',
+    descripcion: 'Puertas, armarios, ventanas, mobiliario. Oficio que aparece en toda reforma — propio o coordinado.',
+    icon: 'fa-hammer',
+    investigacion: null,
+    landingCandidatas: ['/carpinteria-madrid'],
+    servicios: [
+      { codigo: 'O01', nombre: 'Instalación de puertas interiores de madera (incluye marco y tapajuntas)', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'O02', nombre: 'Cambio de puertas interiores sin cambiar marcos (solo hoja)', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'O03', nombre: 'Restauración de puertas existentes (que no cierran, atascan o rechinan)', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'O04', nombre: 'Instalación de armarios empotrados a medida', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'O05', nombre: 'Instalación de puertas correderas de armario', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'O06', nombre: 'Instalación de ventanas de madera (cambio completo)', estado: 'CAP', precio: 'Presupuesto a medida' },
+      { codigo: 'O07', nombre: 'Reparación de ventanas de madera (juntas, bisagras, cierre)', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'O08', nombre: 'Instalación de persianas y estores (enrollables, mallorquinas)', estado: 'CAP', precio: 'Presupuesto a medida' },
+      { codigo: 'O09', nombre: 'Montaje de muebles flat-pack (IKEA, Leroy Merlin, etc.)', estado: 'CAP', precio: 'Presupuesto a medida' },
+      { codigo: 'O10', nombre: 'Fabricación e instalación de mobiliario de madera a medida', estado: 'INV', precio: 'Presupuesto a medida' },
+      { codigo: 'O11', nombre: 'Instalación de molduras y cornisas decorativas de madera / MDF', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'O12', nombre: 'Carpintería para hostelería — barras, mostradores y frentes de madera', estado: 'ACT', precio: 'Presupuesto a medida' },
+    ]
+  },
 ]
 
 export const ESTADO_META = {
@@ -294,10 +316,10 @@ export const ESTADO_META = {
 }
 
 export const TOTALES = {
-  servicios: 141,
-  verticales: 14,
-  ACT: 108,
-  CAP: 22,
+  servicios: 153,
+  verticales: 15,
+  ACT: 115,
+  CAP: 25,
   ESP: 4,
-  INV: 11,
+  INV: 13,
 }

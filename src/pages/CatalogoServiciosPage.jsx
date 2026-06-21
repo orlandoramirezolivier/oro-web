@@ -79,7 +79,7 @@ export default function CatalogoServiciosPage() {
       </section>
 
       {/* Filtros */}
-      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--ink-7)', padding: '20px 0', position: 'sticky', top: '68px', zIndex: 40 }}>
+      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--ink-7)', padding: '20px 0', position: 'sticky', top: 'var(--nav-h)', zIndex: 40 }}>
         <div className="container">
           <div className="cat-filtros">
             <div className="cat-filtros-group">
