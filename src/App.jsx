@@ -14,6 +14,7 @@ import RestaurantesPage from './pages/RestaurantesPage'
 import InvHosteleriaPage from './pages/InvHosteleriaPage'
 import InvNegocioHosteleriaPage from './pages/InvNegocioHosteleriaPage'
 import InvestigacionesPage from './pages/InvestigacionesPage'
+import CatalogoServiciosPage from './pages/CatalogoServiciosPage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/investigaciones/hosteleria-madrid" element={<InvHosteleriaPage />} />
         <Route path="/investigaciones" element={<InvestigacionesPage />} />
         <Route path="/investigaciones/negocio-hosteleria" element={<InvNegocioHosteleriaPage />} />
+        <Route path="/catalogo-servicios" element={<CatalogoServiciosPage />} />
       </Routes>
       {!isStandalone && <Footer />}
     </>

@@ -22,7 +22,7 @@ export default function Footer() {
               <li><Link to="/soluciones">Pintura y Acabados</Link></li>
               <li><Link to="/soluciones">Fontanería</Link></li>
               <li><Link to="/soluciones">Electricidad</Link></li>
-              <li><Link to="/soluciones">Alicatado</Link></li>
+              <li><Link to="/catalogo-servicios">Catálogo completo (141 servicios)</Link></li>
             </ul>
           </div>
           <div className="footer-col">
