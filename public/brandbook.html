@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual de Marca — Oro Constructores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ===== TOKENS ===== */
+:root {
+  --oro: #FDBF00;
+  --oro-dark: #D9A200;
+  --ink: #000000;
+  --paper: #FFFFFF;
+  --bg: #F2F2F7;
+  --gray-1: #8E8E93;
+  --gray-2: #C7C7CC;
+  --gray-3: #E5E5EA;
+  --green: #34C759;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 20px rgba(0,0,0,.10);
+  --font: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --topbar-h: 56px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TOPBAR — light/white Apple style */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--topbar-h);
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--gray-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  gap: 16px;
+}
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.topbar-logo { height: 30px; object-fit: contain; }
+.topbar-title { font-size: 15px; font-weight: 700; color: var(--ink); letter-spacing: -.2px; }
+.topbar-nav { display: flex; align-items: center; gap: 2px; }
+.topbar-nav a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-1);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+  white-space: nowrap;
+}
+.topbar-nav a:hover { background: var(--bg); color: var(--ink); }
+.btn-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--oro);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s, transform .1s;
+  white-space: nowrap;
+  font-family: var(--font);
+}
+.btn-pdf:hover { background: var(--oro-dark); transform: translateY(-1px); }
+
+/* SECTIONS */
+section { padding: 80px 0; }
+.container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--oro-dark); margin-bottom: 8px;
+}
+.section-title { font-size: 32px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 8px; }
+.section-sub { font-size: 16px; color: var(--gray-1); margin-bottom: 40px; }
+
+/* HERO — especificidad forzada */
+section.hero, #hero {
+  background: #000000 !important;
+  color: var(--paper);
+  padding: 64px 0 0;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--oro); margin-bottom: 16px;
+  display: block;
+}
+.hero-title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 16px;
+  color: var(--paper);
+}
+.hero-sub { font-size: 17px; color: rgba(255,255,255,.55); margin-bottom: 32px; line-height: 1.6; }
+.hero-version { font-size: 11px; color: rgba(255,255,255,.25); margin-top: 24px; }
+.hero-tagline {
+  display: inline-block;
+  padding: 8px 18px; background: var(--oro); color: var(--ink);
+  font-size: 13px; font-weight: 700; border-radius: 20px; letter-spacing: .2px;
+}
+.hero-split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 1040px; margin: 0 auto; padding: 0 24px 64px; }
+.hero-bento { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 10px; }
+.hb { border-radius: 16px; overflow: hidden; }
+.hb-logo { grid-column:1; grid-row:1/3; background: #111; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px; min-height:220px; }
+.hb-color { grid-column:2; grid-row:1; background: #1A1A1A; padding:20px; }
+.hb-type  { grid-column:2; grid-row:2; background: var(--oro); padding:20px; }
+.hero-bottom-strip { background: #111; border-top: 1px solid rgba(255,255,255,.06); padding: 16px 24px; display:flex; align-items:center; justify-content:center; gap:32px; flex-wrap:wrap; }
+.hero-stat { text-align:center; }
+.hero-stat-num { font-size:22px; font-weight:800; color:var(--paper); }
+.hero-stat-label { font-size:11px; color:rgba(255,255,255,.35); letter-spacing:.5px; text-transform:uppercase; }
+
+/* INDEX */
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+.index-card {
+  background: var(--paper); border-radius: var(--radius-md); padding: 20px;
+  text-decoration: none; color: var(--ink); border: 1px solid var(--gray-3);
+  transition: box-shadow .2s, transform .2s;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.index-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.index-num { font-size: 11px; font-weight: 700; color: var(--oro-dark); letter-spacing: 1px; }
+.index-name { font-size: 15px; font-weight: 700; }
+.index-desc { font-size: 12px; color: var(--gray-1); }
+
+/* CARDS */
+.card {
+  background: var(--paper); border-radius: var(--radius-lg);
+  padding: 32px; box-shadow: 0 1px 3px rgba(0,0,0,.05), 0 4px 20px rgba(0,0,0,.08);
+  border: 1px solid rgba(0,0,0,.06); margin-bottom: 24px;
+}
+.card-title {
+  font-size: 18px; font-weight: 700; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.card-title i { color: var(--oro); }
+
+/* VALUES */
+.values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+.value-chip { background: var(--bg); border-radius: var(--radius-sm); padding: 16px; text-align: center; }
+.value-chip i { font-size: 20px; color: var(--oro); display: block; margin-bottom: 8px; }
+.value-chip span { font-size: 13px; font-weight: 700; }
+
+/* PROMISE */
+.promise-box {
+  background: var(--ink); color: var(--paper);
+  border-radius: var(--radius-lg); padding: 40px;
+  text-align: center; margin-bottom: 24px;
+}
+.promise-box .label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--oro); margin-bottom: 12px; }
+.promise-box .main { font-size: 28px; font-weight: 800; letter-spacing: -.5px; }
+.promise-box .sub { font-size: 16px; color: rgba(255,255,255,.5); margin-top: 8px; }
+
+/* SERVICES */
+.services-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.service-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; background: var(--bg);
+  border-radius: var(--radius-sm); font-size: 14px; font-weight: 600;
+}
+.service-item i { color: var(--oro); width: 18px; text-align: center; }
+
+/* VERBAL */
+.tone-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.tone-card { padding: 20px; background: var(--bg); border-radius: var(--radius-md); }
+.tone-card .yes { color: var(--green); font-weight: 700; margin-bottom: 8px; }
+.tone-card .no { color: #FF3B30; font-weight: 700; margin-bottom: 8px; }
+.tone-card ul { list-style: none; }
+.tone-card ul li { font-size: 14px; padding: 3px 0; color: var(--gray-1); }
+
+.persona-box {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 24px; align-items: start;
+  background: var(--bg); border-radius: var(--radius-md); padding: 24px;
+}
+.persona-avatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--gray-2); display: flex; align-items: center; justify-content: center;
+  font-size: 28px; color: var(--gray-1); flex-shrink: 0;
+}
+.persona-name { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+.persona-role { color: var(--gray-1); font-size: 14px; margin-bottom: 12px; }
+.persona-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.persona-tag {
+  background: var(--paper); border: 1px solid var(--gray-3);
+  border-radius: 20px; padding: 4px 10px; font-size: 12px; font-weight: 600;
+}
+
+/* COLOR */
+.colors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.color-swatch { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow); }
+.swatch-block { height: 100px; }
+.swatch-info { background: var(--paper); padding: 16px; }
+.swatch-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.swatch-hex { font-size: 12px; color: var(--gray-1); font-family: monospace; }
+.swatch-use { font-size: 11px; color: var(--gray-2); margin-top: 4px; }
+.rule-6030 {
+  display: flex; border-radius: var(--radius-md);
+  overflow: hidden; height: 80px; margin-top: 16px;
+}
+.rule-6030 div { display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+.r60 { flex: 60; background: var(--paper); border: 1px solid var(--gray-3); }
+.r30 { flex: 30; background: var(--ink); color: var(--paper); }
+.r10 { flex: 10; background: var(--oro); }
+
+/* TYPOGRAPHY */
+.type-specimen { padding: 32px; background: var(--bg); border-radius: var(--radius-md); margin-bottom: 16px; }
+.type-showcase { font-family: var(--font); font-size: 40px; font-weight: 800; line-height: 1.1; }
+.type-meta { font-size: 12px; color: var(--gray-1); margin-top: 8px; font-family: monospace; }
+.weights-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+.weight-box { background: var(--bg); border-radius: var(--radius-sm); padding: 16px; text-align: center; }
+.weight-sample { font-size: 24px; margin-bottom: 4px; }
+.weight-label { font-size: 11px; color: var(--gray-1); font-family: monospace; }
+
+/* LOGOS */
+.logo-group-title {
+  font-size: 13px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--gray-1);
+  margin: 32px 0 16px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--gray-3);
+  display: flex; align-items: center; gap: 8px;
+}
+.logo-group-title:first-of-type { margin-top: 0; }
+.logo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.logo-tile { border-radius: var(--radius-md); display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow); }
+.logo-canvas {
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px; min-height: 140px;
+}
+.logo-canvas.light { background: var(--paper); border: 1px solid var(--gray-3); }
+.logo-canvas.dark { background: var(--ink); }
+.logo-canvas.gold { background: var(--oro); }
+.logo-canvas img { max-height: 72px; max-width: 100%; object-fit: contain; }
+.logo-info {
+  background: var(--bg); padding: 12px 16px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo-info-name { font-size: 13px; font-weight: 700; }
+.logo-info-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 8px;
+  border-radius: 10px; letter-spacing: .5px; text-transform: uppercase;
+}
+.badge-pos { background: #E8F8ED; color: #1A7A35; }
+.badge-neg { background: #1A1A1A; color: var(--paper); }
+.badge-gold { background: var(--oro); color: var(--ink); }
+.badge-dev { background: var(--bg); color: var(--gray-1); border: 1px solid var(--gray-3); }
+
+.download-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.download-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px; background: var(--bg); border: 1px solid var(--gray-3);
+  border-radius: 20px; font-size: 12px; font-weight: 700; color: var(--ink);
+  text-decoration: none; cursor: pointer; transition: background .15s;
+}
+.download-btn:hover { background: var(--gray-3); }
+.download-btn i { color: var(--oro); }
+
+/* LOGO DOWNLOAD BUTTON */
+.logo-dl {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
+  background: var(--paper); border: 1px solid var(--gray-3);
+  color: var(--gray-1); text-decoration: none; font-size: 11px;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.logo-dl:hover { background: var(--oro); color: var(--ink); border-color: var(--oro); }
+
+/* ICON LIBRARY */
+.icon-cats { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.icon-cat-btn {
+  padding: 6px 14px; border-radius: 20px; border: 1px solid var(--gray-3);
+  background: var(--paper); font-size: 12px; font-weight: 700;
+  cursor: pointer; transition: all .15s; font-family: var(--font);
+}
+.icon-cat-btn.active { background: var(--oro); border-color: var(--oro); }
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 8px; }
+.icon-tile {
+  background: var(--paper); border: 1px solid var(--gray-3);
+  border-radius: var(--radius-sm); padding: 16px 8px;
+  text-align: center; cursor: pointer; transition: background .15s, transform .1s;
+}
+.icon-tile:hover { background: var(--oro); transform: translateY(-2px); }
+.icon-tile i { font-size: 20px; color: var(--ink); display: block; margin-bottom: 6px; }
+.icon-tile span { font-size: 9px; color: var(--gray-1); font-family: monospace; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* UI COMPONENTS */
+.ui-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.ui-preview { background: var(--bg); border-radius: var(--radius-md); padding: 24px; }
+.ui-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-1); margin-bottom: 12px; }
+.btn-primary {
+  background: var(--oro); color: var(--ink); border: none;
+  padding: 12px 24px; border-radius: 24px; font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: var(--font); width: 100%; margin-bottom: 8px;
+}
+.btn-secondary {
+  background: transparent; color: var(--ink); border: 2px solid var(--ink);
+  padding: 12px 24px; border-radius: 24px; font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: var(--font); width: 100%; margin-bottom: 8px;
+}
+.btn-ghost {
+  background: transparent; color: var(--oro-dark); border: none;
+  padding: 12px 24px; font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: var(--font); text-decoration: underline; width: 100%;
+}
+.badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
+.badge-oro { background: var(--oro); color: var(--ink); }
+.badge-ink { background: var(--ink); color: var(--paper); }
+.badge-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+.input-preview input {
+  width: 100%; padding: 12px 16px; border: 1.5px solid var(--gray-3);
+  border-radius: var(--radius-sm); font-size: 15px; font-family: var(--font);
+  background: var(--paper); outline: none;
+}
+.input-preview input:focus { border-color: var(--oro); }
+.alert-card { display: flex; gap: 12px; padding: 16px; background: rgba(253,191,0,.12); border-left: 3px solid var(--oro); border-radius: var(--radius-sm); }
+.alert-card i { color: var(--oro); margin-top: 2px; }
+.alert-card p { font-size: 14px; }
+
+/* APPLICATIONS */
+.tarjeta-biz {
+  background: var(--ink); color: var(--paper);
+  border-radius: var(--radius-md);
+  width: 100%; max-width: 420px;
+  aspect-ratio: 85 / 54;
+  position: relative; overflow: hidden;
+  padding: 22px 26px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.tarjeta-biz-accent {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--oro);
+}
+.tarjeta-biz-circle {
+  position: absolute; bottom: -36px; right: -36px;
+  width: 130px; height: 130px; border-radius: 50%;
+  background: rgba(253,191,0,.08); pointer-events: none;
+}
+.tarjeta-contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px;
+  padding-top: 14px; border-top: 1px solid rgba(255,255,255,.1);
+}
+.tarjeta-contact-grid span {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 10px; color: rgba(255,255,255,.55); white-space: nowrap; overflow: hidden;
+}
+.tarjeta-contact-grid i { color: var(--oro); font-size: 9px; width: 10px; flex-shrink: 0; }
+
+/* APLICACIONES — layout apilado */
+.app-row {
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 40px;
+  align-items: start; padding: 40px 0;
+  border-bottom: 1px solid var(--gray-3);
+}
+.app-row:last-child { border-bottom: none; }
+.app-num { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--oro-dark); margin-bottom: 6px; }
+.app-name { font-size: 20px; font-weight: 800; letter-spacing: -.3px; margin-bottom: 8px; }
+.app-desc { font-size: 14px; color: var(--gray-1); line-height: 1.6; margin-bottom: 16px; }
+.app-specs { display: flex; flex-direction: column; gap: 6px; }
+.app-spec { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; }
+.app-spec-label { color: var(--gray-2); min-width: 60px; flex-shrink: 0; }
+.app-spec-val { color: var(--ink); font-weight: 600; }
+@media (max-width: 720px) { .app-row { grid-template-columns: 1fr; gap: 24px; } }
+
+/* FOOTER */
+.footer-section { background: var(--ink); color: var(--paper); padding: 80px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.footer-logo { height: 40px; margin-bottom: 16px; }
+.footer-tagline { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+.footer-sub { font-size: 15px; color: rgba(255,255,255,.5); margin-bottom: 24px; }
+.contact-list { display: flex; flex-direction: column; gap: 12px; }
+.contact-item { display: flex; align-items: center; gap: 12px; font-size: 15px; }
+.contact-item i { color: var(--oro); width: 20px; text-align: center; }
+.footer-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--oro); color: var(--ink);
+  font-size: 15px; font-weight: 700; padding: 14px 28px;
+  border-radius: 24px; text-decoration: none; margin-top: 8px;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: 48px; padding: 24px 0;
+  display: flex; justify-content: space-between;
+  font-size: 12px; color: rgba(255,255,255,.35);
+  flex-wrap: wrap; gap: 8px;
+}
+
+/* DIVIDER */
+.section-divider { height: 1px; background: var(--gray-3); }
+
+/* PRINT */
+@media print {
+  .topbar, .icon-cats, .download-row, .btn-pdf { display: none !important; }
+  body { background: white; }
+  section { padding: 40px 0; }
+  .card, .logo-tile, .color-swatch { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
+  .hero { background: black !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .print-cta { display: block !important; }
+}
+.print-cta { display: none; }
+.print-cta {
+  text-align: center; padding: 24px;
+  background: #f9f9f9; border: 2px solid #FDBF00;
+  border-radius: 12px; margin: 32px 24px;
+}
+.print-cta h3 { font-size: 18px; margin-bottom: 8px; }
+.print-cta p { font-size: 14px; color: #555; }
+.print-cta a { color: #000; font-weight: 700; }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .topbar-nav { display: none; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .tone-grid { grid-template-columns: 1fr; }
+  .weights-row { grid-template-columns: repeat(2, 1fr); }
+  .hero-split { grid-template-columns: 1fr; gap: 32px; }
+  .hero-bento { display: none; }
+  .hero-bottom-strip { gap: 20px; }
+}
+@media (max-width: 600px) {
+  .logo-pair { grid-template-columns: 1fr; }
+  .section-title { font-size: 24px; }
+  .promise-box .main { font-size: 20px; }
+  .persona-box { grid-template-columns: 1fr; }
+  .hero-split { padding: 0 16px 48px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR — blanco Apple-style -->
+<header class="topbar">
+  <a href="#hero" class="topbar-brand">
+    <img src="assets/logos/logo_isotipo_triangulo_color.png" alt="Oro Constructores" class="topbar-logo" style="height:48px;">
+  </a>
+  <nav class="topbar-nav">
+    <a href="#estrategia">Estrategia</a>
+    <a href="#verbal">Verbal</a>
+    <a href="#color">Color</a>
+    <a href="#tipografia">Tipografía</a>
+    <a href="#logos">Logos</a>
+    <a href="#iconos">Íconos</a>
+    <a href="#ui">UI</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button class="btn-pdf" onclick="window.print()">
+    <i class="fa-solid fa-arrow-down-to-line"></i>
+    Descargar PDF
+  </button>
+</header>
+
+<!-- HERO — Lattice-style: headline left + bento right -->
+<section id="hero" class="hero">
+
+  <!-- SPLIT: texto izquierda / bento derecha -->
+  <div class="hero-split">
+
+    <!-- LEFT: headline -->
+    <div>
+      <span class="hero-eyebrow">Sistema de Marca · Manual Oficial</span>
+      <h1 class="hero-title">Sistema de<br>Marca Oro<br>Constructores</h1>
+      <p class="hero-sub">Guía oficial de identidad visual, verbal y digital. Todo lo que necesitas para usar la marca correctamente.</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;">
+        <button onclick="window.print()" style="display:inline-flex;align-items:center;gap:8px;background:var(--oro);color:var(--ink);border:none;padding:13px 22px;border-radius:24px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font);">
+          <i class="fa-solid fa-arrow-down-to-line"></i> Descargar PDF
+        </button>
+        <a href="#indice" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);color:var(--paper);border:1px solid rgba(255,255,255,.15);padding:13px 22px;border-radius:24px;font-size:14px;font-weight:700;text-decoration:none;">
+          Ver secciones <i class="fa-solid fa-arrow-down"></i>
+        </a>
+      </div>
+
+      <!-- Valores -->
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-size:11px;font-weight:600;padding:5px 12px;border-radius:16px;">Confianza</span>
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-size:11px;font-weight:600;padding:5px 12px;border-radius:16px;">Estrategia</span>
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-size:11px;font-weight:600;padding:5px 12px;border-radius:16px;">Innovación</span>
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-size:11px;font-weight:600;padding:5px 12px;border-radius:16px;">Sinceridad</span>
+        <span style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-size:11px;font-weight:600;padding:5px 12px;border-radius:16px;">Trabajo en equipo</span>
+      </div>
+
+      <p class="hero-version" style="margin-top:20px;">v2.1 · Junio 2026 · Madrid, España</p>
+    </div>
+
+    <!-- RIGHT: bento preview -->
+    <div class="hero-bento">
+
+      <!-- Card: logo principal (tall, left) -->
+      <div class="hb hb-logo">
+        <img src="assets/logos/logo_completo_invertido.png" alt="Oro Constructores" style="width:100%;max-width:160px;object-fit:contain;margin-bottom:16px;">
+        <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--oro);text-align:center;">Logo Principal</p>
+        <p style="font-size:12px;color:rgba(255,255,255,.3);text-align:center;margin-top:4px;">10 variantes</p>
+      </div>
+
+      <!-- Card: color (top right) -->
+      <div class="hb hb-color">
+        <p style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:12px;">Paleta</p>
+        <div style="display:flex;gap:6px;margin-bottom:8px;">
+          <div style="width:32px;height:32px;border-radius:8px;background:#FDBF00;" title="Oro"></div>
+          <div style="width:32px;height:32px;border-radius:8px;background:#000000;border:1px solid rgba(255,255,255,.1);" title="Tinta"></div>
+          <div style="width:32px;height:32px;border-radius:8px;background:#FFFFFF;" title="Papel"></div>
+          <div style="width:32px;height:32px;border-radius:8px;background:#F2F2F7;" title="Fondo"></div>
+        </div>
+        <p style="font-size:11px;color:rgba(255,255,255,.3);">60% · 30% · 10%</p>
+      </div>
+
+      <!-- Card: tipografía (bottom right, gold) -->
+      <div class="hb hb-type">
+        <p style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(0,0,0,.5);margin-bottom:4px;">Tipografía</p>
+        <p style="font-size:36px;font-weight:800;color:var(--ink);line-height:1;letter-spacing:-1px;">Aa</p>
+        <p style="font-size:11px;font-weight:700;color:rgba(0,0,0,.5);margin-top:6px;">Open Sans · 400–800</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STATS STRIP inferior -->
+  <div class="hero-bottom-strip">
+    <div class="hero-stat"><span class="hero-stat-num">10</span><br><span class="hero-stat-label">Secciones</span></div>
+    <div style="width:1px;height:32px;background:rgba(255,255,255,.1);"></div>
+    <div class="hero-stat"><span class="hero-stat-num">10</span><br><span class="hero-stat-label">Variantes de Logo</span></div>
+    <div style="width:1px;height:32px;background:rgba(255,255,255,.1);"></div>
+    <div class="hero-stat"><span class="hero-stat-num">64+</span><br><span class="hero-stat-label">Íconos</span></div>
+    <div style="width:1px;height:32px;background:rgba(255,255,255,.1);"></div>
+    <div class="hero-stat"><span class="hero-stat-num">3</span><br><span class="hero-stat-label">Colores base</span></div>
+    <div style="width:1px;height:32px;background:rgba(255,255,255,.1);"></div>
+    <div class="hero-stat"><span class="hero-stat-num">8</span><br><span class="hero-stat-label">Subsidiarias</span></div>
+  </div>
+
+</section>
+
+<!-- PRINT-ONLY CTA -->
+<div class="print-cta">
+  <h3>Accede a la versión interactiva completa</h3>
+  <p>Este PDF es un resumen imprimible. Para assets descargables y actualizaciones visita:<br>
+  <a href="https://oroconstructores.com">oroconstructores.com</a></p>
+</div>
+
+<!-- INDEX -->
+<section id="indice" style="padding:48px 0;">
+  <div class="container">
+    <p class="section-label">Contenido</p>
+    <h2 class="section-title">Índice del Manual</h2>
+    <div class="index-grid">
+      <a href="#estrategia" class="index-card">
+        <span class="index-num">01</span>
+        <span class="index-name">Estrategia</span>
+        <span class="index-desc">Misión, visión, valores y servicios</span>
+      </a>
+      <a href="#verbal" class="index-card">
+        <span class="index-num">02</span>
+        <span class="index-name">Identidad Verbal</span>
+        <span class="index-desc">Tono, lenguaje y buyer persona</span>
+      </a>
+      <a href="#color" class="index-card">
+        <span class="index-num">03</span>
+        <span class="index-name">Sistema Cromático</span>
+        <span class="index-desc">Paleta de color y regla 60-30-10</span>
+      </a>
+      <a href="#tipografia" class="index-card">
+        <span class="index-num">04</span>
+        <span class="index-name">Tipografía</span>
+        <span class="index-desc">Open Sans, jerarquía y pesos</span>
+      </a>
+      <a href="#logos" class="index-card">
+        <span class="index-num">05</span>
+        <span class="index-name">Logos & Assets</span>
+        <span class="index-desc">10 variantes organizadas por tipo</span>
+      </a>
+      <a href="#submarcas" class="index-card">
+        <span class="index-num">05B</span>
+        <span class="index-name">Submarcas</span>
+        <span class="index-desc">Oro Corporation · 8 subsidiarias</span>
+      </a>
+      <a href="#iconos" class="index-card">
+        <span class="index-num">06</span>
+        <span class="index-name">Biblioteca de Íconos</span>
+        <span class="index-desc">Font Awesome 6 por categoría</span>
+      </a>
+      <a href="#ui" class="index-card">
+        <span class="index-num">07</span>
+        <span class="index-name">Componentes UI</span>
+        <span class="index-desc">Botones, badges, inputs, alertas</span>
+      </a>
+      <a href="#aplicaciones" class="index-card">
+        <span class="index-num">08</span>
+        <span class="index-name">Aplicaciones</span>
+        <span class="index-desc">Tarjeta, presupuesto, WhatsApp</span>
+      </a>
+      <a href="#descarga" class="index-card">
+        <span class="index-num">09</span>
+        <span class="index-name">Descarga PDF</span>
+        <span class="index-desc">Manual imprimible con CTAs web</span>
+      </a>
+      <a href="#contacto" class="index-card">
+        <span class="index-num">10</span>
+        <span class="index-name">Contacto</span>
+        <span class="index-desc">Canales, web y equipo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 01 ESTRATEGIA -->
+<section id="estrategia">
+  <div class="container">
+    <p class="section-label">01 · Estrategia</p>
+    <h2 class="section-title">Fundamentos de Marca</h2>
+    <p class="section-sub">Por qué existimos, a dónde vamos y en qué creemos.</p>
+
+    <div class="promise-box">
+      <p class="label">Promesa de Marca</p>
+      <p class="main">"Hacemos fácil lo difícil"</p>
+      <p class="sub">Hacemos realidad lo que tienes en mente</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+      <div class="card" style="margin-bottom:0;">
+        <p class="card-title"><i class="fa-solid fa-bullseye"></i> Misión</p>
+        <p style="font-size:15px;color:var(--gray-1);">Hacer que la construcción y la reforma sean accesibles, eficientes y confiables para todos. Sin sorpresas, sin complicaciones.</p>
+      </div>
+      <div class="card" style="margin-bottom:0;">
+        <p class="card-title"><i class="fa-solid fa-telescope"></i> Visión</p>
+        <p style="font-size:15px;color:var(--gray-1);">Ser la empresa de reformas de referencia en Madrid, reconocida por la confianza que generamos y por transformar espacios con criterio.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-title"><i class="fa-solid fa-star"></i> Valores</p>
+      <div class="values-grid">
+        <div class="value-chip"><i class="fa-solid fa-handshake"></i><span>Confianza</span></div>
+        <div class="value-chip"><i class="fa-solid fa-chess"></i><span>Estrategia</span></div>
+        <div class="value-chip"><i class="fa-solid fa-lightbulb"></i><span>Innovación</span></div>
+        <div class="value-chip"><i class="fa-solid fa-comment-dots"></i><span>Sinceridad</span></div>
+        <div class="value-chip"><i class="fa-solid fa-people-group"></i><span>Trabajo en equipo</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-title"><i class="fa-solid fa-hard-hat"></i> Servicios</p>
+      <div class="services-list">
+        <div class="service-item"><i class="fa-solid fa-house-chimney-crack"></i>Reformas Generales</div>
+        <div class="service-item"><i class="fa-solid fa-paintbrush"></i>Pintura y Acabados</div>
+        <div class="service-item"><i class="fa-solid fa-faucet"></i>Fontanería</div>
+        <div class="service-item"><i class="fa-solid fa-bolt"></i>Electricidad</div>
+        <div class="service-item"><i class="fa-solid fa-table-cells"></i>Cerámica y Alicatado</div>
+        <div class="service-item"><i class="fa-solid fa-trowel-bricks"></i>Albañilería</div>
+        <div class="service-item"><i class="fa-solid fa-tree"></i>Carpintería</div>
+        <div class="service-item"><i class="fa-solid fa-droplet"></i>Tratamiento de Humedades</div>
+        <div class="service-item"><i class="fa-solid fa-layer-group"></i>Instalación de Tarima</div>
+        <div class="service-item"><i class="fa-solid fa-sink"></i>Cocinas y Baños</div>
+        <div class="service-item"><i class="fa-solid fa-fan"></i>Falsos Techos</div>
+        <div class="service-item"><i class="fa-solid fa-truck"></i>Gestión de Escombros</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:0;">
+      <p class="card-title"><i class="fa-solid fa-user-tie"></i> Fundador</p>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <p style="font-size:17px;font-weight:700;margin-bottom:4px;">Orlando Ramírez Sánchez</p>
+          <p style="font-size:14px;color:var(--gray-1);margin-bottom:12px;">Maestro de Obra · +30 años de experiencia<br>Venezuela · Ecuador · España</p>
+          <p style="font-size:14px;color:var(--gray-1);">Artesano de la construcción, formado en obra desde Venezuela. Con décadas de trabajo en Latinoamérica y Europa, hoy lidera la ejecución técnica de Oro Constructores en Madrid.</p>
+        </div>
+        <div style="flex:1;min-width:200px;background:var(--bg);border-radius:var(--radius-md);padding:20px;">
+          <p style="font-size:12px;font-weight:700;color:var(--gray-1);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase;">Especialidades</p>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;">
+            <span><i class="fa-solid fa-check" style="color:var(--oro);margin-right:8px;"></i>Reformas integrales</span>
+            <span><i class="fa-solid fa-check" style="color:var(--oro);margin-right:8px;"></i>Cerámica y alicatado</span>
+            <span><i class="fa-solid fa-check" style="color:var(--oro);margin-right:8px;"></i>Acabados de precisión</span>
+            <span><i class="fa-solid fa-check" style="color:var(--oro);margin-right:8px;"></i>Gestión de obra completa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 02 IDENTIDAD VERBAL -->
+<section id="verbal">
+  <div class="container">
+    <p class="section-label">02 · Identidad Verbal</p>
+    <h2 class="section-title">Cómo Hablamos</h2>
+    <p class="section-sub">Lenguaje directo, profesional y cercano. Sin tecnicismos innecesarios.</p>
+
+    <div class="card">
+      <p class="card-title"><i class="fa-solid fa-comment"></i> Tono de Comunicación</p>
+      <div class="tone-grid">
+        <div class="tone-card">
+          <p class="yes"><i class="fa-solid fa-circle-check"></i> Decimos</p>
+          <ul>
+            <li>"Le explicamos todo antes de empezar"</li>
+            <li>"Trabajo limpio, sin sorpresas"</li>
+            <li>"Hacemos fácil lo difícil"</li>
+            <li>"Presupuesto claro y por escrito"</li>
+            <li>Lenguaje de obra, no de oficina</li>
+          </ul>
+        </div>
+        <div class="tone-card">
+          <p class="no"><i class="fa-solid fa-circle-xmark"></i> No decimos</p>
+          <ul>
+            <li>Palabras rebuscadas o anglicismos</li>
+            <li>Promesas sin respaldo real</li>
+            <li>"Más o menos" en presupuestos</li>
+            <li>Lenguaje agresivo o de ventas</li>
+            <li>Tecnicismos sin explicación</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-title"><i class="fa-solid fa-user"></i> Cliente Ideal (Buyer Persona)</p>
+      <div class="persona-box">
+        <div class="persona-avatar"><i class="fa-solid fa-user-helmet-safety"></i></div>
+        <div>
+          <p class="persona-name">Pedro, 42 años</p>
+          <p class="persona-role">Propietario de piso en Madrid · Clase media trabajadora</p>
+          <p style="font-size:14px;color:var(--gray-1);margin-bottom:12px;">Necesita reformar su hogar pero desconfía de presupuestos vagos y empresas que no cumplen. Valora la honestidad, los plazos reales y que le expliquen qué van a hacer antes de empezar.</p>
+          <div class="persona-tags">
+            <span class="persona-tag">Confianza primero</span>
+            <span class="persona-tag">Precio justo</span>
+            <span class="persona-tag">Puntualidad</span>
+            <span class="persona-tag">Comunicación clara</span>
+            <span class="persona-tag">Sin sorpresas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:0;">
+      <p class="card-title"><i class="fa-solid fa-mountain"></i> Referente de Tono</p>
+      <p style="font-size:15px;color:var(--gray-1);">Inspirado en <strong>Patagonia</strong>: comunicación directa, autenticidad, compromiso con el trabajo bien hecho. Sin marketing vacío. Cada palabra respalda una promesa real.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 03 COLOR -->
+<section id="color">
+  <div class="container">
+    <p class="section-label">03 · Sistema Cromático</p>
+    <h2 class="section-title">Paleta de Color</h2>
+    <p class="section-sub">Tres colores. Una identidad. Usar con disciplina.</p>
+
+    <div class="colors-grid">
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#FDBF00;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Oro</p>
+          <p class="swatch-hex">#FDBF00</p>
+          <p class="swatch-use">CTAs, acentos, highlights (10%)</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#000000;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Tinta</p>
+          <p class="swatch-hex">#000000</p>
+          <p class="swatch-use">Texto principal, fondos oscuros (30%)</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#FFFFFF;border:1px solid #E5E5EA;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Papel</p>
+          <p class="swatch-hex">#FFFFFF</p>
+          <p class="swatch-use">Fondos, cards, contenido (60%)</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#F2F2F7;border:1px solid #E5E5EA;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Fondo</p>
+          <p class="swatch-hex">#F2F2F7</p>
+          <p class="swatch-use">Fondo de página, secciones alternas</p>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#8E8E93;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Gris</p>
+          <p class="swatch-hex">#8E8E93</p>
+          <p class="swatch-use">Texto secundario, subtítulos</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Escala de Oro -->
+    <div class="card" style="margin-top:24px;">
+      <p class="card-title"><i class="fa-solid fa-circle-half-stroke"></i> Escala del Oro</p>
+      <p style="font-size:13px;color:var(--gray-1);margin-bottom:16px;">Tints y shades del color principal. Usar los extremos con criterio.</p>
+      <div style="display:flex;gap:4px;border-radius:var(--radius-sm);overflow:hidden;height:48px;">
+        <div style="flex:1;background:#FFF9E6;" title="10%"></div>
+        <div style="flex:1;background:#FFF0B3;" title="30%"></div>
+        <div style="flex:1;background:#FFE066;" title="50%"></div>
+        <div style="flex:1;background:#FDBF00;" title="100% Oro principal" style="outline:2px solid rgba(0,0,0,.1);"></div>
+        <div style="flex:1;background:#D9A200;" title="Oscuro"></div>
+        <div style="flex:1;background:#A67800;" title="Muy oscuro"></div>
+        <div style="flex:1;background:#5C4200;" title="Extra oscuro"></div>
+      </div>
+      <div style="display:flex;gap:4px;margin-top:6px;">
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">10%</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">30%</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">50%</span>
+        <span style="flex:1;font-size:9px;font-weight:800;color:var(--ink);font-family:monospace;text-align:center;">#FDBF00</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">#D9A200</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">#A67800</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">#5C4200</span>
+      </div>
+    </div>
+
+    <!-- Escala de Grises -->
+    <div class="card">
+      <p class="card-title"><i class="fa-solid fa-gradient"></i> Escala de Grises</p>
+      <p style="font-size:13px;color:var(--gray-1);margin-bottom:16px;">De Tinta (#000) a Papel (#FFF). Útil para estados, bordes y textos secundarios.</p>
+      <div style="display:flex;gap:4px;border-radius:var(--radius-sm);overflow:hidden;height:48px;">
+        <div style="flex:1;background:#000000;"></div>
+        <div style="flex:1;background:#1C1C1E;"></div>
+        <div style="flex:1;background:#3A3A3C;"></div>
+        <div style="flex:1;background:#636366;"></div>
+        <div style="flex:1;background:#8E8E93;"></div>
+        <div style="flex:1;background:#C7C7CC;"></div>
+        <div style="flex:1;background:#E5E5EA;"></div>
+        <div style="flex:1;background:#F2F2F7;"></div>
+        <div style="flex:1;background:#FFFFFF;border:1px solid #E5E5EA;"></div>
+      </div>
+      <div style="display:flex;gap:4px;margin-top:6px;">
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">000</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">1C1C</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">3A3A</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">6363</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">8E8E</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">C7C7</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">E5E5</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">F2F2</span>
+        <span style="flex:1;font-size:9px;color:var(--gray-1);font-family:monospace;text-align:center;">FFF</span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:0;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap;">
+        <div>
+          <p class="card-title" style="margin-bottom:4px;"><i class="fa-solid fa-percent"></i> Regla 60–30–10</p>
+          <p style="font-size:14px;color:var(--gray-1);margin:0;">Proporción de color para piezas <strong>impresas y exportables</strong>.</p>
+        </div>
+        <span style="background:#FFF3CD;color:#7A5800;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;white-space:nowrap;letter-spacing:.3px;">
+          <i class="fa-solid fa-print" style="margin-right:4px;"></i>PDF · Impresión · Archivos
+        </span>
+      </div>
+      <div class="rule-6030">
+        <div class="r60">60% Papel</div>
+        <div class="r30">30% Tinta</div>
+        <div class="r10" title="10% Oro"></div>
+      </div>
+      <p style="font-size:12px;color:var(--gray-1);margin-top:12px;">El Oro (#FDBF00) es el 10%. Úsalo para llamadas a la acción y acentos.</p>
+      <div style="margin-top:14px;background:#F2F2F7;border-radius:8px;padding:12px 16px;display:flex;gap:20px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <i class="fa-solid fa-check-circle" style="color:#34C759;font-size:13px;"></i>
+          <span style="font-size:12px;color:var(--gray-1);">Presupuestos PDF · Facturas · Folletos · Tarjetas</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <i class="fa-solid fa-xmark-circle" style="color:#FF3B30;font-size:13px;"></i>
+          <span style="font-size:12px;color:var(--gray-1);">No aplica en web — el diseño web tiene sus propias proporciones</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 04 TIPOGRAFÍA -->
+<section id="tipografia">
+  <div class="container">
+    <p class="section-label">04 · Tipografía</p>
+    <h2 class="section-title">Open Sans</h2>
+    <p class="section-sub">Una fuente. Cuatro pesos. Claridad y profesionalismo.</p>
+
+    <div class="type-specimen">
+      <p class="type-showcase">Construimos<br>con precisión.</p>
+      <p class="type-meta">Open Sans · 800 (ExtraBold) · 40px · letter-spacing: -0.5px</p>
+    </div>
+
+    <div class="type-specimen" style="background:var(--ink);">
+      <p class="type-showcase" style="color:var(--paper);">Hacemos fácil<br><span style="color:var(--oro);">lo difícil.</span></p>
+      <p class="type-meta" style="color:rgba(255,255,255,.4);">Open Sans · 800 · Sobre fondo oscuro · Acento en Oro</p>
+    </div>
+
+    <div class="card">
+      <p class="card-title"><i class="fa-solid fa-weight-hanging"></i> Pesos disponibles</p>
+      <div class="weights-row">
+        <div class="weight-box">
+          <p class="weight-sample" style="font-weight:400;">Aa</p>
+          <p class="weight-label">400 · Regular</p>
+        </div>
+        <div class="weight-box">
+          <p class="weight-sample" style="font-weight:600;">Aa</p>
+          <p class="weight-label">600 · Semibold</p>
+        </div>
+        <div class="weight-box">
+          <p class="weight-sample" style="font-weight:700;">Aa</p>
+          <p class="weight-label">700 · Bold</p>
+        </div>
+        <div class="weight-box">
+          <p class="weight-sample" style="font-weight:800;">Aa</p>
+          <p class="weight-label">800 · ExtraBold</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:0;">
+      <p class="card-title"><i class="fa-solid fa-list"></i> Jerarquía tipográfica</p>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="padding-bottom:16px;border-bottom:1px solid var(--gray-3);">
+          <p style="font-size:36px;font-weight:800;line-height:1.1;letter-spacing:-.5px;">H1 · Título principal</p>
+          <p style="font-size:12px;color:var(--gray-1);font-family:monospace;margin-top:4px;">36px · 800 · -0.5px tracking</p>
+        </div>
+        <div style="padding-bottom:16px;border-bottom:1px solid var(--gray-3);">
+          <p style="font-size:24px;font-weight:700;">H2 · Sección de contenido</p>
+          <p style="font-size:12px;color:var(--gray-1);font-family:monospace;margin-top:4px;">24px · 700</p>
+        </div>
+        <div style="padding-bottom:16px;border-bottom:1px solid var(--gray-3);">
+          <p style="font-size:18px;font-weight:700;">H3 · Subtítulo de card</p>
+          <p style="font-size:12px;color:var(--gray-1);font-family:monospace;margin-top:4px;">18px · 700</p>
+        </div>
+        <div style="padding-bottom:16px;border-bottom:1px solid var(--gray-3);">
+          <p style="font-size:15px;font-weight:400;">Body · Texto de párrafo. Hacemos reformas con precisión y honestidad. Cada proyecto es único y lo tratamos como tal.</p>
+          <p style="font-size:12px;color:var(--gray-1);font-family:monospace;margin-top:4px;">15px · 400 · line-height 1.6</p>
+        </div>
+        <div>
+          <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--oro-dark);">CAPTION · ETIQUETA DE SECCIÓN</p>
+          <p style="font-size:12px;color:var(--gray-1);font-family:monospace;margin-top:4px;">11px · 700 · 1.5px tracking · UPPERCASE</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 05 LOGOS -->
+<section id="logos">
+  <div class="container">
+    <p class="section-label">05 · Logos & Assets</p>
+    <h2 class="section-title">Sistema de Logo</h2>
+    <p class="section-sub">10 variantes organizadas por tipo. Usar siempre la versión correcta según el fondo.</p>
+
+    <!-- LOGO PRINCIPAL — SIEMPRE ES EL COLOR -->
+    <div style="background:var(--ink);border-radius:var(--radius-lg);padding:32px;margin-bottom:24px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;">
+        <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--oro);margin-bottom:8px;">Logo Principal</p>
+        <p style="font-size:20px;font-weight:800;color:var(--paper);margin-bottom:8px;">El logotipo a color es siempre el primario</p>
+        <p style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.6;">Cuando se quiere mostrar la marca con toda su identidad se usa el logotipo completo a color. Las variantes (positivo, negativo, isotipo) se usan cuando el contexto lo requiere — fondo limitado, tamaño reducido, blanco y negro.</p>
+      </div>
+      <div style="background:var(--paper);border-radius:var(--radius-md);padding:32px;display:flex;align-items:center;justify-content:center;min-width:180px;">
+        <img src="assets/logos/logo_completo_color.png" alt="Logo Principal Color" style="height:64px;object-fit:contain;">
+      </div>
+    </div>
+
+    <!-- LOGOTIPOS -->
+    <p class="logo-group-title"><i class="fa-solid fa-text-width"></i> Logotipos — Isotipo + Texto</p>
+    <div class="logo-pair">
+      <div class="logo-tile">
+        <div class="logo-canvas light">
+          <img src="assets/logos/logo_completo_negro.png" alt="Logo Completo Positivo">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Logo Completo</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-pos">Positivo</span>
+            <a href="assets/logos/logo_completo_negro.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="logo-tile">
+        <div class="logo-canvas dark">
+          <img src="assets/logos/logo_completo_invertido.png" alt="Logo Completo Negativo">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Logo Completo</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-neg">Negativo</span>
+            <a href="assets/logos/logo_completo_invertido.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-pair">
+      <div class="logo-tile">
+        <div class="logo-canvas light">
+          <img src="assets/logos/logo_completo_color.png" alt="Logo Completo Color">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Logo Completo Color</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-gold">Color</span>
+            <a href="assets/logos/logo_completo_color.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="logo-tile" style="opacity:.45;">
+        <div class="logo-canvas light" style="background:var(--bg);flex-direction:column;gap:8px;">
+          <i class="fa-solid fa-plus" style="font-size:24px;color:var(--gray-2);"></i>
+          <span style="font-size:12px;color:var(--gray-2);">En desarrollo</span>
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">—</span>
+          <span class="logo-info-badge badge-dev">Próximamente</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISOTIPOS TRIÁNGULO -->
+    <p class="logo-group-title"><i class="fa-solid fa-play"></i> Isotipos de Triángulo</p>
+    <div class="logo-pair">
+      <div class="logo-tile">
+        <div class="logo-canvas light">
+          <img src="assets/logos/logo_isotipo_triangulo_color.png" alt="Isotipo Triángulo Color">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Triángulo Color</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-gold">Color</span>
+            <a href="assets/logos/logo_isotipo_triangulo_color.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="logo-tile">
+        <div class="logo-canvas light">
+          <img src="assets/logos/logo_isotipo_triangulo_bn.png" alt="Isotipo Triángulo B/N">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Triángulo B/N</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-pos">Positivo</span>
+            <a href="assets/logos/logo_isotipo_triangulo_bn.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-pair">
+      <div class="logo-tile">
+        <div class="logo-canvas dark">
+          <img src="assets/logos/logo_isotipo_triangulo_invertido.png" alt="Isotipo Triángulo Blanco">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Triángulo Blanco</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-neg">Negativo</span>
+            <a href="assets/logos/logo_isotipo_triangulo_invertido.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="logo-tile" style="opacity:.45;">
+        <div class="logo-canvas light" style="background:var(--bg);flex-direction:column;gap:8px;">
+          <i class="fa-solid fa-plus" style="font-size:24px;color:var(--gray-2);"></i>
+          <span style="font-size:12px;color:var(--gray-2);">En desarrollo</span>
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">—</span>
+          <span class="logo-info-badge badge-dev">Próximamente</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISOTIPOS CÍRCULO -->
+    <p class="logo-group-title"><i class="fa-solid fa-circle"></i> Isotipos de Círculo Oro · Avatars</p>
+    <div class="logo-pair">
+      <div class="logo-tile">
+        <div class="logo-canvas light">
+          <img src="assets/logos/logo_isotipo_circulo_oro.png" alt="Isotipo Círculo Oro">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Círculo Oro</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-gold">Color</span>
+            <a href="assets/logos/logo_isotipo_circulo_oro.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="logo-tile">
+        <div class="logo-canvas light">
+          <img src="assets/logos/logo_isotipo_circulo_negro.png" alt="Isotipo Círculo Negro">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Círculo Negro</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-pos">Positivo</span>
+            <a href="assets/logos/logo_isotipo_circulo_negro.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-pair">
+      <div class="logo-tile">
+        <div class="logo-canvas dark">
+          <img src="assets/logos/logo_isotipo_circulo_blanco.png" alt="Isotipo Círculo Blanco">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Círculo Blanco</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-neg">Negativo</span>
+            <a href="assets/logos/logo_isotipo_circulo_blanco.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="logo-tile">
+        <div class="logo-canvas light">
+          <img src="assets/logos/logo_variante_sol.png" alt="Círculo Corporación">
+        </div>
+        <div class="logo-info">
+          <span class="logo-info-name">Círculo Corporación</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-info-badge badge-pos">Positivo</span>
+            <a href="assets/logos/logo_variante_sol.png" download class="logo-dl" title="Descargar PNG"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTA CÍRCULO CORPORACIÓN -->
+    <div style="background:var(--ink);border-radius:var(--radius-md);padding:20px 24px;margin-bottom:24px;display:flex;gap:16px;align-items:flex-start;">
+      <i class="fa-solid fa-sitemap" style="color:var(--oro);margin-top:2px;flex-shrink:0;font-size:18px;"></i>
+      <div>
+        <p style="font-size:14px;font-weight:700;color:var(--paper);margin-bottom:4px;">Círculo Corporación — Base para subsidiarias</p>
+        <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;">Este isotipo es la base escalable para todas las marcas del holding <strong style="color:rgba(255,255,255,.7);">Oro Corporation</strong>. Cada subsidiaria adapta el color del círculo y añade su nombre. El trabajador y la forma del círculo permanecen constantes como elemento de identidad corporativa.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <span style="background:rgba(253,191,0,.15);border:1px solid rgba(253,191,0,.3);color:var(--oro);font-size:11px;font-weight:700;padding:4px 10px;border-radius:12px;">Oro Constructores</span>
+          <span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.4);font-size:11px;font-weight:700;padding:4px 10px;border-radius:12px;">Oro Tienda · Próx.</span>
+          <span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.4);font-size:11px;font-weight:700;padding:4px 10px;border-radius:12px;">Oro Transportistas · Próx.</span>
+          <span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.4);font-size:11px;font-weight:700;padding:4px 10px;border-radius:12px;">Oro Diseñadores · Próx.</span>
+          <span style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.4);font-size:11px;font-weight:700;padding:4px 10px;border-radius:12px;">Oro Seguros · Próx.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGLAS -->
+    <div class="card" style="margin-bottom:0;">
+      <p class="card-title"><i class="fa-solid fa-shield-halved"></i> Reglas de Uso del Logo</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;">
+        <div style="padding:16px;background:var(--bg);border-radius:var(--radius-sm);">
+          <p style="font-weight:700;color:var(--green);margin-bottom:8px;font-size:14px;"><i class="fa-solid fa-circle-check"></i> Permitido</p>
+          <ul style="list-style:none;font-size:13px;color:var(--gray-1);display:flex;flex-direction:column;gap:4px;">
+            <li>Escalar proporcionalmente</li>
+            <li>Logo negro sobre fondo claro</li>
+            <li>Logo blanco sobre fondo oscuro</li>
+            <li>Tamaño mínimo: 24px de altura</li>
+          </ul>
+        </div>
+        <div style="padding:16px;background:var(--bg);border-radius:var(--radius-sm);">
+          <p style="font-weight:700;color:#FF3B30;margin-bottom:8px;font-size:14px;"><i class="fa-solid fa-circle-xmark"></i> Prohibido</p>
+          <ul style="list-style:none;font-size:13px;color:var(--gray-1);display:flex;flex-direction:column;gap:4px;">
+            <li>Deformar o distorsionar</li>
+            <li>Cambiar los colores de marca</li>
+            <li>Añadir sombras o efectos 3D</li>
+            <li>Colocar sobre fondos ruidosos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 05B SUBMARCAS EN DESARROLLO -->
+<section id="submarcas" style="padding:80px 0;">
+  <div class="container">
+    <p class="section-label">05B · Submarcas</p>
+    <h2 class="section-title">Oro Corporation — Subsidiarias</h2>
+    <p class="section-sub">Cada subsidiaria hereda el sistema visual del holding. Trabajo en progreso.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+      <!-- Oro Constructores — activa -->
+      <div style="background:var(--ink);border-radius:var(--radius-lg);padding:24px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--oro);"></div>
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--oro);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-trowel-bricks" style="color:var(--ink);font-size:20px;"></i>
+        </div>
+        <p style="font-size:15px;font-weight:800;color:var(--paper);margin-bottom:4px;">Oro Constructores</p>
+        <p style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:12px;">Reformas y Construcción · Madrid</p>
+        <span style="background:var(--oro);color:var(--ink);font-size:10px;font-weight:800;padding:3px 8px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">Activa</span>
+      </div>
+
+      <!-- Oro Tienda -->
+      <div style="background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1.5px dashed var(--gray-3);">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--gray-3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-store" style="color:var(--gray-1);font-size:20px;"></i>
+        </div>
+        <p style="font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;">Oro Tienda</p>
+        <p style="font-size:12px;color:var(--gray-1);margin-bottom:12px;">Materiales y suministros de construcción</p>
+        <span style="background:var(--gray-2);color:var(--paper);font-size:10px;font-weight:800;padding:3px 8px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">En desarrollo</span>
+      </div>
+
+      <!-- Oro Transportistas -->
+      <div style="background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1.5px dashed var(--gray-3);">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--gray-3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-truck" style="color:var(--gray-1);font-size:20px;"></i>
+        </div>
+        <p style="font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;">Oro Transportistas</p>
+        <p style="font-size:12px;color:var(--gray-1);margin-bottom:12px;">Logística y transporte de materiales</p>
+        <span style="background:var(--gray-2);color:var(--paper);font-size:10px;font-weight:800;padding:3px 8px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">En desarrollo</span>
+      </div>
+
+      <!-- Oro Diseñadores -->
+      <div style="background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1.5px dashed var(--gray-3);">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--gray-3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-pen-ruler" style="color:var(--gray-1);font-size:20px;"></i>
+        </div>
+        <p style="font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;">Oro Diseñadores</p>
+        <p style="font-size:12px;color:var(--gray-1);margin-bottom:12px;">Diseño y arquitectura de interiores</p>
+        <span style="background:var(--gray-2);color:var(--paper);font-size:10px;font-weight:800;padding:3px 8px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">En desarrollo</span>
+      </div>
+
+      <!-- Oro Seguros -->
+      <div style="background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1.5px dashed var(--gray-3);">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--gray-3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-shield-halved" style="color:var(--gray-1);font-size:20px;"></i>
+        </div>
+        <p style="font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;">Oro Seguros</p>
+        <p style="font-size:12px;color:var(--gray-1);margin-bottom:12px;">Seguros para obra y propietarios</p>
+        <span style="background:var(--gray-2);color:var(--paper);font-size:10px;font-weight:800;padding:3px 8px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">En desarrollo</span>
+      </div>
+
+      <!-- Oro Recompensas -->
+      <div style="background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1.5px dashed var(--gray-3);">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--gray-3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-gift" style="color:var(--gray-1);font-size:20px;"></i>
+        </div>
+        <p style="font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;">Oro Recompensas</p>
+        <p style="font-size:12px;color:var(--gray-1);margin-bottom:12px;">Programa de fidelización y referidos</p>
+        <span style="background:var(--gray-2);color:var(--paper);font-size:10px;font-weight:800;padding:3px 8px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">En desarrollo</span>
+      </div>
+
+      <!-- Oro Recicladores -->
+      <div style="background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1.5px dashed var(--gray-3);">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--gray-3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-recycle" style="color:var(--gray-1);font-size:20px;"></i>
+        </div>
+        <p style="font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;">Oro Recicladores</p>
+        <p style="font-size:12px;color:var(--gray-1);margin-bottom:12px;">Economía circular en construcción</p>
+        <span style="background:var(--gray-2);color:var(--paper);font-size:10px;font-weight:800;padding:3px 8px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">En desarrollo</span>
+      </div>
+
+      <!-- Oro Reparadores -->
+      <div style="background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1.5px dashed var(--gray-3);">
+        <div style="width:48px;height:48px;border-radius:50%;background:var(--gray-3);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-screwdriver-wrench" style="color:var(--gray-1);font-size:20px;"></i>
+        </div>
+        <p style="font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;">Oro Reparadores</p>
+        <p style="font-size:12px;color:var(--gray-1);margin-bottom:12px;">Servicio de reparaciones del hogar</p>
+        <span style="background:var(--gray-2);color:var(--paper);font-size:10px;font-weight:800;padding:3px 8px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">En desarrollo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 06 ICONOS -->
+<section id="iconos" style="background:var(--paper);">
+  <div class="container">
+    <p class="section-label">06 · Biblioteca de Íconos</p>
+    <h2 class="section-title">Font Awesome 6</h2>
+    <p class="section-sub">Íconos organizados por categoría. Estilo solid. Color según contexto: negro, oro o blanco.</p>
+
+    <div class="icon-cats">
+      <button class="icon-cat-btn active" onclick="showCat('construccion',this)">Construcción</button>
+      <button class="icon-cat-btn" onclick="showCat('hogar',this)">Hogar</button>
+      <button class="icon-cat-btn" onclick="showCat('negocio',this)">Negocio</button>
+      <button class="icon-cat-btn" onclick="showCat('comunicacion',this)">Comunicación</button>
+    </div>
+
+    <div id="cat-construccion" class="icon-grid">
+      <div class="icon-tile"><i class="fa-solid fa-hard-hat"></i><span>hard-hat</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-trowel-bricks"></i><span>trowel-bricks</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-trowel"></i><span>trowel</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-hammer"></i><span>hammer</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-screwdriver"></i><span>screwdriver</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-wrench"></i><span>wrench</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-toolbox"></i><span>toolbox</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-ruler"></i><span>ruler</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-ruler-combined"></i><span>ruler-combined</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-person-digging"></i><span>person-digging</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-truck-pickup"></i><span>truck-pickup</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-dumpster"></i><span>dumpster</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-helmet-safety"></i><span>helmet-safety</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-layer-group"></i><span>layer-group</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-triangle-exclamation"></i><span>warning</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-building"></i><span>building</span></div>
+    </div>
+    <div id="cat-hogar" class="icon-grid" style="display:none;">
+      <div class="icon-tile"><i class="fa-solid fa-house"></i><span>house</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-house-chimney"></i><span>house-chimney</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-house-chimney-crack"></i><span>chimney-crack</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-paintbrush"></i><span>paintbrush</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-paint-roller"></i><span>paint-roller</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-faucet"></i><span>faucet</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-faucet-drip"></i><span>faucet-drip</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-droplet"></i><span>droplet</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-bolt"></i><span>bolt</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-plug"></i><span>plug</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-table-cells"></i><span>table-cells</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-sink"></i><span>sink</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-bath"></i><span>bath</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-fan"></i><span>fan</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-tree"></i><span>tree</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-door-open"></i><span>door-open</span></div>
+    </div>
+    <div id="cat-negocio" class="icon-grid" style="display:none;">
+      <div class="icon-tile"><i class="fa-solid fa-file-invoice"></i><span>file-invoice</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-file-invoice-dollar"></i><span>invoice-dollar</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-receipt"></i><span>receipt</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-chart-line"></i><span>chart-line</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-handshake"></i><span>handshake</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-user-tie"></i><span>user-tie</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-briefcase"></i><span>briefcase</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-star"></i><span>star</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-award"></i><span>award</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-medal"></i><span>medal</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-shield-halved"></i><span>shield</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-calendar-check"></i><span>calendar-check</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-clock"></i><span>clock</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-euro-sign"></i><span>euro-sign</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-people-group"></i><span>people-group</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-chess"></i><span>chess</span></div>
+    </div>
+    <div id="cat-comunicacion" class="icon-grid" style="display:none;">
+      <div class="icon-tile"><i class="fa-solid fa-phone"></i><span>phone</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-mobile-screen"></i><span>mobile-screen</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-envelope"></i><span>envelope</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-location-dot"></i><span>location-dot</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-globe"></i><span>globe</span></div>
+      <div class="icon-tile"><i class="fa-brands fa-whatsapp"></i><span>whatsapp</span></div>
+      <div class="icon-tile"><i class="fa-brands fa-instagram"></i><span>instagram</span></div>
+      <div class="icon-tile"><i class="fa-brands fa-facebook"></i><span>facebook</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-comment"></i><span>comment</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-comments"></i><span>comments</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-paper-plane"></i><span>paper-plane</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-share-nodes"></i><span>share-nodes</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-qrcode"></i><span>qrcode</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-link"></i><span>link</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-at"></i><span>at</span></div>
+      <div class="icon-tile"><i class="fa-solid fa-map"></i><span>map</span></div>
+    </div>
+
+    <div class="card" style="margin-top:24px;margin-bottom:0;">
+      <p class="card-title"><i class="fa-solid fa-circle-info"></i> Cómo usar los íconos</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;">
+        <div style="background:var(--bg);border-radius:var(--radius-sm);padding:16px;">
+          <p style="font-weight:700;font-size:13px;margin-bottom:8px;">Acompañados de texto</p>
+          <p style="font-size:13px;color:var(--gray-1);">Siempre junto a una etiqueta. Nunca como único elemento comunicativo.</p>
+        </div>
+        <div style="background:var(--bg);border-radius:var(--radius-sm);padding:16px;">
+          <p style="font-weight:700;font-size:13px;margin-bottom:8px;">Color</p>
+          <p style="font-size:13px;color:var(--gray-1);">Negro sobre fondo claro. Oro para destacar o CTAs. Blanco sobre fondos oscuros.</p>
+        </div>
+        <div style="background:var(--bg);border-radius:var(--radius-sm);padding:16px;">
+          <p style="font-weight:700;font-size:13px;margin-bottom:8px;">Tamaño</p>
+          <p style="font-size:13px;color:var(--gray-1);">16–24px para inline. 32–48px para íconos de sección ilustrativa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 07 UI -->
+<section id="ui">
+  <div class="container">
+    <p class="section-label">07 · Componentes UI</p>
+    <h2 class="section-title">Elementos de Interfaz</h2>
+    <p class="section-sub">Sistema de componentes para presencia digital. Consistentes y con identidad Oro.</p>
+
+    <div class="ui-grid">
+      <div class="ui-preview">
+        <p class="ui-label">Botones</p>
+        <button class="btn-primary">Solicitar Presupuesto</button>
+        <button class="btn-secondary">Ver Proyectos</button>
+        <button class="btn-ghost">Saber más</button>
+      </div>
+      <div class="ui-preview">
+        <p class="ui-label">Badges</p>
+        <div class="badge-row">
+          <span class="badge badge-oro">Destacado</span>
+          <span class="badge badge-ink">Nuevo</span>
+          <span class="badge badge-outline">En curso</span>
+        </div>
+        <div class="badge-row" style="margin-top:8px;">
+          <span class="badge" style="background:#E8F8ED;color:#1A7A35;">Completado</span>
+          <span class="badge" style="background:#FFF3CD;color:#856404;">En revisión</span>
+          <span class="badge" style="background:#FFEBE8;color:#CC1200;">Urgente</span>
+        </div>
+      </div>
+      <div class="ui-preview input-preview">
+        <p class="ui-label">Input de formulario</p>
+        <input type="text" placeholder="Describe tu reforma...">
+        <p style="font-size:11px;color:var(--gray-1);margin-top:6px;">Borde activo: #FDBF00 · Border-radius: 10px</p>
+      </div>
+      <div class="ui-preview">
+        <p class="ui-label">Alerta informativa</p>
+        <div class="alert-card">
+          <i class="fa-solid fa-circle-info"></i>
+          <p>Todos los presupuestos incluyen IVA y materiales. Sin costes ocultos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;margin-bottom:0;">
+      <p class="card-title"><i class="fa-solid fa-grid-2"></i> Sistema de espaciado 8pt</p>
+      <p style="font-size:14px;color:var(--gray-1);">Todos los márgenes y paddings siguen múltiplos de 8px: <strong>8 · 16 · 24 · 32 · 40 · 48 · 64 · 80 · 96</strong>. Border-radius: 10px (sm) · 14px (md) · 20px (lg).</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 08 APLICACIONES -->
+<section id="aplicaciones">
+  <div class="container">
+    <p class="section-label">08 · Aplicaciones</p>
+    <h2 class="section-title">La Marca en Acción</h2>
+    <p class="section-sub">Cómo se aplica la identidad en piezas reales de comunicación.</p>
+
+    <!-- ROW 1: Tarjeta de visita -->
+    <div class="app-row">
+      <div>
+        <p class="app-num">Activo 01</p>
+        <h3 class="app-name">Tarjeta de Visita</h3>
+        <p class="app-desc">Pieza física y digital de presentación. Se entrega en primera visita de obra, reuniones comerciales y ferias. Representa directamente a la empresa y a su persona de contacto.</p>
+        <div class="app-specs">
+          <div class="app-spec"><span class="app-spec-label">Formato</span><span class="app-spec-val">85 × 54 mm · estándar Europa</span></div>
+          <div class="app-spec"><span class="app-spec-label">Fondo</span><span class="app-spec-val">Negro corporativo (#000000)</span></div>
+          <div class="app-spec"><span class="app-spec-label">Acento</span><span class="app-spec-val">Línea superior Oro (#FDBF00)</span></div>
+          <div class="app-spec"><span class="app-spec-label">Tipografía</span><span class="app-spec-val">Open Sans · 800 nombre / 400 datos</span></div>
+          <div class="app-spec"><span class="app-spec-label">Uso</span><span class="app-spec-val">Primera visita, ferias, reuniones</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="tarjeta-biz">
+          <div class="tarjeta-biz-accent"></div>
+          <div class="tarjeta-biz-circle"></div>
+          <!-- Brand -->
+          <p style="font-size:9px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--oro);">ORO CONSTRUCTORES</p>
+          <!-- Name + title -->
+          <div>
+            <p style="font-size:19px;font-weight:800;letter-spacing:-.3px;line-height:1.15;margin-bottom:5px;">Orlando Ramírez<br>Sánchez</p>
+            <p style="font-size:10.5px;color:rgba(255,255,255,.45);letter-spacing:.1px;">Co-fundador · Director de Operaciones</p>
+          </div>
+          <!-- Contact grid -->
+          <div class="tarjeta-contact-grid">
+            <span><i class="fa-solid fa-phone"></i>+34 624 00 45 90</span>
+            <span><i class="fa-solid fa-envelope"></i>info@oroconstructores.com</span>
+            <span><i class="fa-solid fa-globe"></i>oroconstructores.com</span>
+            <span><i class="fa-solid fa-location-dot"></i>Madrid, España</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2: Presupuesto PDF -->
+    <div class="app-row">
+      <div>
+        <p class="app-num">Activo 02</p>
+        <h3 class="app-name">Presupuesto PDF</h3>
+        <p class="app-desc">Documento oficial que se envía tras la visita de obra. Detalla partidas, materiales y precio final con IVA. Precio cerrado — sin costes ocultos. Se genera desde el sistema en menos de 5 minutos.</p>
+        <div class="app-specs">
+          <div class="app-spec"><span class="app-spec-label">Formato</span><span class="app-spec-val">A4 · PDF digital o impresión</span></div>
+          <div class="app-spec"><span class="app-spec-label">Entrega</span><span class="app-spec-val">Correo electrónico en 24 h</span></div>
+          <div class="app-spec"><span class="app-spec-label">Precio</span><span class="app-spec-val">Siempre cerrado, IVA incluido</span></div>
+          <div class="app-spec"><span class="app-spec-label">Validez</span><span class="app-spec-val">30 días desde emisión</span></div>
+          <div class="app-spec"><span class="app-spec-label">Uso</span><span class="app-spec-val">Post-visita · Cierre comercial</span></div>
+        </div>
+      </div>
+      <div>
+        <!-- Bento presupuesto -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:8px;">
+          <!-- Header: Nº + estado (col 1-2) -->
+          <div style="grid-column:1/3;background:var(--ink);border-radius:var(--radius-md) var(--radius-md) 0 0;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-radius:12px;">
+            <div>
+              <p style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:2px;">Presupuesto</p>
+              <p style="font-size:16px;font-weight:800;color:var(--paper);">N° 008 · Familia García</p>
+            </div>
+            <span style="background:rgba(253,191,0,.15);border:1px solid rgba(253,191,0,.4);color:var(--oro);font-size:10px;font-weight:800;padding:4px 10px;border-radius:8px;letter-spacing:.5px;text-transform:uppercase;">Pendiente</span>
+          </div>
+          <!-- Info obra (col 1-2) -->
+          <div style="grid-column:1/3;background:var(--paper);border:1px solid var(--gray-3);border-radius:10px;padding:12px 16px;">
+            <p style="font-size:11px;font-weight:700;color:var(--gray-2);letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px;">Descripción</p>
+            <p style="font-size:13px;font-weight:600;color:var(--ink);">Reforma baño completo · 15 m² · Alicatado + fontanería + pintura</p>
+          </div>
+          <!-- Mano de obra -->
+          <div style="background:var(--paper);border:1px solid var(--gray-3);border-radius:10px;padding:14px 16px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gray-2);margin-bottom:6px;">Mano de obra</p>
+            <p style="font-size:20px;font-weight:800;color:var(--ink);">1.200 €</p>
+          </div>
+          <!-- Materiales -->
+          <div style="background:var(--paper);border:1px solid var(--gray-3);border-radius:10px;padding:14px 16px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--gray-2);margin-bottom:6px;">Materiales</p>
+            <p style="font-size:20px;font-weight:800;color:var(--ink);">800 €</p>
+          </div>
+          <!-- Total (col 1-2, gold) -->
+          <div style="grid-column:1/3;background:var(--oro);border-radius:10px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <p style="font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:rgba(0,0,0,.5);margin-bottom:2px;">Total + IVA · 21%</p>
+              <p style="font-size:11px;color:rgba(0,0,0,.5);">Precio cerrado · Sin costes ocultos</p>
+            </div>
+            <p style="font-size:26px;font-weight:800;color:var(--ink);">2.420 €</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 3: Mensaje WhatsApp -->
+    <div class="app-row">
+      <div>
+        <p class="app-num">Activo 03</p>
+        <h3 class="app-name">Mensaje WhatsApp</h3>
+        <p class="app-desc">Comunicación directa con el cliente tras enviar el presupuesto. Tono cercano pero profesional. Refuerza los valores de la marca: transparencia, precio cerrado y disponibilidad real.</p>
+        <div class="app-specs">
+          <div class="app-spec"><span class="app-spec-label">Canal</span><span class="app-spec-val">WhatsApp Business</span></div>
+          <div class="app-spec"><span class="app-spec-label">Momento</span><span class="app-spec-val">Minutos después de enviar PDF</span></div>
+          <div class="app-spec"><span class="app-spec-label">Tono</span><span class="app-spec-val">Directo, cálido, sin formalidad excesiva</span></div>
+          <div class="app-spec"><span class="app-spec-label">Evitar</span><span class="app-spec-val">"Quedamos a su disposición" — suena a call center</span></div>
+        </div>
+      </div>
+      <div>
+        <!-- WhatsApp mock -->
+        <div style="background:#E5DDD5;border-radius:var(--radius-md);padding:20px 16px;max-width:420px;">
+          <!-- Header WhatsApp -->
+          <div style="background:#075E54;border-radius:10px 10px 0 0;margin:-20px -16px 16px;padding:12px 16px;display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--oro);display:flex;align-items:center;justify-content:center;">
+              <i class="fa-solid fa-trowel-bricks" style="color:var(--ink);font-size:14px;"></i>
+            </div>
+            <div>
+              <p style="font-size:13px;font-weight:700;color:white;margin:0;">Oro Constructores</p>
+              <p style="font-size:11px;color:rgba(255,255,255,.6);margin:0;">en línea</p>
+            </div>
+          </div>
+          <!-- Burbuja saliente -->
+          <div style="display:flex;justify-content:flex-end;margin-bottom:6px;">
+            <div style="background:#DCF8C6;border-radius:10px 10px 0 10px;padding:10px 14px;max-width:88%;box-shadow:0 1px 2px rgba(0,0,0,.1);">
+              <p style="font-size:13px;line-height:1.55;color:#111;margin-bottom:4px;">Buenos días Antonio. Le acabo de mandar el presupuesto al correo — tómese el tiempo que necesite para revisarlo.</p>
+              <p style="font-size:13px;line-height:1.55;color:#111;">Trabajamos con precio cerrado: lo que acordamos es lo que se cobra. Si tiene alguna pregunta me escribe aquí o llama directamente.</p>
+              <p style="font-size:11px;color:#8E8E93;text-align:right;margin-top:4px;">12:34 ✓✓</p>
+            </div>
+          </div>
+          <!-- Burbuja entrante -->
+          <div style="display:flex;justify-content:flex-start;">
+            <div style="background:white;border-radius:10px 10px 10px 0;padding:10px 14px;max-width:80%;box-shadow:0 1px 2px rgba(0,0,0,.1);">
+              <p style="font-size:13px;line-height:1.55;color:#111;">Perfecto, ahora lo miro. Muchas gracias Orlando.</p>
+              <p style="font-size:11px;color:#8E8E93;margin-top:4px;">12:41</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- DESCARGA MANUAL PDF — BENTO BOX -->
+<section id="descarga" style="background:var(--bg);padding:80px 0;">
+  <div class="container">
+    <p class="section-label">09 · Descarga</p>
+    <h2 class="section-title">Manual de Marca</h2>
+    <p class="section-sub">Versión PDF e interactiva. Siempre actualizado.</p>
+
+    <!-- BENTO GRID -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto;gap:12px;">
+
+      <!-- Card grande: mockup PDF + CTA (col 1-2, row 1-2) -->
+      <div style="grid-column:1/3;grid-row:1/3;background:var(--ink);border-radius:var(--radius-lg);padding:40px;display:flex;align-items:center;gap:40px;overflow:hidden;position:relative;min-height:280px;">
+        <div style="position:absolute;bottom:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(253,191,0,.06);"></div>
+        <!-- Texto -->
+        <div style="flex:1;position:relative;z-index:1;">
+          <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--oro);margin-bottom:12px;">PDF · Imprimible</p>
+          <p style="font-size:28px;font-weight:800;color:var(--paper);letter-spacing:-.5px;line-height:1.2;margin-bottom:16px;">Descarga el<br>Manual completo</p>
+          <p style="font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px;line-height:1.6;">10 secciones · Logos · Colores · Tipografía · Íconos. Con CTAs hacia la versión web interactiva.</p>
+          <button onclick="window.print()" style="display:inline-flex;align-items:center;gap:8px;background:var(--oro);color:var(--ink);border:none;padding:12px 22px;border-radius:24px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font);">
+            <i class="fa-solid fa-arrow-down-to-line"></i> Descargar PDF
+          </button>
+        </div>
+        <!-- Mockup mini -->
+        <div style="flex-shrink:0;position:relative;">
+          <div style="position:absolute;top:6px;left:6px;width:140px;height:190px;background:rgba(255,255,255,.06);border-radius:8px;transform:rotate(3deg);"></div>
+          <div style="width:140px;height:190px;background:var(--paper);border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.6);position:relative;">
+            <div style="background:#000;padding:14px;text-align:center;border-bottom:2px solid var(--oro);">
+              <img src="assets/logos/logo_completo_invertido.png" style="height:20px;object-fit:contain;margin-bottom:4px;" alt="OC">
+              <p style="font-size:5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--oro);">SISTEMA DE MARCA</p>
+            </div>
+            <div style="padding:10px;display:flex;flex-direction:column;gap:5px;">
+              <div style="height:5px;background:var(--bg);border-radius:3px;"></div>
+              <div style="height:5px;background:var(--bg);border-radius:3px;width:70%;margin-bottom:6px;"></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:6px;">
+                <div style="height:28px;background:var(--oro);border-radius:4px;"></div>
+                <div style="height:28px;background:#111;border-radius:4px;"></div>
+              </div>
+              <div style="height:4px;background:var(--bg);border-radius:2px;"></div>
+              <div style="height:4px;background:var(--bg);border-radius:2px;width:80%;"></div>
+              <div style="height:4px;background:var(--bg);border-radius:2px;width:55%;margin-bottom:6px;"></div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;">
+                <div style="height:16px;background:var(--bg);border-radius:3px;"></div>
+                <div style="height:16px;background:var(--bg);border-radius:3px;"></div>
+                <div style="height:16px;background:var(--bg);border-radius:3px;"></div>
+              </div>
+            </div>
+            <div style="position:absolute;bottom:8px;right:8px;background:var(--oro);color:var(--ink);font-size:7px;font-weight:800;padding:2px 6px;border-radius:4px;">PDF</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: web interactiva (col 3, row 1) -->
+      <div style="grid-column:3;grid-row:1;background:var(--oro);border-radius:var(--radius-lg);padding:28px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <i class="fa-solid fa-globe" style="font-size:28px;color:var(--ink);margin-bottom:12px;display:block;"></i>
+          <p style="font-size:16px;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:8px;">Versión web interactiva</p>
+          <p style="font-size:13px;color:rgba(0,0,0,.55);">Assets descargables, logos y colores en tiempo real.</p>
+        </div>
+        <a href="https://oroconstructores.com" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:20px;font-size:13px;font-weight:700;text-decoration:none;margin-top:16px;align-self:flex-start;">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar
+        </a>
+      </div>
+
+      <!-- Card: stats versión (col 3, row 2) -->
+      <div style="grid-column:3;grid-row:2;background:var(--paper);border-radius:var(--radius-lg);padding:28px;border:1px solid var(--gray-3);">
+        <p style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray-1);margin-bottom:16px;">Estado del manual</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
+            <span style="color:var(--gray-1);">Versión</span>
+            <span style="font-weight:700;background:var(--ink);color:var(--paper);padding:2px 8px;border-radius:6px;font-size:11px;">v2.1</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
+            <span style="color:var(--gray-1);">Secciones</span>
+            <span style="font-weight:700;">10</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
+            <span style="color:var(--gray-1);">Logos</span>
+            <span style="font-weight:700;">10 variantes</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
+            <span style="color:var(--gray-1);">Íconos</span>
+            <span style="font-weight:700;">64+</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:13px;">
+            <span style="color:var(--gray-1);">Actualizado</span>
+            <span style="font-weight:700;">Jun 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: colores (col 1, row 3) -->
+      <div style="grid-column:1;grid-row:3;background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1px solid var(--gray-3);">
+        <p style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray-1);margin-bottom:16px;">Paleta de Color</p>
+        <div style="display:flex;gap:8px;">
+          <div style="flex:1;height:40px;background:var(--oro);border-radius:8px;" title="#FDBF00"></div>
+          <div style="flex:1;height:40px;background:var(--ink);border-radius:8px;" title="#000000"></div>
+          <div style="flex:1;height:40px;background:var(--paper);border-radius:8px;border:1px solid var(--gray-3);" title="#FFFFFF"></div>
+          <div style="flex:1;height:40px;background:var(--bg);border-radius:8px;border:1px solid var(--gray-3);" title="#F2F2F7"></div>
+        </div>
+        <p style="font-size:12px;color:var(--gray-1);margin-top:10px;">60% Papel · 30% Tinta · 10% Oro</p>
+      </div>
+
+      <!-- Card: tipografía (col 2, row 3) -->
+      <div style="grid-column:2;grid-row:3;background:var(--ink);border-radius:var(--radius-lg);padding:24px;">
+        <p style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--oro);margin-bottom:12px;">Tipografía</p>
+        <p style="font-size:28px;font-weight:800;color:var(--paper);line-height:1.1;letter-spacing:-.5px;">Open<br>Sans</p>
+        <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:8px;">400 · 600 · 700 · 800</p>
+      </div>
+
+      <!-- Card: próximas actualizaciones (col 3, row 3) -->
+      <div style="grid-column:3;grid-row:3;background:var(--paper);border-radius:var(--radius-lg);padding:24px;border:1.5px dashed var(--gray-3);">
+        <p style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray-1);margin-bottom:12px;">En desarrollo</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-1);">
+            <i class="fa-regular fa-circle" style="font-size:10px;"></i> Logos en SVG
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-1);">
+            <i class="fa-regular fa-circle" style="font-size:10px;"></i> Plantillas Canva
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-1);">
+            <i class="fa-regular fa-circle" style="font-size:10px;"></i> Fotografía de marca
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-1);">
+            <i class="fa-regular fa-circle" style="font-size:10px;"></i> Uniformes
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /bento -->
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 09 CONTACTO / FOOTER -->
+<footer id="contacto" class="footer-section">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logos/logo_completo_invertido.png" alt="Oro Constructores" class="footer-logo">
+        <p class="footer-tagline">Hacemos fácil<br>lo difícil.</p>
+        <p class="footer-sub">Reformas y construcción en Madrid.<br>30 años de experiencia. Presupuesto sin compromiso.</p>
+        <a href="https://oroconstructores.com" class="footer-cta" target="_blank">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          oroconstructores.com
+        </a>
+      </div>
+      <div>
+        <p style="font-size:13px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;">Canales de contacto</p>
+        <div class="contact-list">
+          <div class="contact-item"><i class="fa-brands fa-whatsapp"></i><span>+34 624 00 45 90</span></div>
+          <div class="contact-item"><i class="fa-solid fa-envelope"></i><span>info.oroconstructores@gmail.com</span></div>
+          <div class="contact-item"><i class="fa-solid fa-globe"></i><span>oroconstructores.com</span></div>
+          <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>Madrid, España</span></div>
+        </div>
+        <div style="margin-top:24px;padding:20px;background:rgba(253,191,0,.1);border:1px solid rgba(253,191,0,.3);border-radius:var(--radius-md);">
+          <p style="font-size:13px;font-weight:700;color:var(--oro);margin-bottom:6px;">¿Tienes una reforma en mente?</p>
+          <p style="font-size:13px;color:rgba(255,255,255,.5);">Escríbenos por WhatsApp o visita nuestra web. Presupuesto gratuito en 24h.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Oro Constructores · Oro Corporation</span>
+      <span>Manual de Marca v2.1 · Junio 2026</span>
+      <span>Sistema creado con Business IA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showCat(cat, btn) {
+  document.querySelectorAll('[id^="cat-"]').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.icon-cat-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('cat-' + cat).style.display = 'grid';
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
