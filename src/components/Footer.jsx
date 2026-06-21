@@ -36,6 +36,7 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Investigaciones</h5>
             <ul>
+              <li><Link to="/investigaciones">Ver todas las investigaciones</Link></li>
               <li><Link to="/investigaciones/hosteleria-madrid">Hostelería en Madrid</Link></li>
             </ul>
           </div>
