@@ -11,16 +11,76 @@ const investigaciones = [
     fuentes: '12 fuentes',
     secciones: '10 secciones',
     tags: ['Restaurantes', 'Mantenimiento', 'Reformas'],
-    publico: true,
+  },
+  {
+    id: 'inv-3',
+    slug: '/investigaciones/reforma-bano-madrid',
+    etiqueta: 'Baños',
+    titulo: 'El cliente que reformó el baño en Madrid',
+    subtitulo: 'Miedos, proceso de decisión y lo que el propietario madrileño realmente espera de su reforma de baño.',
+    fecha: 'Junio 2026',
+    fuentes: '8 fuentes',
+    secciones: '10 secciones',
+    tags: ['Baños', 'Reformas', 'Decisión de compra'],
+  },
+  {
+    id: 'inv-4',
+    slug: '/investigaciones/reforma-piso-madrid',
+    etiqueta: 'Reformas Integrales',
+    titulo: 'La reforma integral del piso en Madrid',
+    subtitulo: 'Proceso, decisores, timings y presupuesto real del propietario madrileño que afronta una reforma integral.',
+    fecha: 'Junio 2026',
+    fuentes: '9 fuentes',
+    secciones: '10 secciones',
+    tags: ['Reformas Integrales', 'Propietarios', 'Madrid'],
+  },
+  {
+    id: 'inv-5',
+    slug: '/investigaciones/humedades-madrid',
+    etiqueta: 'Humedades',
+    titulo: 'Humedades en viviendas de Madrid',
+    subtitulo: 'Causas, incidencia por zona geográfica y expectativas del propietario y administrador de fincas.',
+    fecha: 'Junio 2026',
+    fuentes: '7 fuentes',
+    secciones: '10 secciones',
+    tags: ['Humedades', 'Patología', 'Comunidades'],
+  },
+  {
+    id: 'inv-6',
+    slug: '/investigaciones/reforma-cocina-madrid',
+    etiqueta: 'Cocinas',
+    titulo: 'El cliente que reformó la cocina en Madrid',
+    subtitulo: 'Motivadores, frustraciones frecuentes y cómo el propietario elige a su contratista de cocinas.',
+    fecha: 'Junio 2026',
+    fuentes: '8 fuentes',
+    secciones: '10 secciones',
+    tags: ['Cocinas', 'Reformas', 'Decisión de compra'],
+  },
+  {
+    id: 'inv-7',
+    slug: '/investigaciones/urgencias-hosteleria-madrid',
+    etiqueta: 'Hostelería',
+    titulo: 'Urgencias en hostelería — impacto y respuesta del mercado',
+    subtitulo: 'Cómo afectan las averías al negocio hostelero en Madrid y qué respuesta ofrece el mercado actual de mantenimiento.',
+    fecha: 'Junio 2026',
+    fuentes: '8 fuentes',
+    secciones: '10 secciones',
+    tags: ['Urgencias', 'Hostelería', 'Mantenimiento'],
+  },
+  {
+    id: 'inv-8',
+    slug: '/investigaciones/pintura-madrid',
+    etiqueta: 'Pintura',
+    titulo: 'El mercado de pintura en Madrid',
+    subtitulo: 'Estacionalidad, perfil del cliente y ticket medio del servicio de pintura más contratado en Madrid.',
+    fecha: 'Junio 2026',
+    fuentes: '7 fuentes',
+    secciones: '10 secciones',
+    tags: ['Pintura', 'Acabados', 'Mercado'],
   },
 ]
 
-const proximamente = [
-  { titulo: 'La reforma de baño en Madrid', desc: 'Miedos, decisiones y lo que el cliente realmente espera.', vertical: 'Baños' },
-  { titulo: 'La reforma integral del piso', desc: 'Proceso, decisores, timings y presupuesto real del propietario madrileño.', vertical: 'Reformas Integrales' },
-  { titulo: 'Humedades en viviendas de Madrid', desc: 'Causas, incidencia por zona y expectativas del cliente.', vertical: 'Humedades' },
-  { titulo: 'El cliente que reformó la cocina', desc: 'Frustraciones frecuentes y cómo elegir al contratista.', vertical: 'Cocinas' },
-]
+const proximamente = []
 
 export default function InvestigacionesPage() {
   return (
@@ -91,30 +151,32 @@ export default function InvestigacionesPage() {
       </section>
 
       {/* PRÓXIMAMENTE */}
-      <section className="section section-paper">
-        <div className="container">
-          <div className="section-label">En preparación</div>
-          <h2 className="h2" style={{ marginBottom: '8px' }}>Próximas investigaciones</h2>
-          <p className="lead" style={{ marginBottom: '32px', maxWidth: '600px' }}>Estos son los proyectos de investigación en curso. Se publican cuando los datos son suficientes para ofrecer conclusiones útiles.</p>
+      {proximamente.length > 0 && (
+        <section className="section section-paper">
+          <div className="container">
+            <div className="section-label">En preparación</div>
+            <h2 className="h2" style={{ marginBottom: '8px' }}>Próximas investigaciones</h2>
+            <p className="lead" style={{ marginBottom: '32px', maxWidth: '600px' }}>Estos son los proyectos de investigación en curso. Se publican cuando los datos son suficientes para ofrecer conclusiones útiles.</p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-            {proximamente.map((inv, i) => (
-              <div key={i} style={{
-                border: '1px dashed var(--ink-5)',
-                borderRadius: 'var(--radius-lg)',
-                padding: '24px',
-                background: 'var(--paper)',
-              }}>
-                <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.6px', color: 'var(--ink-4)', background: 'var(--ink-7)', padding: '3px 10px', borderRadius: '20px', display: 'inline-block', marginBottom: '12px' }}>
-                  {inv.vertical}
-                </span>
-                <h4 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)', marginBottom: '6px' }}>{inv.titulo}</h4>
-                <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: 1.6, margin: 0 }}>{inv.desc}</p>
-              </div>
-            ))}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              {proximamente.map((inv, i) => (
+                <div key={i} style={{
+                  border: '1px dashed var(--ink-5)',
+                  borderRadius: 'var(--radius-lg)',
+                  padding: '24px',
+                  background: 'var(--paper)',
+                }}>
+                  <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.6px', color: 'var(--ink-4)', background: 'var(--ink-7)', padding: '3px 10px', borderRadius: '20px', display: 'inline-block', marginBottom: '12px' }}>
+                    {inv.vertical}
+                  </span>
+                  <h4 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)', marginBottom: '6px' }}>{inv.titulo}</h4>
+                  <p style={{ fontSize: '13px', color: 'var(--ink-3)', lineHeight: 1.6, margin: 0 }}>{inv.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* METODOLOGÍA */}
       <section className="section">

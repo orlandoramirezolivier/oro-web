@@ -14,6 +14,12 @@ import RestaurantesPage from './pages/RestaurantesPage'
 import InvHosteleriaPage from './pages/InvHosteleriaPage'
 import InvNegocioHosteleriaPage from './pages/InvNegocioHosteleriaPage'
 import InvestigacionesPage from './pages/InvestigacionesPage'
+import InvBanoPage from './pages/InvBanoPage'
+import InvReformaPisoPage from './pages/InvReformaPisoPage'
+import InvHumedadesPage from './pages/InvHumedadesPage'
+import InvCocinaPage from './pages/InvCocinaPage'
+import InvUrgenciasPage from './pages/InvUrgenciasPage'
+import InvPinturaPage from './pages/InvPinturaPage'
 import CatalogoServiciosPage from './pages/CatalogoServiciosPage'
 import NotFoundPage from './pages/NotFoundPage'
 
@@ -44,9 +50,15 @@ export default function App() {
         <Route path="/nuestra-cultura" element={<NuestraCulturaPage />} />
         <Route path="/tienda" element={<TiendaPage />} />
         <Route path="/restaurantes" element={<RestaurantesPage />} />
-        <Route path="/investigaciones/hosteleria-madrid" element={<InvHosteleriaPage />} />
         <Route path="/investigaciones" element={<InvestigacionesPage />} />
+        <Route path="/investigaciones/hosteleria-madrid" element={<InvHosteleriaPage />} />
         <Route path="/investigaciones/negocio-hosteleria" element={<InvNegocioHosteleriaPage />} />
+        <Route path="/investigaciones/reforma-bano-madrid" element={<InvBanoPage />} />
+        <Route path="/investigaciones/reforma-piso-madrid" element={<InvReformaPisoPage />} />
+        <Route path="/investigaciones/humedades-madrid" element={<InvHumedadesPage />} />
+        <Route path="/investigaciones/reforma-cocina-madrid" element={<InvCocinaPage />} />
+        <Route path="/investigaciones/urgencias-hosteleria-madrid" element={<InvUrgenciasPage />} />
+        <Route path="/investigaciones/pintura-madrid" element={<InvPinturaPage />} />
         <Route path="/catalogo-servicios" element={<CatalogoServiciosPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

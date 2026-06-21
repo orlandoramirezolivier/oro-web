@@ -37,8 +37,14 @@ export default function Footer() {
           <div className="footer-col">
             <h5>Investigaciones</h5>
             <ul>
-              <li><Link to="/investigaciones">Ver todas las investigaciones</Link></li>
+              <li><Link to="/investigaciones">Ver todas</Link></li>
               <li><Link to="/investigaciones/hosteleria-madrid">Hostelería en Madrid</Link></li>
+              <li><Link to="/investigaciones/reforma-bano-madrid">Reforma de baño</Link></li>
+              <li><Link to="/investigaciones/reforma-piso-madrid">Reforma integral de piso</Link></li>
+              <li><Link to="/investigaciones/humedades-madrid">Humedades en Madrid</Link></li>
+              <li><Link to="/investigaciones/reforma-cocina-madrid">Reforma de cocina</Link></li>
+              <li><Link to="/investigaciones/urgencias-hosteleria-madrid">Urgencias hostelería</Link></li>
+              <li><Link to="/investigaciones/pintura-madrid">Mercado de pintura</Link></li>
             </ul>
           </div>
           <div className="footer-col">
