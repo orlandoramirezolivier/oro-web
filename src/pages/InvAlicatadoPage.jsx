@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const HR = <hr style={{ border: 'none', borderTop: '1px solid var(--ink-6)', margin: '56px 0' }} />
+const h3style = { fontSize: '18px', fontWeight: 800, color: 'var(--ink)', margin: '32px 0 16px' }
 
 export default function InvAlicatadoPage() {
   return (
@@ -124,16 +125,50 @@ export default function InvAlicatadoPage() {
 
           <div className="section-anchor" id="problemas">
             <div className="section-label">04 — Problemas y frustraciones</div>
-            <h2 className="h2">La base invisible y el format grande: los dos grandes riesgos.</h2>
+            <h2 className="h2">La base invisible y el gran formato: los cinco riesgos reales.</h2>
             <p className="body-text">
-              El problema más frecuente en reformas de alicatado es la mala preparación de la base. Si el soporte (pared o suelo) no está perfectamente nivelado, saneado y limpio, el azulejo se adhiere mal, aparecen huecos por detrás (el sonido hueco al golpear), el fraguado es irregular y a los 2-3 años empiezan a soltarse azulejos. El cliente culpa al material cuando el problema es la ejecución.
+              Los problemas del alicatado son invisibles durante la obra y muy visibles cuando la reforma ya está terminada. El cliente no puede evaluar si la base está bien preparada, si el adhesivo es el adecuado o si el nivelado es correcto — lo descubre dos años después cuando un azulejo se suelta o una junta empieza a agrietarse. Entender estos riesgos permite comunicar el valor de hacerlo bien desde el principio.
             </p>
-            <p className="body-text">
-              El segundo problema es la dificultad creciente de los formatos grandes. Un porcelánico de 120×120 cm pesa más de 20 kg por pieza, requiere adhesivos de alto agarre, herramientas de corte específicas y al menos dos personas para su manipulación. Muchos alicatadores individuales no tienen esta capacitación y evitan estos formatos, o los aceptan y dan resultados deficientes.
-            </p>
-            <p className="body-text">
-              En reformas con múltiples gremios (baño completo: fontanería + alicatado + electricidad + carpintería), la falta de coordinación entre el fontanero y el alicatador es una fuente constante de conflictos: si el fontanero no termina las tomas antes de que llegue el alicatador, la obra se paraliza días. Si el alicatador no deja los huecos de las tomas en el lugar exacto, hay que romper lo ya puesto.
-            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  icon: 'fa-solid fa-layer-group',
+                  titulo: 'La base invisible: preparación deficiente que nadie ve hasta que falla',
+                  detalle: 'El problema más frecuente y más costoso de corregir. Si el soporte no está perfectamente nivelado, saneado y limpio, el azulejo se adhiere mal, aparecen huecos por detrás (el sonido hueco al golpear) y el fraguado es irregular. A los 2-3 años empiezan a soltarse piezas. El cliente culpa al material cuando el problema es la ejecución. Comunicar que se prepara la base correctamente — y cómo — es el argumento técnico más diferenciador del mercado.'
+                },
+                {
+                  icon: 'fa-solid fa-expand',
+                  titulo: 'El gran formato: 120×120 cm requiere herramientas y experiencia que muchos no tienen',
+                  detalle: 'Un porcelánico de 120×120 cm pesa más de 20 kg por pieza, requiere adhesivos de alto agarre, herramientas de corte específicas (cortadora de gran formato, ventosas de manipulación) y al menos dos personas para su colocación. Muchos alicatadores individuales no tienen esta capacitación y evitan estos formatos o los aceptan y entregan resultados deficientes: juntas desalineadas, piezas rotas durante el corte, niveles incorrectos que se perciben a simple vista en formatos grandes.'
+                },
+                {
+                  icon: 'fa-solid fa-arrows-left-right-to-line',
+                  titulo: 'Coordinación fontanero-alicatador: obra parada días si uno no termina antes que el otro',
+                  detalle: 'En reformas con múltiples gremios, la falta de coordinación entre el fontanero y el alicatador es una fuente constante de retrasos y conflictos. Si el fontanero no termina las tomas antes de que llegue el alicatador, la obra se paraliza días. Si el alicatador no deja los huecos en el lugar exacto, hay que romper lo ya puesto. Con equipos separados y contratados independientemente, nadie asume la responsabilidad de la espera. El cliente es quien paga el sobrecoste.'
+                },
+                {
+                  icon: 'fa-solid fa-plug',
+                  titulo: 'El hueco del enchufe: el alicatador tiene que saber exactamente dónde van las tomas',
+                  detalle: 'En baños y cocinas, los puntos de luz y los enchufes quedan integrados en el alicatado. Si el alicatador no coordina con el electricista antes de colocar, o si no tiene el plano de instalación eléctrica actualizado, los huecos para las cajas de enchufe quedan mal posicionados — demasiado altos, demasiado bajos, o en medio de una pieza. Corrección implica romper azulejos ya colocados, retrasos y coste adicional que el cliente percibe como negligencia.'
+                },
+                {
+                  icon: 'fa-solid fa-border-top-left',
+                  titulo: 'La esquina mal rematada: el detalle que el cliente ve primero al entrar',
+                  detalle: 'Las esquinas y los remates son la firma del alicatador. Un inglete mal ejecutado, un perfil de aluminio torcido o una junta de esquina que no está perfectamente recta son lo primero que el ojo detecta al entrar en un baño reformado. Es el detalle que el cliente muestra cuando enseña la reforma a sus visitas y el que menciona si algo no le convence. Un alicatado técnicamente correcto en el plano pero con esquinas descuidadas genera insatisfacción desproporcionada en el cliente.'
+                },
+              ].map((m, i) => (
+                <div key={i} style={{ border: '1px solid var(--ink-6)', borderRadius: '12px', padding: '24px', display: 'flex', gap: '20px' }}>
+                  <div style={{ color: 'var(--oro)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                    <i className={m.icon}></i>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', fontSize: '15px' }}>{m.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{m.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {HR}
 
@@ -155,6 +190,17 @@ export default function InvAlicatadoPage() {
             <p className="body-text">
               Este doble proceso tiene una implicación importante: el argumento de venta del alicatado no va dirigido al propietario sino a quien gestiona la obra. El cliente solo valora el resultado final; la empresa de reforma valora la fiabilidad, la puntualidad y la capacidad técnica del equipo de alicatado.
             </p>
+
+            <table className="r-table">
+              <thead><tr><th>Etapa del proceso</th><th>Duración típica</th><th>Qué busca el cliente</th><th>Canal principal</th></tr></thead>
+              <tbody>
+                <tr><td>Inspiración / selección de material</td><td>2-8 semanas</td><td>Referentes de estilo, colores, formatos disponibles</td><td>Pinterest, Houzz, visita a exposición cerámica</td></tr>
+                <tr><td>Búsqueda de empresa de reforma</td><td>2-4 semanas</td><td>Empresa que coordine todos los oficios</td><td>Google Maps, boca a boca, Habitissimo</td></tr>
+                <tr><td>Empresa elige alicatador</td><td>Interno</td><td>Fiabilidad, capacidad gran formato, disponibilidad</td><td>Red de confianza del contratista principal</td></tr>
+                <tr><td>Ejecución de la obra</td><td>3-10 días</td><td>Limpieza, puntualidad, avance visible</td><td>Seguimiento directo en obra</td></tr>
+                <tr><td>Validación del resultado</td><td>Al terminar</td><td>Juntas, esquinas, nivel general, limpieza final</td><td>Inspección visual con el cliente</td></tr>
+              </tbody>
+            </table>
           </div>
           {HR}
 
@@ -164,8 +210,19 @@ export default function InvAlicatadoPage() {
             <p className="body-text">
               El mercado de alicatado en Madrid está muy atomizado: la mayoría son autónomos especializados que trabajan solos o en parejas. Los alicatadores de calidad que trabajan con formatos grandes tienen agendas ocupadas con 4-8 semanas de antelación en temporada alta. Para obra nueva, las grandes promotoras los tienen contratados en exclusiva.
             </p>
+
+            <table className="r-table">
+              <thead><tr><th>Tipo de operador</th><th>Ventaja</th><th>Problema principal</th><th>Ticket medio</th></tr></thead>
+              <tbody>
+                <tr><td>Autónomo individual</td><td>Precio bajo, trato directo, flexibilidad</td><td>Sin herramientas de gran formato; sin cobertura si enferma o no aparece</td><td>18-22 €/m²</td></tr>
+                <tr><td>Autónomo especializado en gran formato</td><td>Alta calidad en formatos 60×60 y superiores</td><td>Agenda muy ocupada; precio elevado; escasa disponibilidad a corto plazo</td><td>28-35 €/m²</td></tr>
+                <tr><td>Empresa subcontratando alicatador</td><td>Coordinación gestionada por la empresa</td><td>Subcontrata; si el alicatador falla, la empresa de reforma queda mal con el cliente</td><td>30-40 €/m²</td></tr>
+                <tr><td>Empresa con equipo propio</td><td>Integración total; mismo equipo en toda la obra; control de calidad directo</td><td>Mayor coste estructural; requiere volumen constante para rentabilizar el equipo</td><td>25-38 €/m²</td></tr>
+              </tbody>
+            </table>
+
             <p className="body-text">
-              Para reforma residencial de particulares, el acceso a alicatadores de calidad con disponibilidad inmediata es escaso. Las empresas de reforma que tienen su propio equipo de alicatado —con herramientas para gran formato y disponibilidad integrada en el planning de obra— tienen una ventaja competitiva real en plazo y coordinación.
+              Para reforma residencial de particulares, el acceso a alicatadores de calidad con disponibilidad inmediata es escaso. Las empresas de reforma que tienen su propio equipo de alicatado — con herramientas para gran formato y disponibilidad integrada en el planning de obra — tienen una ventaja competitiva real en plazo y coordinación.
             </p>
           </div>
           {HR}
@@ -189,18 +246,53 @@ export default function InvAlicatadoPage() {
             <div className="section-label">09 — Implicaciones para Oro Constructores</div>
             <h2 className="h2">Integración y gran formato como ventaja.</h2>
             <p className="body-text">
-              El alicatado propio — no subcontratado — permite coordinar la secuencia de trabajo sin depender de la agenda de un tercero. En una reforma de baño, el alicatador entra el mismo día que termina el fontanero. No hay esperas de semanas. El proyecto avanza según el planning comprometido con el cliente.
+              Los datos de esta investigación apuntan a tres vectores de diferenciación claros para Oro Constructores en el segmento de alicatado:
             </p>
-            <p className="body-text">
-              Comunicar la capacidad de trabajar con gran formato (60×60 y 60×120) posiciona a Oro Constructores en el segmento de reforma de mayor calidad percibida y ticket más alto. El cliente que elige porcelánico de 120×120 no está buscando al más barato — está buscando al que sabe hacerlo bien.
-            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  num: '01',
+                  titulo: 'Gran formato propio como diferenciador técnico y comercial',
+                  detalle: 'Comunicar la capacidad de trabajar con 60×60 y 60×120 posiciona a Oro Constructores en el segmento de reforma de mayor calidad percibida y ticket más alto. El cliente que elige porcelánico de 120×120 no está buscando al más barato — está buscando al que sabe hacerlo bien. Las herramientas de gran formato (cortadora, ventosas, niveladores) son un argumento visual concreto: mostrarlas en portfolio y comunicación refuerza la credibilidad técnica antes de que el cliente pregunte el precio.'
+                },
+                {
+                  num: '02',
+                  titulo: 'Coordinación fontanero-alicatador en el mismo equipo como promesa de plazo',
+                  detalle: 'El alicatado propio — no subcontratado — permite coordinar la secuencia de trabajo sin depender de la agenda de un tercero. En una reforma de baño, el alicatador entra el mismo día que termina el fontanero. No hay esperas de semanas. El proyecto avanza según el planning comprometido con el cliente. Esta integración no solo reduce plazos — elimina el escenario en que el cliente queda atrapado entre dos autónomos que se culpan mutuamente por un retraso o un error de posición.'
+                },
+                {
+                  num: '03',
+                  titulo: 'La base como argumento de calidad y garantía de durabilidad',
+                  detalle: 'El 80% de los problemas post-reforma de alicatado tienen su origen en la preparación de la base, no en el material. Oro Constructores puede convertir esto en un argumento comercial explícito: "antes de colocar una pieza, preparamos la base". Incluir en el presupuesto una línea específica de "saneado y preparación de soporte" — aunque el cliente no la vea como trabajo diferencial — comunica rigor y genera confianza. La garantía sobre el trabajo propio solo tiene valor si la base está bien ejecutada.'
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ border: '2px solid var(--oro)', borderRadius: '12px', padding: '28px', display: 'flex', gap: '24px' }}>
+                  <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--oro)', flexShrink: 0, lineHeight: 1, opacity: 0.3 }}>{item.num}</div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '10px', fontSize: '15px' }}>{item.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{item.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {HR}
 
           <div className="section-anchor" id="fuentes">
             <div className="section-label">10 — Fuentes</div>
             <h2 className="h2">Referencias y metodología.</h2>
-            <p className="nota">Anfacer — Estadísticas de producción y consumo cerámico en España y Comunidad de Madrid. / Ascer — Informe anual del sector azulejero español. / INE, Encuesta Continua de Hogares — frecuencia de reforma residencial. / Habitissimo — base de datos de precios y proyectos de reforma en Madrid. / Houzz España — Encuesta anual de reforma y decoración del hogar 2024. / Leroy Merlin España — datos de tendencias de formato cerámico en puntos de venta Madrid. / Observación directa Oro Constructores — tipología de proyectos ejecutados en área metropolitana de Madrid.</p>
+            <p className="body-text">Esta investigación se apoya en las siguientes fuentes:</p>
+            <ul style={{ paddingLeft: '20px', lineHeight: 2.2, color: 'var(--ink-2)', fontSize: '14px' }}>
+              <li>Anfacer — Asociación Nacional de Fabricantes de Azulejos y Pavimentos Cerámicos. <em>Estadísticas de producción y consumo cerámico en España y Comunidad de Madrid.</em> Edición 2024.</li>
+              <li>Ascer — Asociación Española de Fabricantes de Azulejos. <em>Informe anual del sector azulejero español.</em> 2024.</li>
+              <li>INE — Instituto Nacional de Estadística. <em>Encuesta Continua de Hogares — frecuencia de reforma residencial por tipología de obra.</em> 2023.</li>
+              <li>Habitissimo. <em>Base de datos de precios y proyectos de reforma en Madrid — alicatado y cerámica.</em> Consultado junio 2026.</li>
+              <li>Houzz España. <em>Encuesta anual de reforma y decoración del hogar 2024 — tendencias de material y formato cerámico.</em> 2024.</li>
+              <li>Leroy Merlin España. <em>Datos de tendencias de formato cerámico en puntos de venta Madrid.</em> 2025.</li>
+              <li>Observación directa Oro Constructores. <em>Tipología de proyectos de alicatado ejecutados en el área metropolitana de Madrid.</em> 2024-2026.</li>
+            </ul>
+            <p className="nota">* Los datos de consumo de cerámica son estimaciones basadas en proyección de datos nacionales de Anfacer/Ascer. Las cifras de precio por m² proceden de análisis de proyectos publicados en plataformas digitales y experiencia directa en el mercado de Madrid. No se garantiza su exactitud absoluta.</p>
           </div>
 
         </div>

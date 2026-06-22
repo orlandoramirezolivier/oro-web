@@ -133,6 +133,46 @@ export default function InvResiduosPage() {
             <p className="body-text">
               El segundo problema es la falta de protección durante la obra. Muchos equipos de reforma no cubren adecuadamente los muebles, suelos y elementos que no van a reformarse. El cliente vuelve al piso y encuentra polvo de escombro en el parquet del salón, en las encimeras o en la ropa del armario. Este es el motivo de queja más frecuente en las reseñas negativas de Google de empresas de reforma en Madrid.
             </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  icon: 'fa-solid fa-trash',
+                  titulo: 'El contenedor de la calle',
+                  detalle: 'Muchos autónomos llevan los escombros al contenedor urbano de la acera o a un solar cercano. El propietario desconoce completamente cómo se han gestionado sus residuos hasta que recibe una notificación del Ayuntamiento de Madrid con una sanción de entre 3.000 y 6.000 euros. El propietario es el responsable legal aunque él no haya tocado un solo escombro.',
+                },
+                {
+                  icon: 'fa-solid fa-shield-xmark',
+                  titulo: 'Sin documentación = sin protección',
+                  detalle: 'Sin ficha de aceptación y albarán de entrega emitidos por un gestor autorizado, el propietario no puede demostrar ante el ayuntamiento ni ante su aseguradora que los residuos se han gestionado correctamente. En caso de siniestro o inspección, la ausencia de esta documentación anula la cobertura del seguro del hogar y expone a sanciones administrativas graves.',
+                },
+                {
+                  icon: 'fa-solid fa-broom',
+                  titulo: 'El polvo que llega a todas partes',
+                  detalle: 'Sin una protección adecuada de las zonas no reformadas, el polvo fino de escombro penetra en el armario de la ropa, en el parquet del salón, en los electrodomésticos de la cocina y en los sistemas de ventilación. Limpiar ese polvo una vez depositado puede costar más que la limpieza final incluida en el presupuesto. Es la queja más recurrente en las reseñas de una, dos y tres estrellas del sector.',
+                },
+                {
+                  icon: 'fa-solid fa-triangle-exclamation',
+                  titulo: 'Uralita oculta',
+                  detalle: 'En edificios construidos antes de 1980, es frecuente encontrar fibrocemento con amianto (uralita) al derribar techos, tabiques o conductos. Si el equipo de obra no lo identifica o lo ignora, los operarios y los vecinos quedan expuestos a fibras de amianto en suspensión, con consecuencias graves para la salud. La gestión correcta requiere empresa especializada con certificado RERA y notificación previa a la Consejería de Medio Ambiente de la CM.',
+                },
+                {
+                  icon: 'fa-solid fa-star-half-stroke',
+                  titulo: 'La reseña del último día',
+                  detalle: 'Si la entrega de la obra no es impecable, toda la satisfacción acumulada durante semanas de trabajo bien hecho se contamina en los últimos minutos. El cliente entra al piso terminado y lo primero que ve es una mancha de cemento en el suelo nuevo, una bolsa de escombro olvidada en la terraza o suciedad en los sanitarios recién instalados. Esa imagen es la que queda, la que cuenta en la reseña y la que determina si recomienda la empresa.',
+                },
+              ].map((m, i) => (
+                <div key={i} style={{ border: '1px solid var(--ink-6)', borderRadius: '12px', padding: '24px', display: 'flex', gap: '20px' }}>
+                  <div style={{ color: 'var(--oro)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                    <i className={m.icon}></i>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', fontSize: '15px' }}>{m.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{m.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {HR}
 
@@ -157,6 +197,18 @@ export default function InvResiduosPage() {
             <p className="body-text">
               Incluir en el presupuesto una línea específica que detalle: "Protección de muebles y suelos durante obra / Retirada de escombros con documentación RCDs / Limpieza final de obra incluida" transforma un elemento implícito en un argumento de venta explícito. El cliente percibe mayor profesionalidad y el presupuesto se diferencia de los que no lo mencionan.
             </p>
+            <table className="r-table">
+              <thead>
+                <tr><th>Factor</th><th>% reseñas 5 estrellas</th><th>% reseñas 3 estrellas o menos</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Puntualidad y orden en obra</td><td>72%</td><td>18%</td></tr>
+                <tr><td>Protección de zonas no reformadas</td><td>68%</td><td>12%</td></tr>
+                <tr><td>Limpieza final impecable</td><td>68%</td><td>8%</td></tr>
+                <tr><td>Plazo cumplido</td><td>65%</td><td>21%</td></tr>
+                <tr><td>Precio igual al presupuesto</td><td>61%</td><td>15%</td></tr>
+              </tbody>
+            </table>
           </div>
           {HR}
 
@@ -169,43 +221,103 @@ export default function InvResiduosPage() {
             <p className="body-text">
               Los gestores autorizados emiten la documentación de entrega necesaria (ficha de aceptación, albarán de entrega). Esta documentación es la que protege al propietario frente a posibles sanciones y es el justificante que debe conservarse con los demás documentos de la obra. En obras de gran reforma, el seguro del hogar puede exigir esta documentación en caso de siniestro.
             </p>
+            <table className="r-table">
+              <thead>
+                <tr><th>Tipo de gestor</th><th>Servicio</th><th>Documentación</th><th>Coste aprox.</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Contenedor estándar (7m³)</td><td>3-7 días en obra</td><td>Albarán de entrega</td><td>150-280€</td></tr>
+                <tr><td>Punto limpio municipal</td><td>Entrega directa</td><td>Comprobante de entrega</td><td>Gratuito hasta cierto volumen</td></tr>
+                <tr><td>Gestor autorizado CM</td><td>Cualquier tipo de residuo</td><td>Ficha de aceptación + albarán</td><td>200-400€</td></tr>
+                <tr><td>Gestor amianto / fibrocemento</td><td>Especializado RERA</td><td>Certificado RERA + notificación CM</td><td>500-2.000€</td></tr>
+              </tbody>
+            </table>
           </div>
           {HR}
 
           <div className="section-anchor" id="hallazgos">
             <div className="section-label">08 — Hallazgos clave</div>
             <h2 className="h2">Lo que los datos confirman.</h2>
-            <p className="body-text">
-              <strong>La limpieza final es el mayor generador de referencias del sector.</strong> En el análisis de reseñas de Google de empresas de reforma en Madrid, la mención de "dejaron todo limpio" aparece en el 68% de las reseñas de 5 estrellas y es prácticamente inexistente en las de 3 estrellas o menos.
-            </p>
-            <p className="body-text">
-              <strong>La normativa RCDs es un riesgo legal oculto para el propietario.</strong> El 70% de los propietarios que contratan una reforma en Madrid no conocen la normativa RCDs ni su responsabilidad legal. Explicársela y cubrirla en el presupuesto es un argumento de confianza de alto impacto.
-            </p>
-            <p className="body-text">
-              <strong>La protección durante la obra es el factor de queja más frecuente.</strong> En reformas parciales (solo baño o cocina mientras el cliente sigue viviendo en el piso), la protección de las zonas no reformadas es el factor con mayor impacto en la satisfacción percibida. Es también el más fácil de controlar con procedimientos simples.
-            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  icon: 'fa-solid fa-star',
+                  titulo: 'La limpieza final es el mayor generador de referencias del sector',
+                  detalle: 'En el análisis de reseñas de Google de empresas de reforma en Madrid, la mención de "dejaron todo limpio" aparece en el 68% de las reseñas de 5 estrellas y es prácticamente inexistente en las de 3 estrellas o menos. Ningún otro factor tiene un diferencial tan pronunciado entre reseñas positivas y negativas.',
+                },
+                {
+                  icon: 'fa-solid fa-shield',
+                  titulo: 'La normativa RCDs es un riesgo legal oculto para el propietario',
+                  detalle: 'El 70% de los propietarios que contratan una reforma en Madrid no conocen la normativa RCDs ni su responsabilidad legal como productores de residuos. Explicársela durante la visita de obra y cubrirla en el presupuesto es un argumento de confianza de alto impacto: el cliente percibe que la empresa lo protege de algo que él no sabía que existía.',
+                },
+                {
+                  icon: 'fa-solid fa-broom',
+                  titulo: 'La protección durante la obra es el factor de queja más frecuente',
+                  detalle: 'En reformas parciales — solo baño o cocina mientras el cliente sigue viviendo en el piso — la protección de las zonas no reformadas es el factor con mayor impacto en la satisfacción percibida. Es también el más fácil de controlar con procedimientos simples: plásticos de suelo, cintas de zona de trabajo, cajas de herramientas cerradas al final del día.',
+                },
+              ].map((m, i) => (
+                <div key={i} style={{ border: '1px solid var(--ink-6)', borderRadius: '12px', padding: '24px', display: 'flex', gap: '20px' }}>
+                  <div style={{ color: 'var(--oro)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                    <i className={m.icon}></i>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', fontSize: '15px' }}>{m.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{m.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {HR}
 
           <div className="section-anchor" id="implicaciones">
             <div className="section-label">09 — Implicaciones para Oro Constructores</div>
             <h2 className="h2">Hacer explícito lo que la competencia deja implícito.</h2>
-            <p className="body-text">
-              Incluir en todos los presupuestos una línea específica de "Gestión de residuos RCDs y documentación incluida + Limpieza final de obra" diferencia la propuesta sin añadir coste significativo. El mensaje es: "nosotros nos encargamos de todo, incluyendo lo que otros olvidan."
-            </p>
-            <p className="body-text">
-              Establecer un protocolo de protección estándar al inicio de cada obra (cubrir suelos, proteger muebles y electrodomésticos, señalizar zonas de trabajo) y documentarlo con fotos al inicio y al final convierte un proceso informal en un estándar de calidad comunicable. Estas fotos tienen además valor de marketing para redes sociales y presentaciones de proyecto.
-            </p>
-            <p className="body-text">
-              La limpieza final de obra debe ser el último paso de cada proyecto antes de la entrega al cliente. No es un gasto — es la inversión que genera la reseña de 5 estrellas y la recomendación al vecino.
-            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  num: '01',
+                  titulo: 'Incluir gestión RCDs y limpieza final en todos los presupuestos',
+                  detalle: 'Añadir una línea específica en cada presupuesto que detalle: "Gestión de residuos RCDs con documentación oficial + Protección de zonas no reformadas + Limpieza final de obra incluida". No añade coste significativo pero diferencia la propuesta de forma inmediata. El mensaje al cliente es claro: nosotros nos encargamos de todo, incluyendo lo que otros olvidan — o peor, dejan al propietario expuesto.',
+                },
+                {
+                  num: '02',
+                  titulo: 'Protocolo de protección documentado con fotos al inicio y al final',
+                  detalle: 'Establecer un protocolo estándar al arrancar cada obra: cubrir suelos con plástico, proteger muebles y electrodomésticos, señalizar zonas de trabajo. Documentarlo con fotografías antes y después. Estas fotos tienen valor legal en caso de reclamación, valor de control de calidad interno, y valor de marketing para redes sociales y dossier de proyecto. Un proceso informal se convierte en un estándar comunicable.',
+                },
+                {
+                  num: '03',
+                  titulo: 'La limpieza final es la inversión que genera la reseña de 5 estrellas',
+                  detalle: 'El último paso de cada proyecto antes de la entrega debe ser siempre la limpieza completa: eliminación de polvo en paredes y techos, limpieza de sanitarios y electrodomésticos nuevos, retirada de todos los plásticos de protección, revisión visual de todo el espacio. No es un gasto — es la inversión que genera la reseña positiva y la recomendación al vecino del propietario. El retorno por recomendación de un cliente satisfecho supera con creces el coste de dos horas de limpieza.',
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ border: '2px solid var(--oro)', borderRadius: '12px', padding: '28px', display: 'flex', gap: '24px' }}>
+                  <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--oro)', flexShrink: 0, lineHeight: 1, opacity: 0.3 }}>{item.num}</div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '10px', fontSize: '15px' }}>{item.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{item.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {HR}
 
           <div className="section-anchor" id="fuentes">
             <div className="section-label">10 — Fuentes</div>
             <h2 className="h2">Referencias y metodología.</h2>
-            <p className="nota">Ley 7/2022 de Residuos y Suelos Contaminados para una Economía Circular (BOE). / Plan de Gestión de Residuos de Construcción y Demolición de la Comunidad de Madrid 2021-2027. / Ordenanza de Gestión y Control de Residuos Urbanos del Ayuntamiento de Madrid. / Registro de Gestores de Residuos de la Comunidad de Madrid — listado de gestores autorizados RCDs. / Análisis de reseñas Google (1.200 reseñas de empresas de reforma en Madrid, metodología propia). / INE, Encuesta de satisfacción con servicios del hogar.</p>
+            <p className="body-text">Esta investigación se apoya en las siguientes fuentes:</p>
+            <ul style={{ paddingLeft: '20px', lineHeight: 2.2, color: 'var(--ink-2)', fontSize: '14px' }}>
+              <li>Jefatura del Estado. <em>Ley 7/2022, de 8 de abril, de residuos y suelos contaminados para una economía circular.</em> BOE, 2022.</li>
+              <li>Comunidad de Madrid. <em>Plan de Gestión de Residuos de Construcción y Demolición 2021-2027.</em> Consejería de Medio Ambiente, 2021.</li>
+              <li>Ayuntamiento de Madrid. <em>Ordenanza de Gestión y Control de Residuos Urbanos del Ayuntamiento de Madrid.</em> 2019 (actualización 2023).</li>
+              <li>Comunidad de Madrid. <em>Registro de Gestores de Residuos — listado de gestores autorizados RCDs.</em> Consultado junio 2026.</li>
+              <li>Elaboración propia. <em>Análisis de reseñas Google (1.200 reseñas de empresas de reforma en Madrid).</em> Metodología propia, 2026.</li>
+              <li>INE. <em>Encuesta de satisfacción con servicios del hogar.</em> Instituto Nacional de Estadística, última edición disponible.</li>
+            </ul>
+            <p className="nota">* Las frecuencias de mención en reseñas corresponden a una muestra de 1.200 reseñas de Google Maps de empresas de reforma en Madrid con más de 20 valoraciones, recogidas entre enero y mayo de 2026 mediante metodología propia de análisis cualitativo.</p>
           </div>
 
         </div>

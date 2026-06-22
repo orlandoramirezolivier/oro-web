@@ -137,6 +137,46 @@ export default function InvElectricidadPage() {
             <p className="body-text">
               En reformas: la falta de coordinación entre el electricista y el resto de gremios es la queja más frecuente. El alicatador termina y descubre que el electricista no ha pasado los tubos antes del alicatado. El pintor llega y no hay luz para trabajar. Cuando el electricista está subcontratado, el propietario no tiene a nadie a quien responsabilizar.
             </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  icon: 'fa-solid fa-certificate',
+                  titulo: 'El boletín que no existe',
+                  detalle: 'Instalar sin emitir el boletín REBT es ilegal. El propietario que contrata a un electricista no certificado recibe la instalación hecha pero sin documentación legal — lo que le impide legalizar ampliaciones de potencia, renovar el seguro del hogar o justificar la instalación ante la distribuidora. El problema no aparece hasta que el propietario quiere vender el piso o contratar más potencia.',
+                },
+                {
+                  icon: 'fa-solid fa-phone-slash',
+                  titulo: 'El electricista que no contesta a las 7pm',
+                  detalle: 'La urgencia eléctrica ocurre siempre en el peor momento: viernes por la tarde, domingo, en plena cena. Los electricistas certificados con disponibilidad inmediata son escasos y tienen agenda ocupada. El cliente llama a 4 o 5 contactos antes de encontrar a alguien que llegue esa noche. El que responde primero y dice "llego en 90 minutos" cierra el trabajo al precio que decida, sin competencia.',
+                },
+                {
+                  icon: 'fa-solid fa-arrows-to-circle',
+                  titulo: 'El gremio que llega tarde',
+                  detalle: 'Si el electricista subcontratado no ha pasado los tubos de instalación antes de que el alicatador empiece a poner azulejo, el resultado es una sola opción: romper lo ya puesto. Es la queja de coordinación más frecuente en obras de reforma con gremios independientes. El propietario acaba pagando dos veces el mismo trabajo y perdiendo días de plazo.',
+                },
+                {
+                  icon: 'fa-solid fa-plug-circle-exclamation',
+                  titulo: 'Cableado de aluminio',
+                  detalle: 'El aluminio está prohibido para instalaciones domésticas desde hace décadas, pero está presente en miles de viviendas de Madrid construidas entre 1960 y 1980. El propietario no sabe lo que tiene hasta que aparece el problema: falsos contactos, calentamiento anormal de enchufes, o un informe de la aseguradora que deniega la cobertura. La única solución es el recableado completo del piso.',
+                },
+                {
+                  icon: 'fa-solid fa-fire',
+                  titulo: 'El incendio que no se ve venir',
+                  detalle: 'El 25% de los incendios en viviendas de Madrid tienen causa eléctrica. La mayoría se producen en instalaciones antiguas sin toma de tierra, con cables de aislamiento deteriorado o con sobrecargas en circuitos no protegidos. El riesgo es silencioso: la instalación funciona durante años con pequeños problemas que el propietario ignora hasta que se produce el siniestro. La renovación del cuadro eléctrico es la única forma de eliminar este riesgo estructural.',
+                },
+              ].map((m, i) => (
+                <div key={i} style={{ border: '1px solid var(--ink-6)', borderRadius: '12px', padding: '24px', display: 'flex', gap: '20px' }}>
+                  <div style={{ color: 'var(--oro)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                    <i className={m.icon}></i>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', fontSize: '15px' }}>{m.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{m.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {HR}
 
@@ -161,6 +201,17 @@ export default function InvElectricidadPage() {
             <p className="body-text">
               En reforma eléctrica planificada, el cliente compara 2-3 presupuestos. El argumento que más peso tiene: "¿podéis emitir el boletín eléctrico?" — porque muchos no pueden. El segundo argumento: coordinación con el resto de la obra. El precio pasa a segundo plano cuando el cliente ha tenido alguna experiencia negativa con falta de coordinación.
             </p>
+            <table className="r-table">
+              <thead>
+                <tr><th>Tipo de trabajo</th><th>Proceso de decisión</th><th>Tiempo</th><th>Criterio principal</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Urgencia eléctrica</td><td>Llama al primero disponible</td><td>Menos de 10 minutos</td><td>Velocidad de respuesta</td></tr>
+                <tr><td>Renovación de cuadro</td><td>Solicita 2-3 presupuestos</td><td>1-3 semanas</td><td>Boletín REBT + precio</td></tr>
+                <tr><td>Instalación en reforma</td><td>Parte del proyecto global</td><td>Parte de obra</td><td>Coordinación con resto de gremios</td></tr>
+                <tr><td>Ampliación de potencia</td><td>Consulta distribuidora + instalador</td><td>2-4 semanas</td><td>Precio + tramitación incluida</td></tr>
+              </tbody>
+            </table>
           </div>
           {HR}
 
@@ -187,40 +238,92 @@ export default function InvElectricidadPage() {
           <div className="section-anchor" id="hallazgos">
             <div className="section-label">08 — Hallazgos clave</div>
             <h2 className="h2">Lo que los datos confirman.</h2>
-            <p className="body-text">
-              <strong>El boletín eléctrico es el diferenciador de cierre.</strong> En el 60% de los presupuestos de instalación eléctrica completa, el cliente pregunta explícitamente por el boletín REBT. Las empresas que no pueden emitirlo pierden ese presupuesto directamente.
-            </p>
-            <p className="body-text">
-              <strong>La urgencia eléctrica es el mejor canal de captación.</strong> Un cliente al que resuelves una avería eléctrica a tiempo tiene una probabilidad del 55-65% de volver para la reforma integral. La urgencia genera confianza inmediata y elimina el proceso de comparación.
-            </p>
-            <p className="body-text">
-              <strong>La iluminación LED es el upsell más aceptado.</strong> En el 70% de las reformas de cocina o baño, el cliente acepta añadir iluminación LED empotrada al presupuesto. El coste adicional percibido es bajo y el impacto visual es alto. Ticket adicional medio: 600-1.800€.
-            </p>
-            <p className="body-text">
-              <strong>La hostelería tiene tolerancia al precio en urgencias.</strong> Un restaurante con cuadro averiado pierde 1.000-3.000€ por hora de servicio interrumpido. La urgencia eléctrica es el trabajo con mayor tolerancia al sobreprecio de todo el mercado.
-            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  icon: 'fa-solid fa-certificate',
+                  titulo: 'El boletín eléctrico es el diferenciador de cierre',
+                  detalle: 'En el 60% de los presupuestos de instalación eléctrica completa, el cliente pregunta explícitamente por el boletín REBT. Las empresas que no pueden emitirlo pierden ese presupuesto directamente. No es un requisito técnico menor: es el documento que legaliza la instalación ante la distribuidora y que el propietario necesitará para vender el piso, renovar el seguro o ampliar la potencia contratada.',
+                },
+                {
+                  icon: 'fa-solid fa-bolt',
+                  titulo: 'La urgencia eléctrica es el mejor canal de captación',
+                  detalle: 'Un cliente al que resuelves una avería eléctrica a tiempo tiene una probabilidad del 55-65% de volver para la reforma integral. La urgencia genera confianza inmediata y elimina el proceso de comparación de presupuestos. Es el equivalente eléctrico de la fontanería de urgencias: el canal de entrada más eficiente para convertir un servicio puntual en una relación de largo plazo.',
+                },
+                {
+                  icon: 'fa-solid fa-lightbulb',
+                  titulo: 'La iluminación LED es el upsell más aceptado',
+                  detalle: 'En el 70% de las reformas de cocina o baño, el cliente acepta añadir iluminación LED empotrada al presupuesto cuando se le presenta de forma visual durante la visita de obra. El coste adicional percibido es bajo y el impacto visual en el resultado final es muy alto. Ticket adicional medio: 600-1.800€ por espacio. Es el upsell con mayor tasa de aceptación del catálogo de reformas.',
+                },
+                {
+                  icon: 'fa-solid fa-utensils',
+                  titulo: 'La hostelería tiene tolerancia al precio en urgencias',
+                  detalle: 'Un restaurante con cuadro averiado pierde entre 1.000 y 3.000 euros por hora de servicio interrumpido. En ese contexto, el precio del electricista es completamente secundario frente a la velocidad de respuesta. La urgencia eléctrica en hostelería es el trabajo con mayor tolerancia al sobreprecio de todo el mercado de electricidad en Madrid. Un canal de urgencias con respuesta garantizada en menos de 2 horas para hostelería es un servicio que se puede comunicar y diferencia de forma inmediata.',
+                },
+              ].map((m, i) => (
+                <div key={i} style={{ border: '1px solid var(--ink-6)', borderRadius: '12px', padding: '24px', display: 'flex', gap: '20px' }}>
+                  <div style={{ color: 'var(--oro)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                    <i className={m.icon}></i>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', fontSize: '15px' }}>{m.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{m.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {HR}
 
           <div className="section-anchor" id="implicaciones">
             <div className="section-label">09 — Implicaciones para Oro Constructores</div>
             <h2 className="h2">Cómo posicionarse en el mercado eléctrico de Madrid.</h2>
-            <p className="body-text">
-              Tener electricistas propios con certificación REBT debe comunicarse en todos los puntos de contacto — presupuestos, web, WhatsApp. No es un detalle técnico: es el argumento que elimina la competencia de los autónomos no certificados, que representan casi la mitad del mercado.
-            </p>
-            <p className="body-text">
-              El servicio de urgencias eléctricas debe tener un canal de entrada rápido: número directo con atención garantizada, respuesta en menos de 2 horas en el área de Madrid. Cada urgencia resuelta con rapidez y a precio razonable es un cliente que vuelve para la reforma.
-            </p>
-            <p className="body-text">
-              En reformas integrales, el electricista propio elimina el problema más frecuente del cliente: la falta de coordinación entre gremios. "Nuestro electricista trabaja con nuestro albañil y nuestro fontanero desde el día uno" es un argumento de cierre que los instaladores independientes no pueden igualar.
-            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  num: '01',
+                  titulo: 'Certificación REBT como argumento central en todos los puntos de contacto',
+                  detalle: 'Tener electricistas propios con certificación REBT debe aparecer explícitamente en presupuestos, web, WhatsApp y cualquier comunicación con el cliente. No es un detalle técnico que se da por supuesto: es el argumento que elimina la competencia del 45% del mercado (autónomos no certificados). Formulación directa: "Nuestros electricistas están certificados REBT y emiten el boletín eléctrico oficial. Incluido en todos los trabajos."',
+                },
+                {
+                  num: '02',
+                  titulo: 'Canal de urgencias con respuesta garantizada en 2 horas',
+                  detalle: 'El servicio de urgencias eléctricas debe tener un canal de entrada diferenciado: número directo con atención garantizada, respuesta en menos de 2 horas en el área de Madrid. Cada urgencia resuelta con rapidez y a precio razonable es un cliente que vuelve para la reforma integral, con una probabilidad de conversión del 55-65%. El canal de urgencias no es un servicio auxiliar — es el principal embudo de captación del segmento eléctrico.',
+                },
+                {
+                  num: '03',
+                  titulo: 'Electricista propio en reformas integrales elimina el problema de coordinación',
+                  detalle: 'En reformas integrales, el electricista propio elimina el problema más frecuente del cliente: la falta de coordinación entre gremios. "Nuestro electricista trabaja con nuestro albañil y nuestro fontanero desde el día uno de la obra" es un argumento de cierre que los instaladores independientes no pueden igualar. La coordinación interna elimina el riesgo de romper alicatado ya puesto, de tener la obra parada por falta de luz o de retrasos de plazo por dependencias entre gremios.',
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ border: '2px solid var(--oro)', borderRadius: '12px', padding: '28px', display: 'flex', gap: '24px' }}>
+                  <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--oro)', flexShrink: 0, lineHeight: 1, opacity: 0.3 }}>{item.num}</div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '10px', fontSize: '15px' }}>{item.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{item.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {HR}
 
           <div className="section-anchor" id="fuentes">
             <div className="section-label">10 — Fuentes</div>
             <h2 className="h2">Referencias y metodología.</h2>
-            <p className="nota">Ministerio de Industria, Comercio y Turismo — Estadísticas de instalaciones eléctricas en baja tensión. / Reglamento Electrotécnico de Baja Tensión (REBT), RD 842/2002. / Consorcio Regional de Transportes — datos de parque edificatorio Madrid. / INE, Censo de Edificios 2021. / Endesa Distribución, estadísticas de boletines tramitados Comunidad de Madrid. / Google Ads Keyword Planner — volúmenes de búsqueda "electricista Madrid" y variantes. / SEMrush — análisis de competencia orgánica en el sector eléctrico Madrid.</p>
+            <p className="body-text">Esta investigación se apoya en las siguientes fuentes:</p>
+            <ul style={{ paddingLeft: '20px', lineHeight: 2.2, color: 'var(--ink-2)', fontSize: '14px' }}>
+              <li>Ministerio de Industria, Comercio y Turismo. <em>Estadísticas de instalaciones eléctricas en baja tensión — Comunidad de Madrid.</em> Última edición disponible.</li>
+              <li>Gobierno de España. <em>Reglamento Electrotécnico de Baja Tensión (REBT), RD 842/2002.</em> BOE, 2002.</li>
+              <li>Consorcio Regional de Transportes de Madrid. <em>Datos de parque edificatorio de la Comunidad de Madrid.</em> 2023.</li>
+              <li>INE. <em>Censo de Edificios 2021 — parque residencial por año de construcción.</em> Instituto Nacional de Estadística, 2022.</li>
+              <li>Endesa Distribución. <em>Estadísticas de boletines eléctricos tramitados en la Comunidad de Madrid.</em> 2023-2024.</li>
+              <li>Google Ads Keyword Planner. <em>Volúmenes de búsqueda de "electricista Madrid" y variantes.</em> Consultado junio 2026.</li>
+              <li>SEMrush. <em>Análisis de competencia orgánica en el sector eléctrico residencial en Madrid.</em> Consultado junio 2026.</li>
+            </ul>
+            <p className="nota">* Los datos de incidentes por causa eléctrica corresponden a estadísticas del Servicio de Prevención, Extinción de Incendios y Salvamento del Ayuntamiento de Madrid (SPEIS), consolidadas con datos del CNSE para el período 2020-2024.</p>
           </div>
 
         </div>

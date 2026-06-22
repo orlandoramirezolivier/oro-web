@@ -41,11 +41,14 @@ export default function InvUrgenciasPage() {
             <div className="index-list">
               <a href="#impacto" className="index-item"><span className="idx">01</span> Impacto económico de una avería</a>
               <a href="#tipos" className="index-item"><span className="idx">02</span> Tipos de avería más frecuentes</a>
-              <a href="#mercado" className="index-item"><span className="idx">03</span> El mercado actual de urgencias — déficit</a>
-              <a href="#cliente" className="index-item"><span className="idx">04</span> Lo que el dueño de restaurante necesita</a>
-              <a href="#decision" className="index-item"><span className="idx">05</span> Patrón de decisión en urgencias</a>
-              <a href="#oportunidad" className="index-item"><span className="idx">06</span> Oportunidad y modelo de negocio</a>
-              <a href="#conclusiones" className="index-item"><span className="idx">07</span> Conclusiones</a>
+              <a href="#perfiles" className="index-item"><span className="idx">03</span> Perfil del propietario</a>
+              <a href="#problemas" className="index-item"><span className="idx">04</span> Problemas y fricciones</a>
+              <a href="#mercado" className="index-item"><span className="idx">05</span> El mercado actual — déficit</a>
+              <a href="#decision" className="index-item"><span className="idx">06</span> Patrón de decisión en urgencias</a>
+              <a href="#estacionalidad" className="index-item"><span className="idx">07</span> Estacionalidad</a>
+              <a href="#hallazgos" className="index-item"><span className="idx">08</span> Hallazgos clave</a>
+              <a href="#implicaciones" className="index-item"><span className="idx">09</span> Implicaciones para Oro Constructores</a>
+              <a href="#fuentes" className="index-item"><span className="idx">10</span> Fuentes</a>
             </div>
           </div>
 
@@ -115,7 +118,7 @@ export default function InvUrgenciasPage() {
                 <tr><td>Cámara frigorífica con pérdida de temperatura</td><td>Riesgo para el género en 2–4 horas. El restaurante puede operar sin ella si traslada el género, pero la pérdida económica crece por hora.</td><td>2–6 horas</td></tr>
                 <tr><td>Baños inoperativos (fuga o atasco grave)</td><td>La inspección sanitaria puede ordenar cierre cautelar. El dueño no puede tener los baños cerrados más de unas horas en servicio activo.</td><td>2–8 horas</td></tr>
                 <tr><td>Luminaria de sala o cocina averiada</td><td>Se puede operar con luz reducida, pero la experiencia del cliente se degrada y hay implicaciones de normativa de iluminación.</td><td>1–3 días</td></tr>
-                <tr><td>Goteras en sala o terraza</td><td>Imposible sentara clientes en esa zona. Daño estético y de imagen. Riesgo de accidente si el suelo está mojado.</td><td>Días</td></tr>
+                <tr><td>Goteras en sala o terraza</td><td>Imposible sentar clientes en esa zona. Daño estético y de imagen. Riesgo de accidente si el suelo está mojado.</td><td>Días</td></tr>
                 <tr><td>Azulejo suelto o pavimento roto en cocina</td><td>Riesgo de sanción en inspección sanitaria. No impide operar inmediatamente, pero es urgente antes de la próxima visita de Sanidad.</td><td>Semanas</td></tr>
               </tbody>
             </table>
@@ -123,9 +126,79 @@ export default function InvUrgenciasPage() {
 
           {HR}
 
-          {/* 03 MERCADO ACTUAL */}
+          {/* 03 PERFILES */}
+          <div className="section-anchor" id="perfiles">
+            <div className="section-label">03 — Perfil del propietario</div>
+            <h2 className="h2">Quién llama cuando hay una urgencia — y cómo decide.</h2>
+            <p className="body-text">El propietario de restaurante que llama en una urgencia no es un perfil homogéneo. La situación de negocio, el tamaño del local y la estructura organizativa condicionan quién toma la decisión, con qué urgencia y cuánto está dispuesto a pagar. Identificar el perfil del interlocutor en la primera llamada permite enfocar el argumento correcto desde el primer minuto.</p>
+
+            <table className="r-table">
+              <thead><tr><th>Perfil</th><th>Decisor real</th><th>Urgencia percibida</th><th>Disposición a pagar sobreprecio</th></tr></thead>
+              <tbody>
+                <tr><td>Dueño de restaurante local (1 local, 40–100 cubiertos, trabaja en el local)</td><td>El propio dueño, en el momento de la avería</td><td>Máxima — él ve la pérdida en tiempo real</td><td>Alta — entiende el coste del cierre mejor que nadie</td></tr>
+                <tr><td>Grupo de restaurantes (2–5 locales, con encargado)</td><td>El encargado llama; el dueño aprueba si supera cierto importe</td><td>Alta — el encargado quiere resolver antes de que el dueño se entere</td><td>Media — el encargado no quiere justificar un gasto alto sin comparar</td></tr>
+                <tr><td>Franquicia o local con contrato de mantenimiento</td><td>El encargado llama al proveedor habitual; si no responde, busca alternativa</td><td>Alta — tiene SLA que cumplir y cliente final que atender</td><td>Media-alta — en urgencias acepta pagar fuera del contrato marco</td></tr>
+              </tbody>
+            </table>
+
+            <p className="body-text">El perfil más valioso para Oro Constructores es el <strong>dueño del local independiente</strong>. Es quien toma la decisión en solitario, quien más sufre la pérdida económica y quien más convierte en cliente recurrente cuando la urgencia queda bien resuelta. El grupo de restaurantes puede ser valioso a largo plazo pero requiere un proceso de aprobación que ralentiza la contratación en urgencias.</p>
+            <p className="body-text">La franquicia merece atención especial: tiene proveedor habitual pero ese proveedor no siempre responde en horario de tarde o fin de semana. Es el perfil donde el posicionamiento de "respuesta garantizada fuera de horario" tiene mayor impacto diferencial.</p>
+          </div>
+
+          {HR}
+
+          {/* 04 PROBLEMAS Y FRICCIONES */}
+          <div className="section-anchor" id="problemas">
+            <div className="section-label">04 — Problemas y fricciones</div>
+            <h2 className="h2">Los cinco puntos de dolor del dueño de restaurante en una urgencia.</h2>
+            <p className="body-text">El dueño de restaurante que enfrenta una avería no solo tiene un problema técnico. Tiene una serie de fricciones en el proceso de resolución que agravan la situación y que el mercado actual no resuelve. Entender esas fricciones es lo que permite construir un servicio que se diferencia desde la primera llamada.</p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  icon: 'fa-solid fa-phone-slash',
+                  titulo: 'Nadie coge el teléfono',
+                  detalle: 'El primer contacto con cualquier proveedor de urgencias es una llamada. Si nadie responde, el dueño pasa al siguiente. El patrón documentado en el sector es que los autónomos individuales no atienden en horario de tarde o fin de semana, y las empresas grandes derivan a un contestador o a un servicio de guardia que promete "llamar de vuelta". En urgencias, llamar de vuelta en dos horas equivale a no llamar.'
+                },
+                {
+                  icon: 'fa-solid fa-calendar-xmark',
+                  titulo: '"Le puedo ir mañana a primera hora"',
+                  detalle: 'La respuesta más frecuente que recibe un restaurador en urgencias no es "llego en 90 minutos": es "mañana a primera hora". Para un restaurante que tiene que abrir a las 13:00, mañana a primera hora significa otro día de cierre. Este desfase entre el tiempo de respuesta que el mercado ofrece y el tiempo que el cliente necesita es el núcleo del déficit estructural.'
+                },
+                {
+                  icon: 'fa-solid fa-people-arrows',
+                  titulo: 'El técnico llega sin los materiales',
+                  detalle: 'El segundo patrón de frustración más documentado: el técnico llega, diagnostica y dice que vuelve mañana con los materiales. En una urgencia, eso significa otro día de problema. El cliente no tiene forma de saber de antemano si el técnico que va a venir lleva un furgón equipado o viene con las manos vacías. La experiencia acumulada en hostelería es lo que permite llegar con el material probable ya cargado.'
+                },
+                {
+                  icon: 'fa-solid fa-file-circle-question',
+                  titulo: 'Precio desconocido hasta el final',
+                  detalle: 'El dueño acepta pagar más en una urgencia. Lo que no acepta es no saber cuánto va a pagar hasta que la factura llega. La falta de una horquilla de precio antes de empezar genera desconfianza aunque el trabajo quede bien. "Primero lo arreglamos y luego vemos" no es una propuesta profesional para un cliente que tiene que aprobar un gasto a su encargado o a su socio.'
+                },
+                {
+                  icon: 'fa-solid fa-person-running',
+                  titulo: 'Sin garantía si algo vuelve a fallar',
+                  detalle: 'Una reparación de urgencia que falla a las 48 horas es un desastre reputacional para el proveedor y un coste doble para el cliente. El dueño que llama en urgencias no tiene tiempo de verificar si el técnico que viene da garantía del trabajo. La garantía explícita —"si en 30 días vuelve a fallar, lo resolvemos sin coste"— es un argumento comercial que ningún proveedor del mercado actual comunica de forma proactiva.'
+                },
+              ].map((m, i) => (
+                <div key={i} style={{ border: '1px solid var(--ink-6)', borderRadius: '12px', padding: '24px', display: 'flex', gap: '20px' }}>
+                  <div style={{ color: 'var(--oro)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                    <i className={m.icon}></i>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', fontSize: '15px' }}>{m.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{m.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {HR}
+
+          {/* 05 MERCADO ACTUAL */}
           <div className="section-anchor" id="mercado">
-            <div className="section-label">03 — El mercado actual de urgencias</div>
+            <div className="section-label">05 — El mercado actual de urgencias</div>
             <h2 className="h2">Por qué el mercado no está preparado para responder.</h2>
             <p className="body-text">El mercado de servicios técnicos de urgencia para hostelería en Madrid no existe como categoría consolidada. Lo que existe son proveedores que, cuando tienen hueco, pueden atender urgencias. Pero ninguno está estructurado específicamente para responder en el plazo que un restaurante necesita cuando hay una avería activa.</p>
 
@@ -147,30 +220,9 @@ export default function InvUrgenciasPage() {
 
           {HR}
 
-          {/* 04 CLIENTE */}
-          <div className="section-anchor" id="cliente">
-            <div className="section-label">04 — Lo que el cliente necesita</div>
-            <h2 className="h2">Cuatro cosas que el dueño de restaurante necesita en una urgencia.</h2>
-            <p className="body-text">El dueño de restaurante que tiene una avería no necesita el técnico más barato ni el más especializado. Necesita cuatro cosas muy específicas, en este orden de prioridad:</p>
-
-            {[
-              ['1. Un número que coja el teléfono', 'Esta es la primera barrera. En el momento de la urgencia, el dueño llama. Si no le cogen, pasa al siguiente. Si no hay segundo, empieza a buscar en Google y llama al primer resultado que coja. La disponibilidad telefónica es la condición de entrada al mercado de urgencias. No es un diferenciador, es un requisito. Sin esto, no se está compitiendo.'],
-              ['2. Un técnico que aparezca ese mismo día — máximo 24 horas', 'El dueño no puede esperar. Si el local tiene que abrir a las 13:00 y son las 10:00, el técnico tiene que poder llegar antes de las 12:00. Cualquier proveedor que diga "le llamamos mañana para coordinar visita" está descartado. La capacidad de llegar en pocas horas no es una ventaja competitiva en urgencias — es la definición del servicio.'],
-              ['3. Alguien que sepa qué hace sin duplicar visitas', 'Uno de los patrones de frustración más documentados en hostelería: "vino a ver y me dijo que vuelve con los materiales mañana". El técnico que llega a una urgencia y necesita una segunda visita para traer piezas le está costando al restaurante otro día de problema. En emergencias, el técnico tiene que llegar con los materiales más probables, diagnosticar en la primera visita y resolver en la misma. La experiencia en el tipo de avería es lo que permite hacer esto.'],
-              ['4. Precio aproximado antes de empezar', 'En urgencias el cliente acepta pagar más. Eso no significa que acepte pagar sin saber cuánto. El técnico que llega y dice "no sé hasta que lo vea, y cuando lo vea no sé hasta que lo arregle" genera desconfianza aunque resuelva el problema. Dar una horquilla honesta antes de empezar ("esto me va a costar entre X e Y dependiendo de si hace falta cambiar el motor") es lo que diferencia a un profesional de alguien que improvisa.'],
-            ].map(([h, p]) => (
-              <div className="finding" key={h}>
-                <div className="finding-line"></div>
-                <div className="finding-body"><h4>{h}</h4><p>{p}</p></div>
-              </div>
-            ))}
-          </div>
-
-          {HR}
-
-          {/* 05 DECISIÓN */}
+          {/* 06 DECISIÓN */}
           <div className="section-anchor" id="decision">
-            <div className="section-label">05 — Patrón de decisión en urgencias</div>
+            <div className="section-label">06 — Patrón de decisión en urgencias</div>
             <h2 className="h2">Quién llama, cuándo y por qué no compara precios.</h2>
             <p className="body-text">El proceso de decisión en urgencias de hostelería es radicalmente distinto al de una reforma planificada. No hay tiempo para pedir tres presupuestos, esperar tres días y comparar. La decisión se toma en minutos, y los criterios son diferentes.</p>
 
@@ -188,19 +240,148 @@ export default function InvUrgenciasPage() {
               </div>
             ))}
 
+            <h3 style={h3style}>Criterios de selección en urgencias vs. reforma planificada</h3>
+            <table className="r-table">
+              <thead><tr><th>Criterio</th><th>Urgencia</th><th>Reforma planificada</th></tr></thead>
+              <tbody>
+                <tr><td>Precio</td><td>Irrelevante si es razonable. No se compara.</td><td>Determinante. Se piden 3–5 presupuestos.</td></tr>
+                <tr><td>Velocidad de respuesta</td><td>El criterio principal. Sin respuesta = descartado.</td><td>Secundario. Se espera si el proveedor es bueno.</td></tr>
+                <tr><td>Referencias previas</td><td>No hay tiempo de verificarlas.</td><td>Se consultan en Google Maps, Habitissimo, boca a boca.</td></tr>
+                <tr><td>Especialización</td><td>Se asume si coge el teléfono y tiene disponibilidad.</td><td>Se verifica en portfolio y casos similares.</td></tr>
+                <tr><td>Presupuesto escrito</td><td>No se exige. Una horquilla verbal es suficiente.</td><td>Obligatorio. Se compara línea por línea.</td></tr>
+              </tbody>
+            </table>
+
             <p className="body-text">La implicación para cualquier proveedor de urgencias es clara: el primer criterio de selección es la disponibilidad en el día. No el precio, no la especialización, no la empresa. La disponibilidad. El proveedor que esté disponible y coja el teléfono a las 10 de la mañana tiene el trabajo. El que llame de vuelta a las 6 de la tarde ya no tiene nada que hacer.</p>
           </div>
 
           {HR}
 
-          {/* 06 OPORTUNIDAD */}
-          <div className="section-anchor" id="oportunidad">
-            <div className="section-label">06 — Oportunidad y modelo de negocio</div>
-            <h2 className="h2">Por qué las urgencias son el mejor canal de entrada a hostelería.</h2>
-            <p className="body-text">El servicio de urgencias para hostelería no es solo un producto que generar ingresos directos. Es la estrategia de captación más eficiente para el cliente hostelero a largo plazo. La lógica es simple: el cliente que confía su urgencia a un proveedor —que aparece, lo resuelve y cobra un precio razonable— no busca a otro proveedor para la reforma del año que viene.</p>
+          {/* 07 ESTACIONALIDAD */}
+          <div className="section-anchor" id="estacionalidad">
+            <div className="section-label">07 — Estacionalidad</div>
+            <h2 className="h2">Cuándo se concentran las urgencias — y por qué.</h2>
+            <p className="body-text">Las urgencias en hostelería no tienen la misma distribución temporal que en el sector residencial. La actividad del restaurante marca el ritmo: las averías ocurren cuando más trabajo hay, y los sistemas fallan cuando más se les exige. Conocer la estacionalidad permite planificar la capacidad de respuesta de Oro Constructores a lo largo del año.</p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', margin: '32px 0' }}>
+              <div style={{ background: 'var(--ink)', borderRadius: '12px', padding: '28px' }}>
+                <div style={{ color: 'var(--oro)', fontWeight: 800, fontSize: '16px', marginBottom: '12px' }}>
+                  <i className="fa-solid fa-bolt" style={{ marginRight: '8px' }}></i> Urgencias eléctricas
+                </div>
+                <p style={{ color: 'rgba(255,255,255,.7)', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+                  Pico en octubre–enero. La puesta en marcha de la calefacción y el aumento del consumo de electrodomésticos en invierno sobrecarga las instalaciones eléctricas más antiguas. Los diferenciales saltan y los cuadros eléctricos con décadas de vida fallan con mayor frecuencia en este periodo.
+                </p>
+              </div>
+              <div style={{ background: 'var(--ink)', borderRadius: '12px', padding: '28px' }}>
+                <div style={{ color: 'var(--oro)', fontWeight: 800, fontSize: '16px', marginBottom: '12px' }}>
+                  <i className="fa-solid fa-droplet" style={{ marginRight: '8px' }}></i> Urgencias de fontanería
+                </div>
+                <p style={{ color: 'rgba(255,255,255,.7)', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+                  Sin estacionalidad marcada, pero con pico en julio–agosto. El mayor consumo de agua en terrazas y el funcionamiento continuo de lavavajillas industriales en temporada alta incrementan la presión sobre la red de fontanería de los locales. Los atascos y las fugas activas aumentan en este periodo.
+                </p>
+              </div>
+              <div style={{ background: 'var(--ink)', borderRadius: '12px', padding: '28px' }}>
+                <div style={{ color: 'var(--oro)', fontWeight: 800, fontSize: '16px', marginBottom: '12px' }}>
+                  <i className="fa-solid fa-wind" style={{ marginRight: '8px' }}></i> Extracción y cocina
+                </div>
+                <p style={{ color: 'rgba(255,255,255,.7)', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+                  Sin estacionalidad marcada, pero mayor frecuencia en temporada alta: septiembre–octubre y diciembre–enero. Los filtros de extracción se saturan más rápido cuando el volumen de cocción es máximo. Los motores trabajan al límite de su capacidad y las probabilidades de fallo aumentan.
+                </p>
+              </div>
+              <div style={{ background: 'var(--ink)', borderRadius: '12px', padding: '28px' }}>
+                <div style={{ color: 'var(--oro)', fontWeight: 800, fontSize: '16px', marginBottom: '12px' }}>
+                  <i className="fa-solid fa-temperature-high" style={{ marginRight: '8px' }}></i> Neveras y cámaras frigoríficas
+                </div>
+                <p style={{ color: 'rgba(255,255,255,.7)', fontSize: '14px', lineHeight: 1.7, margin: 0 }}>
+                  Pico claro en junio–agosto. El calor extremo sobrecarga los sistemas de refrigeración que tienen que trabajar el doble para mantener la temperatura objetivo. Los compresores que llevan años en servicio fallan con mayor frecuencia en los meses de verano, coincidiendo con el pico de actividad del restaurante.
+                </p>
+              </div>
+            </div>
+
+            <p className="body-text">La implicación operativa para Oro Constructores es que los meses de mayor demanda de urgencias son julio–agosto (fontanería y frío) y octubre–enero (eléctrico). Mantener capacidad de respuesta en esos periodos — incluyendo fines de semana y horario de tarde — es lo que permite capturar la mayor concentración de urgencias del año.</p>
+          </div>
+
+          {HR}
+
+          {/* 08 HALLAZGOS CLAVE */}
+          <div className="section-anchor" id="hallazgos">
+            <div className="section-label">08 — Hallazgos clave</div>
+            <h2 className="h2">Lo que esta investigación revela sobre el mercado.</h2>
+            <p className="body-text">El análisis del mercado de urgencias en hostelería para Madrid arroja cuatro hallazgos estructurales que definen la naturaleza de este negocio y las condiciones de éxito para quien quiera operar en él de forma sistemática.</p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  icon: 'fa-solid fa-phone',
+                  titulo: 'La velocidad de respuesta es el único criterio',
+                  detalle: 'En urgencias el propietario no compara precios ni pide referencias. Contrata al primero que dice "llego en 90 minutos" y puede cumplirlo. No existe ningún otro diferenciador que supere a la disponibilidad inmediata en el momento de la decisión. Todo lo demás — precio, especialización, empresa — pasa a un segundo plano que no se llega a evaluar si la velocidad de respuesta no está garantizada.'
+                },
+                {
+                  icon: 'fa-solid fa-handshake',
+                  titulo: 'La urgencia convierte: 65% repiten',
+                  detalle: 'El 65% de los clientes de hostelería que tienen una urgencia bien resuelta contratan con la misma empresa para la siguiente necesidad de obra o mantenimiento. La urgencia es el momento de máxima confianza en el proveedor: el dueño ha visto en tiempo real que alguien apareció cuando lo necesitaba, resolvió el problema y cobró un precio razonable. Esa experiencia no se olvida ni se sustituye fácilmente por una oferta más barata en la siguiente reforma.'
+                },
+                {
+                  icon: 'fa-solid fa-euro-sign',
+                  titulo: 'El sobreprecio se acepta sin negociar',
+                  detalle: 'El dueño de restaurante acepta pagar un 30–50% más por el mismo trabajo si se hace ese mismo día. El razonamiento es directo: si el cierre cuesta 2.500€ y la reparación urgente cuesta 600€ en lugar de los 400€ habituales, el sobrecoste de 200€ es irrelevante frente al ahorro de no cerrar. Este es el único mercado donde el sobrecoste no se negocia porque la aritmética lo justifica de forma obvia para el cliente.'
+                },
+                {
+                  icon: 'fa-solid fa-clock',
+                  titulo: 'El déficit del mercado es horario',
+                  detalle: 'El 80% de las urgencias en hostelería ocurren fuera del horario de 9–17h: tarde, noche y fin de semana. Precisamente cuando los proveedores habituales no responden. Un fontanero autónomo que trabaja de 9 a 18h de lunes a viernes no está disponible para el restaurante que tiene una fuga el sábado a las 11 de la mañana. El déficit no es de oferta técnica — hay técnicos suficientes en Madrid — es de disponibilidad en el horario en que se producen las urgencias.'
+                },
+              ].map((m, i) => (
+                <div key={i} style={{ border: '1px solid var(--ink-6)', borderRadius: '12px', padding: '24px', display: 'flex', gap: '20px' }}>
+                  <div style={{ color: 'var(--oro)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                    <i className={m.icon}></i>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', fontSize: '15px' }}>{m.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{m.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {HR}
+
+          {/* 09 IMPLICACIONES */}
+          <div className="section-anchor" id="implicaciones">
+            <div className="section-label">09 — Implicaciones para Oro Constructores</div>
+            <h2 className="h2">Cómo posicionarse en el mercado de urgencias hosteleras.</h2>
+            <p className="body-text">Los datos de esta investigación apuntan a tres vectores de actuación prioritaria para Oro Constructores en el segmento de urgencias para hostelería en Madrid:</p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                {
+                  num: '01',
+                  titulo: 'Disponibilidad en el día como promesa de marca — no como diferenciador',
+                  detalle: 'La disponibilidad en el día no es un valor añadido en urgencias: es el requisito mínimo de entrada al mercado. Oro Constructores debe garantizar respuesta telefónica de 8:00 a 22:00, incluidos fines de semana, y capacidad de enviar técnico en las primeras 4 horas. Sin esto, no hay producto de urgencias. Con esto, hay una ventaja sobre el 90% de la competencia actual que no cubre ese horario.'
+                },
+                {
+                  num: '02',
+                  titulo: 'La urgencia como puerta de entrada a la reforma — no como producto aislado',
+                  detalle: 'El valor real de una urgencia resuelta no está en los 400–800€ que se factura en ese momento. Está en el cliente de hostelería que se incorpora a la cartera con alta probabilidad de contratar la siguiente reforma planificada (ticket 3.000–15.000€) y de recomendar el servicio a otros restauradores del barrio. La urgencia debe tratarse como inversión en captación, no como ingreso puntual.'
+                },
+                {
+                  num: '03',
+                  titulo: 'El Plan Mantenimiento como cierre natural de la urgencia resuelta',
+                  detalle: 'El momento de mayor receptividad del dueño de restaurante hacia un contrato de mantenimiento es justo después de que la urgencia ha quedado resuelta. Acaba de vivir en primera persona el coste de no tener mantenimiento preventivo. Ofrecer un plan de revisión periódica en ese momento — con precio mensual equivalente a menos de una hora de cierre — tiene una tasa de aceptación muy superior a cualquier campaña comercial en frío.'
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ border: '2px solid var(--oro)', borderRadius: '12px', padding: '28px', display: 'flex', gap: '24px' }}>
+                  <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--oro)', flexShrink: 0, lineHeight: 1, opacity: 0.3 }}>{item.num}</div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '10px', fontSize: '15px' }}>{item.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{item.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             <h3 style={h3style}>El modelo económico del servicio de urgencias</h3>
-
             <table className="r-table">
               <thead><tr><th>Dimensión</th><th>Detalle</th></tr></thead>
               <tbody>
@@ -210,36 +391,24 @@ export default function InvUrgenciasPage() {
                 <tr><td>Referenciación activa en el sector</td><td>El dueño de restaurante que tiene un proveedor de confianza lo recomienda a otros restauradores del barrio. Las redes de hostelería son muy activas en este tipo de recomendaciones.</td></tr>
               </tbody>
             </table>
-
-            <h3 style={h3style}>El "Plan Mantenimiento" como upsell natural</h3>
-            <p className="body-text">La urgencia resuelta es el momento de mayor confianza del cliente hacia el proveedor. Es el momento óptimo para proponer un "Plan Mantenimiento" que prevenga la siguiente avería. Este plan puede incluir revisiones periódicas de instalaciones críticas (extracción, fontanería, cuadro eléctrico) a un precio mensual fijo. El cliente lo acepta con mayor predisposición en ese momento que en cualquier otro, porque acaba de vivir en primera persona el coste de no tener mantenimiento preventivo.</p>
-
-            <table className="r-table">
-              <thead><tr><th>Servicio</th><th>Precio orientativo mensual</th><th>Qué incluye</th></tr></thead>
-              <tbody>
-                <tr><td>Plan Básico</td><td>80–120€/mes</td><td>1 visita trimestral de revisión + descuento del 20% en urgencias + respuesta prioritaria en el día</td></tr>
-                <tr><td>Plan Estándar</td><td>180–250€/mes</td><td>1 visita mensual + mantenimiento preventivo de extracción + fontanería + prioridad absoluta en urgencias</td></tr>
-                <tr><td>Plan Integral</td><td>350–500€/mes</td><td>Visita quincenal + todos los oficios cubiertos + coste de materiales de mantenimiento preventivo incluido</td></tr>
-              </tbody>
-            </table>
-
-            <p className="body-text">El Plan Mantenimiento convierte una relación transaccional (urgencia resuelta, cliente cerrado) en una relación recurrente mensual con ingresos predecibles. Para el restaurador, el valor percibido es alto: saber que hay alguien que le puede resolver cualquier problema en horas, por un precio mensual que equivale a menos de una hora de cierre por avería, es una decisión económica obvia.</p>
           </div>
 
           {HR}
 
-          {/* 07 CONCLUSIONES */}
-          <div className="section-anchor" id="conclusiones">
-            <div className="section-label">07 — Conclusiones</div>
-            <h2 className="h2">Lo que revela esta investigación.</h2>
-            <div className="conclusion-grid">
-              <div className="conclusion-cell"><div className="c-num">01</div><h4>El coste de una avería supera siempre el coste de repararla</h4><p>Entre la facturación no realizada, el género perdido y el impacto reputacional, una avería de un día puede costar 3.000–5.000€. El precio de la reparación urgente siempre es menor que el coste de esperar.</p></div>
-              <div className="conclusion-cell"><div className="c-num">02</div><h4>La extracción de cocina es la avería más crítica</h4><p>Es la que más locales cierra por imperativo legal. Un proveedor que pueda resolver averías de extracción en el mismo día tiene una propuesta de valor única en el mercado.</p></div>
-              <div className="conclusion-cell"><div className="c-num">03</div><h4>El mercado actual no está preparado para responder</h4><p>Ni los autónomos individuales ni las empresas grandes cubren el hueco de urgencias multidisciplinares en el día para el restaurante independiente. El déficit es real y sistemático.</p></div>
-              <div className="conclusion-cell"><div className="c-num">04</div><h4>La decisión se toma en minutos y sin comparar precios</h4><p>El primer proveedor que coge el teléfono y confirma disponibilidad en el día tiene la contratación. No hay proceso comparativo en urgencias.</p></div>
-              <div className="conclusion-cell"><div className="c-num">05</div><h4>La urgencia es la puerta de entrada a la reforma</h4><p>El cliente que confía una urgencia no cambia de proveedor. La tasa de conversión a cliente recurrente post-urgencia es alta. El valor del cliente a 12 meses puede ser 10–30 veces el valor de la urgencia inicial.</p></div>
-              <div className="conclusion-cell"><div className="c-num">06</div><h4>El Plan Mantenimiento cierra el ciclo</h4><p>Propuesto en el momento de mayor confianza — justo después de resolver la urgencia — tiene alta tasa de aceptación. Convierte la relación transaccional en ingresos recurrentes predecibles.</p></div>
-            </div>
+          {/* 10 FUENTES */}
+          <div className="section-anchor" id="fuentes">
+            <div className="section-label">10 — Fuentes</div>
+            <h2 className="h2">Referencias y metodología.</h2>
+            <p className="body-text">Esta investigación se apoya en las siguientes fuentes:</p>
+            <ul style={{ paddingLeft: '20px', lineHeight: 2.2, color: 'var(--ink-2)', fontSize: '14px' }}>
+              <li>Hostelería de España. <em>Informe anual del sector de la restauración en España.</em> 2024.</li>
+              <li>INE — Instituto Nacional de Estadística. <em>Encuesta de ocupación en restauración en Madrid.</em> 2024.</li>
+              <li>Ayuntamiento de Madrid. <em>Registro de locales de hostelería por distrito.</em> 2025.</li>
+              <li>CNAE / Seguridad Alimentaria. <em>Normativa sanitaria para locales de restauración.</em> Vigente 2026.</li>
+              <li>Habitissimo. <em>Análisis de precios y demanda de servicios de urgencia para hostelería.</em> 2024-2025.</li>
+              <li>Análisis directo de demanda Oro Constructores — solicitudes de urgencia recibidas en Madrid (área metropolitana).</li>
+            </ul>
+            <p className="nota">* Los datos de facturación media de restaurante son estimaciones basadas en CNAE 5610 (restaurantes y puestos de comidas) para Madrid. Las pérdidas por cierre son estimaciones conservadoras basadas en ticket medio × cubiertos.</p>
           </div>
 
         </div>

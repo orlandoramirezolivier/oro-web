@@ -985,4 +985,371 @@ export const invServicesLM = [
     ctaTitulo: 'La cocina limpia y el desagüe operativo antes del servicio.',
     ctaDescripcion: 'Limpieza de trampa de grasa e hidrojetting. El mismo día. Con documentación para la inspección.',
   },
+
+  {
+    codigo: 'M06',
+    slug: 'campana-extraccion-averiada-hosteleria-madrid',
+    titulo: 'Campana de extracción averiada en hostelería — Madrid',
+    subtitulo: 'Sin extracción la cocina no puede operar. Diagnóstico y reparación el mismo día.',
+    vertical: { codigo: 'M', nombre: 'Urgencias', invSlug: 'urgencias-hosteleria-madrid' },
+    abstract: 'Una cocina industrial sin campana de extracción operativa no puede abrir al público. Los humos se acumulan en sala, la temperatura sube y la normativa prohíbe operar sin extracción activa. Cada hora que la cocina no extrae es una hora de servicio perdido. Oro Constructores diagnostica y repara averías de campana de extracción en locales hosteleros de Madrid el mismo día, con técnico propio que conoce las instalaciones industriales de cocina.',
+
+    stats: [
+      { valor: 'Obligatoria', label: 'la extracción en cocinas industriales según normativa de apertura de locales en Madrid' },
+      { valor: '85%', label: 'de las averías de campana industrial se deben a motor, filtros o problema eléctrico — todos reparables en el día' },
+      { valor: '2–48h', label: 'rango de tiempo de reparación según si hay pieza disponible o hay que pedirla' },
+    ],
+
+    contexto: 'La campana de extracción en una cocina industrial no es un elemento opcional. Es una exigencia de la normativa de actividades de Madrid y una condición imprescindible para que la cocina funcione de forma segura. Sin extracción, los vapores de grasa se acumulan en el ambiente, el calor se dispara y los humos llegan a la sala. Operar sin campana no solo es una infracción administrativa — en caso de incendio, la falta de extracción puede constituir una negligencia con consecuencias legales graves.\n\nLas causas de avería en campanas industriales siguen un patrón claro. La causa más frecuente son los filtros de grasa saturados: cuando no se limpian con regularidad, la acumulación de grasa reduce el caudal hasta detenerlo y convierte la campana en un riesgo de incendio. El motor es la segunda causa: los motores de campana industrial trabajan con grasa en el ambiente y se desgastan. La correa de transmisión (en modelos con mando indirecto) y los problemas eléctricos completan el cuadro de averías habituales.\n\nOro Constructores diagnostica y repara averías de campana en Madrid el mismo día. No somos servicio técnico de fabricante, pero sí somos instaladores con experiencia en campanas industriales y conocemos las causas de avería más frecuentes. Si la reparación requiere una pieza específica que no tenemos en furgoneta, lo comunicamos con el tiempo real de espera y buscamos soluciones provisionales mientras llega.',
+
+    perfiles: [
+      { tipo: 'Cocinero o encargado que llega y la campana no arranca', descripcion: 'Ha encendido la cocina y la campana no responde. El servicio del mediodía está en riesgo. Necesita saber en menos de una hora si la avería se puede resolver hoy o si hay que preparar un plan alternativo. No puede esperar a que un técnico de fabricante le dé cita para la semana que viene.' },
+      { tipo: 'Propietario de restaurante con campana que extrae poco', descripcion: 'Los cocineros llevan semanas quejándose del calor y del olor en sala. La campana funciona pero no extrae bien. Sabe que en cualquier momento la inspección puede levantar un acta. Necesita que alguien revise la campana, identifique el problema y lo resuelva de forma definitiva.' },
+    ],
+
+    queEs: 'La avería de campana industrial es cualquier situación en que el sistema de extracción de una cocina profesional no funciona correctamente: sin caudal de aire, con caudal reducido, con ruido anormal o con indicaciones de avería en el panel. Incluye averías en el motor, en los filtros, en la instalación eléctrica de la campana y en los conductos de evacuación accesibles.',
+
+    trabajoDetalle: 'El diagnóstico de una campana averiada sigue un orden lógico. Primero se verifica si la avería es eléctrica: si la campana no arranca en absoluto, el problema puede estar en el interruptor, en el fusible de la línea o en el motor. Si arranca pero extrae poco, el problema está casi siempre en los filtros saturados o en el motor con el rodamiento desgastado. Si hay ruido anormal, el problema puede ser la correa de transmisión o un desequilibrio en el rodete del motor.\n\nLos filtros de grasa son el punto de mantenimiento más ignorado en cocinas industriales. Un filtro metálico de acero inoxidable saturado de grasa tiene una resistencia al paso del aire que puede reducir el caudal al 20% del nominal. Esto no solo inutiliza la extracción sino que convierte el filtro en una mecha potencial en caso de fuego en la cocina. La limpieza de filtros es una intervención de mantenimiento que Oro Constructores recomienda incorporar al protocolo semanal de la cocina.',
+
+    pasosEjecucion: [
+      { numero: '01', titulo: 'Diagnóstico eléctrico y mecánico', descripcion: 'Verificamos si la campana recibe tensión, si el motor arranca y si el selector de velocidades funciona. Inspeccionamos los filtros de grasa y el estado visual del motor y la correa. En 15–20 minutos tenemos la causa probable de la avería.' },
+      { numero: '02', titulo: 'Limpieza de filtros si es la causa o parte del problema', descripcion: 'Desmontamos los filtros metálicos, los limpiamos con desengrasante industrial y los volvemos a colocar. Si los filtros están dañados o deformados, los sustituimos. Esta operación por sí sola resuelve la mayoría de los casos de extracción reducida.' },
+      { numero: '03', titulo: 'Reparación o sustitución del elemento defectuoso', descripcion: 'Motor averiado: evaluamos si se puede reparar in situ o requiere sustitución. Problema eléctrico: reparamos la línea, el interruptor o el regulador. Correa rota: sustitución inmediata si tenemos el repuesto, o provisional si hay que pedir la medida exacta.' },
+      { numero: '04', titulo: 'Prueba de caudal y verificación antes del servicio', descripcion: 'Encendemos la campana a todas las velocidades y verificamos el caudal de extracción. Comprobamos que no hay ruidos anormales. Si la reparación es provisional por falta de pieza, comunicamos el plazo de la reparación definitiva y lo que el local puede hacer mientras tanto.' },
+    ],
+
+    materiales: [
+      { tipo: 'Filtros de grasa saturados (acero inoxidable)', tecnica: 'Limpieza con desengrasante industrial o sustitución', cuandoUsarla: 'Causa más frecuente de extracción reducida. Se identifican por el color y el peso al desmontarlos.' },
+      { tipo: 'Motor de campana averiado', tecnica: 'Sustitución del motor por equivalente', cuandoUsarla: 'Cuando el motor no arranca o tiene rodamiento roto. El motor es la pieza que más tarda en llegar si no está en stock.' },
+      { tipo: 'Correa de transmisión rota (campanas con mando indirecto)', tecnica: 'Sustitución de la correa por medida exacta', cuandoUsarla: 'Campanas con motor separado del rodete. Fallo repentino y ruidoso. Pieza rápida de sustituir si se tiene en stock.' },
+      { tipo: 'Regulador de velocidad o interruptor defectuoso', tecnica: 'Sustitución del elemento', cuandoUsarla: 'Cuando la campana no responde al mando o funciona solo a una velocidad.' },
+    ],
+
+    queIncluye: [
+      'Desplazamiento urgente el mismo día en Madrid capital y área metropolitana',
+      'Diagnóstico completo: eléctrico, mecánico y de filtros',
+      'Limpieza de filtros de grasa si es parte de la avería o causa directa',
+      'Reparación del elemento defectuoso (interruptor, regulador, correa, motor si disponible)',
+      'Prueba de caudal a todas las velocidades antes de finalizar',
+      'Informe de la avería y recomendaciones de mantenimiento preventivo',
+    ],
+    queNoIncluye: [
+      'Instalación de campana nueva si la avería lo requiere (presupuesto aparte)',
+      'Limpieza de conductos de extracción (servicio aparte — conductos de chapa requieren empresa especializada)',
+      'Piezas que no están en stock y hay que pedir al fabricante (se comunica el plazo)',
+    ],
+
+    precios: [
+      { trabajo: 'Desplazamiento urgente + diagnóstico + limpieza de filtros', precio: '200–400€', nota: 'Sin IVA. Resuelve la mayoría de los casos de extracción reducida.' },
+      { trabajo: 'Sustitución de regulador o interruptor', precio: '150–300€', nota: 'Aparte del desplazamiento. Incluye material.' },
+      { trabajo: 'Sustitución de correa de transmisión', precio: '100–250€', nota: 'Aparte del desplazamiento. Si hay que pedir correa, se presupuesta el tiempo de espera.' },
+      { trabajo: 'Sustitución de motor de campana', precio: '400–900€', nota: 'Según potencia y modelo. Incluye material y mano de obra de sustitución.' },
+      { trabajo: 'Recargo urgencia fuera de horario o fin de semana', precio: '+50–100%', nota: 'Sobre la tarifa base.' },
+    ],
+    preciosContexto: 'El coste de la reparación de campana depende de la causa de la avería. La limpieza de filtros y la sustitución de elementos de mando (interruptores, reguladores) son las intervenciones más económicas y resuelven la mayoría de los casos. La sustitución del motor es la intervención más cara y puede requerir esperar la pieza si no está en stock local. En todos los casos, el coste de la reparación debe compararse con el coste de tener la cocina sin extracción un día más.',
+
+    errores: [
+      { error: 'No limpiar los filtros de grasa con regularidad', consecuencia: 'Los filtros saturados son la causa más frecuente de avería de campana y, simultáneamente, el mayor riesgo de incendio en una cocina industrial. Un filtro lleno de grasa es combustible acumulado justo encima de los fogones. La limpieza semanal o quincenal de filtros es la medida de prevención más rentable que puede hacer una cocina.' },
+      { error: 'Operar con campana averiada o con extracción reducida', consecuencia: 'Además del riesgo de incendio por filtros saturados, operar sin extracción puede ser causa de sanción en una inspección de la Agencia de Actividades. En caso de incendio con filtros en mal estado, el seguro puede denegar la cobertura si se acredita que la campana no estaba en mantenimiento correcto.' },
+      { error: 'Llamar al servicio técnico del fabricante para una avería urgente', consecuencia: 'Los servicios técnicos de fabricante tienen plazos de cita habitualmente de 3–7 días. Una cocina industrial no puede esperar una semana sin extracción. Para la urgencia, la solución es un instalador con experiencia en campanas industriales que pueda diagnosticar y reparar el mismo día con las piezas más habituales.' },
+    ],
+
+    porQueOro: [
+      { icon: 'fa-solid fa-clock', titulo: 'El mismo día, sin cita previa de fabricante', texto: 'Los servicios técnicos de fabricante dan cita para la semana que viene. Nosotros llegamos el mismo día. Para una cocina industrial sin extracción, la diferencia es la diferencia entre abrir o no abrir.' },
+      { icon: 'fa-solid fa-magnifying-glass', titulo: 'Diagnóstico completo, no solo el síntoma', texto: 'No venimos solo a sustituir la pieza que falla. Revisamos los filtros, el motor, la instalación eléctrica y el estado general de la campana. Si hay un problema secundario que va a causar la próxima avería, te lo comunicamos antes de que lo haga.' },
+      { icon: 'fa-solid fa-shield-halved', titulo: 'Reparación que cumple normativa', texto: 'Trabajamos con materiales aptos para instalaciones de cocina industrial y dejamos la campana en condiciones de superar una inspección de actividades. No hacemos chapuzas provisionales que te crean un problema administrativo en la próxima inspección.' },
+    ],
+
+    proceso: [
+      { numero: '01', titulo: 'Aviso y confirmación de llegada', descripcion: 'Cuando llamas, confirmamos disponibilidad y damos tiempo de llegada real. Si el aviso llega la noche anterior, podemos organizar la visita para antes de la apertura del local.' },
+      { numero: '02', titulo: 'Diagnóstico en 20 minutos', descripcion: 'A la llegada verificamos el estado eléctrico, el motor y los filtros. En 20 minutos tenemos la causa de la avería y te comunicamos si se puede resolver ese mismo día o si hay que esperar alguna pieza.' },
+      { numero: '03', titulo: 'Reparación y prueba', descripcion: 'Reparamos el elemento defectuoso, limpiamos los filtros si es necesario y probamos la campana a todas las velocidades. Solo damos la reparación por terminada cuando el caudal es correcto.' },
+      { numero: '04', titulo: 'Informe y recomendaciones de mantenimiento', descripcion: 'Emitimos informe de la avería con descripción de la causa, trabajo realizado y materiales. Te recomendamos la frecuencia de mantenimiento de filtros y revisión del motor para evitar la próxima urgencia.' },
+    ],
+
+    faq: [
+      { pregunta: '¿Podemos operar con la campana averiada mientras esperamos la reparación?', respuesta: 'No es recomendable y en muchos casos no es legal. Sin extracción, la cocina acumula vapores de grasa que son inflamables y que llegan a la sala. Si la avería es de filtros saturados, operar supone riesgo de incendio. Si es de motor, la cocina queda sin ventilación. Lo correcto es suspender la actividad de cocina o limitarla a elaboraciones sin fritura ni plancha hasta que la campana esté operativa.' },
+      { pregunta: '¿Con qué frecuencia hay que limpiar los filtros de la campana?', respuesta: 'En cocinas de alta producción (restaurantes con servicio de mediodía y noche), los filtros deben limpiarse semanalmente. En cocinas de menor producción (bares de tapas, desayunos), quincenalmente o mensualmente. La señal de que hay que limpiarlos antes de lo previsto es el goteo de grasa desde la campana durante el servicio.' },
+      { pregunta: '¿Y si la pieza que necesita la campana no está disponible?', respuesta: 'Si la avería requiere una pieza que no tenemos en furgoneta y hay que pedirla al fabricante, te lo comunicamos inmediatamente con el plazo real. Buscamos soluciones provisionales que permitan operar con la menor limitación posible mientras llega la pieza. El plazo habitual para piezas de motor es de 1–3 días laborables.' },
+      { pregunta: '¿Hacéis también la limpieza de los conductos de extracción?', respuesta: 'La limpieza de conductos de chapa de gran longitud requiere empresa especializada con equipo específico. Nosotros limpiamos la campana, los filtros y el arranque de conducto accesible, pero para la limpieza completa del conducto de extracción desde la cocina hasta la salida de cubierta recomendamos una empresa especializada en limpieza de conductos de cocina industrial, que debe hacerse al menos una vez al año.' },
+    ],
+
+    ctaTitulo: 'La campana averiada no puede esperar al técnico de fabricante.',
+    ctaDescripcion: 'Diagnóstico y reparación el mismo día. Madrid capital y área metropolitana.',
+  },
+
+  {
+    codigo: 'M07',
+    slug: 'banos-fuera-servicio-hostelero-madrid',
+    titulo: 'Baños fuera de servicio en local hostelero — Madrid',
+    subtitulo: 'Sin baños no se puede abrir. Lo resolvemos antes de que el servicio empiece.',
+    vertical: { codigo: 'M', nombre: 'Urgencias', invSlug: 'urgencias-hosteleria-madrid' },
+    abstract: 'Un restaurante o bar con los baños fuera de servicio no puede abrir al público. La normativa sanitaria lo exige: sin instalaciones sanitarias operativas, el local no está en condiciones de actividad. Y si los baños se averían durante el servicio, el local queda en una situación embarazosa que acaba antes o después en queja o en llamada de inspección. Oro Constructores resuelve averías de baños en locales hosteleros de Madrid el mismo día, sea un atasco, una fuga o una grifería que no para.',
+
+    stats: [
+      { valor: 'Obligatorios', label: 'los aseos para clientes en establecimientos hosteleros según la normativa sanitaria de Madrid' },
+      { valor: '35%', label: 'de las sanciones sanitarias en hostelería madrileña están relacionadas con instalaciones sanitarias deficientes' },
+      { valor: '< 2h', label: 'tiempo de respuesta de Oro Constructores para urgencias de baños en hostelería Madrid capital' },
+    ],
+
+    contexto: 'La normativa sanitaria de establecimientos hosteleros en Madrid exige que el local disponga de aseos para clientes en condiciones higiénicas correctas. Sin baños operativos, el local no puede abrir — y si intenta abrir, queda expuesto a sanciones de la Agencia de Actividades que pueden incluir el cierre cautelar. La presión adicional es que los baños de un local hostelero están sometidos a un uso intensivo que multiplica la probabilidad de averías respecto a los de una vivienda.\n\nLas causas más frecuentes de baños fuera de servicio en hostelería son: atasco total (inodoro o sumidero bloqueado sin posibilidad de descarga), tubería reventada por presión o por golpe, cisterna que no funciona (no carga o no descarga) y grifería que no corta el agua. En todos los casos, la urgencia es máxima porque sin baños no hay servicio.\n\nOro Constructores ha visto todas estas situaciones en 30 años de trabajo en hostelería madrileña. La ventaja de trabajar con nosotros en una urgencia de baños es que venimos con herramientas para resolver el problema más frecuente, no a hacer un diagnóstico y volver mañana. La mayoría de las averías de baños en hostelería se resuelven en una sola visita.',
+
+    perfiles: [
+      { tipo: 'Gerente que llega al local y los baños están inundados o bloqueados', descripcion: 'Llega por la mañana para preparar la apertura y encuentra los baños con agua en el suelo, o el inodoro desbordado, o el grifo corriendo sin que nada lo pare. Tiene el servicio del mediodía en riesgo. Necesita que alguien llegue antes de la apertura y lo resuelva.' },
+      { tipo: 'Propietario que recibe queja de clientes durante el servicio', descripcion: 'El camarero le avisa de que el baño no tira. O peor: un cliente ha salido y ha dicho que hay agua en el suelo. El local sigue con clientes pero los baños son inutilizables. Necesita solución inmediata o sabe que las quejas van a ir escalando.' },
+    ],
+
+    queEs: 'Urgencia de baños en hostelería es cualquier situación que deja los aseos del local total o parcialmente fuera de servicio: atasco de inodoro o sumidero, fuga activa en tubería de baño, cisterna que no descarga o que no para de correr, grifería que no cierra, o daño en cualquier elemento sanitario que impida el uso correcto del baño.',
+
+    trabajoDetalle: 'Las averías de baños en hostelería tienen cuatro causas principales con soluciones diferentes. El atasco de inodoro es la más frecuente: se resuelve con espiral mecánica o émbolo profesional en la mayoría de los casos. La tubería reventada requiere cortar el suministro de agua, localizar el punto de rotura y repararlo — en baños de hostelería, las tuberías suelen ser accesibles porque los baños tienen trasdosados o falsos techos desmontables. La cisterna defectuosa se repara en la mayoría de los casos con la sustitución del flotador, la válvula de llenado o la válvula de descarga — piezas estándar que se tienen en furgoneta. La grifería que no corta requiere sustituir la cartucho o, si el daño es mayor, la pieza completa.\n\nLa particularidad de los baños de hostelería es el uso intensivo: un baño de restaurante puede recibir entre 50 y 200 usos diarios, lo que equivale a años de uso doméstico en pocas semanas. Esto significa que las piezas se desgastan más rápido y que las averías son más frecuentes. También significa que una avería que en casa daría días para resolver, en hostelería necesita solución en horas.',
+
+    pasosEjecucion: [
+      { numero: '01', titulo: 'Diagnóstico rápido de la causa', descripcion: 'Inspeccionamos los baños del local para identificar la causa exacta: atasco, fuga, cisterna o grifería. En menos de 10 minutos tenemos claro qué hay que hacer y te comunicamos si se puede resolver en esa misma visita.' },
+      { numero: '02', titulo: 'Corte del suministro si hay agua corriendo', descripcion: 'Si hay agua que no para — grifería rota, cisterna que no cierra o tubería reventada — cortamos el suministro de la zona afectada para detener el daño. Si hay agua en el suelo, evaluamos el alcance antes de actuar.' },
+      { numero: '03', titulo: 'Reparación del elemento defectuoso', descripcion: 'Atasco: espiral mecánica o émbolo profesional hasta resolver el bloqueo. Fuga en tubería: reparación del punto de rotura con material homologado. Cisterna: sustitución de las piezas defectuosas (flotador, válvula, mecanismo). Grifería: sustitución del cartucho o de la pieza completa.' },
+      { numero: '04', titulo: 'Prueba y verificación antes del servicio', descripcion: 'Probamos todos los elementos reparados con uso real: descarga completa del inodoro, apertura y cierre del grifo, verificación de que no hay fugas residuales. Solo damos la avería por resuelta cuando el baño está en condiciones de uso para clientes.' },
+    ],
+
+    materiales: [
+      { tipo: 'Inodoro bloqueado (atasco)', tecnica: 'Émbolo profesional o espiral mecánica', cuandoUsarla: 'El caso más frecuente. Normalmente resuelto en 15–30 minutos si el bloqueo está en el sifón del inodoro.' },
+      { tipo: 'Cisterna que no carga o no descarga', tecnica: 'Sustitución de flotador, válvula de llenado o mecanismo de descarga', cuandoUsarla: 'Piezas estándar disponibles en furgoneta. Reparación de 30–60 minutos.' },
+      { tipo: 'Grifería que no corta', tecnica: 'Sustitución del cartucho cerámico o de la pieza completa', cuandoUsarla: 'Grifería de hostelería con uso intensivo. El cartucho cerámico tiene vida útil limitada a alta frecuencia de uso.' },
+      { tipo: 'Tubería reventada o con fuga', tecnica: 'Reparación del punto de rotura o sustitución del tramo afectado', cuandoUsarla: 'Menos frecuente pero más grave. Requiere corte de suministro y acceso a la tubería.' },
+    ],
+
+    queIncluye: [
+      'Desplazamiento urgente el mismo día en Madrid capital y área metropolitana',
+      'Diagnóstico de todos los baños del local',
+      'Reparación del elemento defectuoso (atasco, cisterna, grifería o fuga)',
+      'Prueba con uso real antes de finalizar',
+      'Informe técnico de la intervención para el seguro si aplica',
+    ],
+    queNoIncluye: [
+      'Obras de albañilería o alicatado para acceso a tuberías empotradas (presupuesto aparte)',
+      'Sustitución completa del inodoro, lavabo o grifería por nueva (presupuesto aparte)',
+      'Reparación de daños causados por el agua en suelos o paredes (presupuesto aparte)',
+    ],
+
+    precios: [
+      { trabajo: 'Desplazamiento urgente + diagnóstico', precio: '150–250€', nota: 'Sin IVA. Horario laboral L–V 8:00–18:00.' },
+      { trabajo: 'Desatasco de inodoro en hostelería', precio: '150–400€', nota: 'Según profundidad del bloqueo. Ver también M05 para atascos de grasa.' },
+      { trabajo: 'Reparación de cisterna (flotador, válvula, mecanismo)', precio: '100–250€', nota: 'Incluye material estándar. Aparte del desplazamiento.' },
+      { trabajo: 'Sustitución de grifería en baño de hostelería', precio: '150–300€', nota: 'Incluye pieza estándar de hostelería. Grifería especial a consultar.' },
+      { trabajo: 'Reparación de fuga en tubería de baño (accesible)', precio: '200–500€', nota: 'Según accesibilidad. Tuberías empotradas a presupuestar aparte.' },
+      { trabajo: 'Recargo fuera de horario y fin de semana', precio: '+50–100%', nota: 'Sobre la tarifa base total.' },
+    ],
+    preciosContexto: 'El coste de la urgencia de baños varía según la causa de la avería. Los atascos de inodoro y las reparaciones de cisterna son las intervenciones más económicas. Las fugas en tubería empotrada o los trabajos que requieren abrir trasdosados tienen un coste mayor. En todos los casos, el coste de la reparación es significativamente menor que el coste de cerrar el local hasta que se resuelva.',
+
+    errores: [
+      { error: 'Intentar abrir el local con los baños fuera de servicio', consecuencia: 'Si un inspector de sanidad o de la Agencia de Actividades visita el local y encuentra los baños sin funcionar, puede levantar acta y ordenar el cierre cautelar del local hasta que se acredite la corrección. La sanción administrativa puede ser superior al coste de la reparación urgente.' },
+      { error: 'Usar el baño de personal como alternativa para los clientes', consecuencia: 'Es una solución temporal que crea más problemas de los que resuelve: el baño de personal no suele cumplir los requisitos de accesibilidad y condiciones exigidas para baños de clientes. Si hay una inspección, la situación puede considerarse más grave.' },
+      { error: 'No documentar la avería y la reparación para el seguro', consecuencia: 'Si hay daños por agua en el suelo o en la zona adyacente, el seguro del local puede cubrir parte de los daños. Para reclamar, necesitas el informe técnico de la avería y las fotografías del daño. Si limpias sin documentar, pierdes la posibilidad de reclamar.' },
+    ],
+
+    porQueOro: [
+      { icon: 'fa-solid fa-bolt', titulo: 'Antes de que abra el servicio', texto: 'Cuando el aviso llega la noche anterior o a primera hora, podemos estar en el local antes de la apertura. El objetivo es que el local abra con los baños operativos, sin que los clientes sepan que ha habido una incidencia.' },
+      { icon: 'fa-solid fa-toolbox', titulo: 'Furgoneta con piezas para las averías más frecuentes', texto: 'Viajamos con cisternas, cartuchos de grifería, material de fontanería y herramientas de desatasco. La mayoría de las averías de baños en hostelería se resuelven en una sola visita sin esperar a pedir piezas.' },
+      { icon: 'fa-solid fa-file-medical', titulo: 'Informe técnico para el seguro y para la inspección', texto: 'Emitimos informe de cada intervención de urgencia con descripción de la avería, causa y trabajo realizado. Sirve tanto para tramitar el parte con la aseguradora como para acreditar ante la Agencia de Actividades que la incidencia se ha resuelto.' },
+    ],
+
+    proceso: [
+      { numero: '01', titulo: 'Aviso y confirmación de llegada', descripcion: 'Cuando llamas, describimos el síntoma por teléfono para orientar el diagnóstico y venimos con el material más probable. Confirmamos tiempo de llegada real.' },
+      { numero: '02', titulo: 'Diagnóstico y comunicación al propietario', descripcion: 'A la llegada inspeccionamos los baños y comunicamos la causa y la solución prevista. Si la avería se puede resolver en esa visita, empezamos inmediatamente. Si requiere material que no tenemos, comunicamos el plazo real.' },
+      { numero: '03', titulo: 'Reparación y prueba', descripcion: 'Reparamos el elemento defectuoso y probamos con uso real: descarga completa, apertura y cierre de grifo, verificación de ausencia de fugas. El baño queda en condiciones de uso para clientes.' },
+      { numero: '04', titulo: 'Informe y factura', descripcion: 'Emitimos el informe técnico de la intervención y la factura. El local puede reanudar la actividad con los baños operativos.' },
+    ],
+
+    faq: [
+      { pregunta: '¿Podéis venir antes de que abra el local si la avería es la noche anterior?', respuesta: 'Sí. Si nos avisas la noche anterior, organizamos la visita para antes de la apertura. Para avisos recibidos después de las 22:00, la visita se organiza para primera hora de la mañana siguiente o de madrugada si el local abre muy temprano.' },
+      { pregunta: '¿Qué hacemos si los baños se averían en pleno servicio?', respuesta: 'Si la avería ocurre durante el servicio y los baños quedan totalmente fuera de uso, el local está en una situación difícil. Llámanos inmediatamente. En Madrid capital podemos estar en menos de dos horas. Mientras esperáis, colocad un cartel en los baños indicando que están temporalmente fuera de servicio y disculpad las molestias.' },
+      { pregunta: '¿Cómo evitamos que esto vuelva a pasar?', respuesta: 'Las causas más recurrentes son el uso intensivo de inodoros sin mantenimiento de la cisterna y la grifería de bajo coste que falla rápido con uso intensivo. Recomendamos revisión periódica de cisternas (el flotador desgastado provoca cisterna que corre sin parar y también fallos en la descarga) y grifería de calidad para hostelería, diseñada para miles de usos diarios.' },
+      { pregunta: '¿Las obras de baños accesibles obligatorias las hacéis vosotros?', respuesta: 'Sí. Si en la urgencia detectamos que los baños del local no cumplen los requisitos de accesibilidad obligatorios según la normativa, podemos presupuestaros la adecuación. Es un trabajo diferente a la urgencia, planificado y con presupuesto cerrado, pero conviene abordarlo para evitar problemas en futuras inspecciones.' },
+    ],
+
+    ctaTitulo: 'Sin baños no se abre. Con nosotros, los baños vuelven a funcionar hoy.',
+    ctaDescripcion: 'Urgencias de baños en hostelería. El mismo día. Madrid capital y área metropolitana.',
+  },
+
+  {
+    codigo: 'M08',
+    slug: 'grifo-valvula-rota-urgente-madrid',
+    titulo: 'Grifo o válvula rota con agua corriendo — Madrid',
+    subtitulo: 'El agua no para. Cada minuto suma en la factura y en el riesgo de inundación.',
+    vertical: { codigo: 'M', nombre: 'Urgencias', invSlug: 'urgencias-hosteleria-madrid' },
+    abstract: 'El grifo que no cierra o la válvula que no corta no es una molestia menor: es agua corriendo sin control, factura creciendo por minutos y riesgo real de inundación si el nivel sube. Un grifo abierto puede gastar entre 6 y 12 litros por minuto. En 24 horas: hasta 17.000 litros y una factura de agua de 60€ — sin contar el daño si el desagüe no da abasto. Oro Constructores repara grifos y válvulas rotas en Madrid el mismo día.',
+
+    stats: [
+      { valor: '6–12 L/min', label: 'gasto de agua de un grifo que no cierra correctamente' },
+      { valor: '17.280 L', label: 'volumen máximo de agua que puede gastar en 24 horas un grifo de cierre automático roto' },
+      { valor: '30–60€', label: 'coste mínimo de la factura de agua de 24 horas con un grifo que no cierra — sin contar daños por inundación' },
+    ],
+
+    contexto: 'Un grifo roto o una válvula que no cierra es una de las urgencias de fontanería que más subestiman los propietarios. La razón es que, a diferencia de una fuga visible, el agua se va por el desagüe y no se ve el daño inmediato. Pero el contador sigue sumando. En tarifa de bloque progresiva como la que aplica el Canal de Isabel II en Madrid, los excesos de consumo tienen un coste por m³ que puede multiplicar por 5 o por 10 el precio del agua normal. Un día con un grifo abierto puede equivaler al consumo mensual de una familia.\n\nEl riesgo mayor aparece cuando la capacidad de desagüe no es suficiente para el caudal que entra. Si el grifo vierte en un lavabo y el sifón tiene una pequeña obstrucción parcial, el nivel puede subir hasta desbordar. En una vivienda en planta superior, eso significa filtración al vecino de abajo. En un local hostelero, significa inundación del baño o de la cocina mientras el negocio está cerrado por la noche.\n\nLas causas más frecuentes son tres: el cartucho cerámico del grifo desgastado (que ya no sella cuando se cierra), la válvula de paso que no cierra completamente por cal acumulada o por desgaste del asiento, y el flotador de cisterna defectuoso que deja entrar agua continuamente aunque la cisterna esté llena. En todos los casos, la reparación es puntual y rápida cuando se tiene la pieza adecuada.',
+
+    perfiles: [
+      { tipo: 'Propietario que descubre el grifo corriendo al llegar a casa', descripcion: 'Ha llegado a casa y lleva horas corriendo. No sabe exactamente cuánto tiempo pero la factura ya está hecha. Necesita que alguien lo repare hoy mismo y que le diga si hay riesgo de daño adicional. La preocupación inmediata es parar el agua.' },
+      { tipo: 'Gerente de hostelería que recibe aviso de que hay agua corriendo en el local cerrado', descripcion: 'Le llama el vecino o el sistema de alarma. Hay agua en el suelo del baño o de la cocina. No puede ir inmediatamente pero necesita alguien que llegue, diagnostique y resuelva sin que él tenga que estar presente.' },
+    ],
+
+    queEs: 'Urgencia de grifo o válvula rota es cualquier situación en que el agua no puede cortarse correctamente: grifo de apertura que no cierra al girar el mando, válvula de paso que no corta el suministro, flotador de cisterna que no para de llenar, o válvula de seguridad que ha abierto y no cierra. En todos los casos, el agua corre sin control y no hay forma de pararla sin intervención técnica.',
+
+    trabajoDetalle: 'La reparación de un grifo o una válvula que no cierra empieza por cortar el suministro del tramo afectado para detener el flujo de agua. Luego se desmonta el elemento defectuoso para identificar la pieza que ha fallado: el cartucho cerámico en grifos monomando, la junta de goma en grifos antiguos de dos mandos, el asiento de la válvula de paso o el mecanismo del flotador de cisterna.\n\nEn la mayoría de los casos, la reparación consiste en sustituir la pieza defectuosa. Los cartuchos cerámicos de grifería estándar son piezas universales que se tienen en furgoneta. Los flotadores de cisterna también son piezas estándar. Las válvulas de paso con asiento desgastado pueden repararse o sustituirse según el estado. El tiempo de reparación habitual es de 30 a 90 minutos.\n\nLa complicación aparece cuando la grifería es de diseño especial o de marca con piezas no estándar — en ese caso puede ser necesario pedir la pieza. En estos casos buscamos una solución provisional que corte el agua mientras se espera la pieza definitiva.',
+
+    pasosEjecucion: [
+      { numero: '01', titulo: 'Corte del suministro y evaluación del daño', descripcion: 'A la llegada cortamos la llave de paso más próxima al elemento defectuoso para detener el flujo de agua. Evaluamos si hay agua acumulada y el riesgo de daño adicional (desbordamiento, filtración a vecino).' },
+      { numero: '02', titulo: 'Diagnóstico del elemento defectuoso', descripcion: 'Desmontamos el grifo o la válvula para identificar la pieza que ha fallado: cartucho cerámico, junta de goma, asiento de válvula o mecanismo de flotador. Verificamos si tenemos la pieza en furgoneta o si hay que pedirla.' },
+      { numero: '03', titulo: 'Sustitución de la pieza defectuosa', descripcion: 'Sustituimos la pieza con material de calidad equivalente o superior al original. Si la pieza no está disponible, instalamos una solución provisional que permita cortar el agua mientras llega la pieza definitiva.' },
+      { numero: '04', titulo: 'Prueba de estanqueidad y verificación', descripcion: 'Abrimos el suministro y verificamos que el grifo o la válvula cierra correctamente en todos los rangos de apertura. Comprobamos que no hay fugas residuales en las juntas de montaje. Emitimos informe si se necesita para el seguro.' },
+    ],
+
+    materiales: [
+      { tipo: 'Cartucho cerámico de grifería monomando', tecnica: 'Sustitución por cartucho equivalente', cuandoUsarla: 'Causa más frecuente en grifería moderna. El cartucho cerámico dura entre 5 y 15 años según la calidad del agua.' },
+      { tipo: 'Junta de goma en grifo antiguo de dos mandos', tecnica: 'Sustitución de la junta o del conjunto', cuandoUsarla: 'Grifería anterior a los años 90. Las juntas de goma se endurecen con el tiempo y dejan de sellar.' },
+      { tipo: 'Válvula de paso con asiento desgastado', tecnica: 'Sustitución de la válvula completa', cuandoUsarla: 'Válvulas de cierre que no cortan completamente. Más frecuente en válvulas de más de 20 años.' },
+      { tipo: 'Flotador de cisterna defectuoso', tecnica: 'Sustitución del flotador o de la válvula de llenado', cuandoUsarla: 'Cisterna que no para de llenar aunque esté al nivel correcto. Señal: agua que corre constantemente por el rebosadero.' },
+    ],
+
+    queIncluye: [
+      'Desplazamiento urgente el mismo día en Madrid capital y área metropolitana',
+      'Corte del suministro para detener el flujo de agua',
+      'Diagnóstico del elemento defectuoso',
+      'Sustitución de la pieza defectuosa con material estándar',
+      'Prueba de estanqueidad post-reparación',
+      'Informe técnico si se necesita para el seguro',
+    ],
+    queNoIncluye: [
+      'Sustitución de grifería completa de diseño especial (presupuesto aparte)',
+      'Reparación de daños causados por el agua acumulada (presupuesto aparte)',
+      'Piezas de grifería de importación o de fabricante que hay que pedir (se comunica el plazo)',
+    ],
+
+    precios: [
+      { trabajo: 'Desplazamiento urgente + diagnóstico + reparación estándar', precio: '150–350€', nota: 'Sin IVA. Incluye sustitución de cartucho, junta o flotador estándar. Horario laboral.' },
+      { trabajo: 'Sustitución de válvula de paso', precio: '150–300€', nota: 'Aparte del desplazamiento. Incluye material. Varía según diámetro y accesibilidad.' },
+      { trabajo: 'Recargo urgencia fuera de horario', precio: '+75–150€', nota: 'Para avisos de tarde-noche o madrugada.' },
+      { trabajo: 'Recargo fin de semana y festivos', precio: '+50–100%', nota: 'Sobre la tarifa base total.' },
+    ],
+    preciosContexto: 'La reparación de un grifo o válvula rota es habitualmente una intervención rápida y económica cuando la pieza está disponible. El coste total depende de la hora del aviso (hay recargos fuera de horario), la accesibilidad de la válvula de corte y el tipo de pieza a sustituir. Grifería de diseño o de importación puede requerir pedir pieza, lo que añade días de espera.',
+
+    errores: [
+      { error: 'Dejar el grifo corriendo hasta el día siguiente por no querer pagar el recargo nocturno', consecuencia: 'Un grifo abierto durante 12 horas de noche puede gastar entre 4.000 y 8.000 litros de agua. En tarifa progresiva de Canal de Isabel II, eso puede equivaler a 2–3 meses de consumo facturado en una noche. El ahorro del recargo nocturno no compensa la factura de agua del día siguiente. Y si el desagüe se satura, añade el coste del daño por inundación.' },
+      { error: 'Intentar cerrar la válvula a la fuerza cuando no cierra', consecuencia: 'Las válvulas de paso con el asiento desgastado no se pueden cerrar a la fuerza: el esfuerzo puede romper el vástago o deformar el cuerpo de la válvula, convirtiendo un problema de no-cierre en una rotura con escape libre. El procedimiento correcto es cerrar la válvula de corte anterior y llamar al fontanero.' },
+      { error: 'No avisar a los vecinos de abajo si hay agua acumulada en el suelo', consecuencia: 'Si hay agua en el suelo de la vivienda o del local y el vecino de abajo empieza a ver humedades en su techo, la responsabilidad es del propietario de arriba. Avisar al vecino y documentar la situación desde el primer momento reduce el conflicto y facilita la tramitación con el seguro.' },
+    ],
+
+    porQueOro: [
+      { icon: 'fa-solid fa-clock', titulo: 'El agua parada en horas, no mañana', texto: 'Un grifo que no cierra no puede esperar a que abra la ferretería o a que el fontanero tenga hueco en la semana. Atendemos la urgencia el mismo día porque sabemos que cada hora con el agua corriendo tiene un coste real.' },
+      { icon: 'fa-solid fa-toolbox', titulo: 'Furgoneta con las piezas más habituales', texto: 'Llevamos cartuchos cerámicos de los formatos más habituales, flotadores de cisterna, juntas de goma y válvulas de paso estándar. La mayoría de las averías de grifo se resuelven en una sola visita sin esperar piezas.' },
+      { icon: 'fa-solid fa-file-medical', titulo: 'Informe para el seguro si hay daños por agua', texto: 'Si el agua acumulada ha generado daños en suelo, paredes o en el vecino de abajo, emitimos informe técnico de la avería con descripción de la causa. Es el documento que las aseguradoras necesitan para tramitar el siniestro.' },
+    ],
+
+    proceso: [
+      { numero: '01', titulo: 'Aviso y llegada el mismo día', descripcion: 'Cuando llamas, confirmamos disponibilidad y damos tiempo de llegada real. Para avisos de agua corriendo sin control, priorizamos sobre trabajos no urgentes.' },
+      { numero: '02', titulo: 'Corte del suministro y diagnóstico', descripcion: 'A la llegada cortamos el suministro del tramo afectado para detener el flujo. Desmontamos el elemento defectuoso y verificamos la pieza que hay que sustituir.' },
+      { numero: '03', titulo: 'Reparación con pieza disponible', descripcion: 'Si tenemos la pieza en furgoneta, la sustituimos inmediatamente. Si la pieza hay que pedirla, instalamos una solución provisional que corta el agua con seguridad mientras llega la definitiva.' },
+      { numero: '04', titulo: 'Verificación y factura', descripcion: 'Probamos la estanqueidad del elemento reparado y verificamos que no hay fugas residuales. Emitimos informe si se necesita para el seguro y factura con el desglose del trabajo.' },
+    ],
+
+    faq: [
+      { pregunta: '¿Qué hago mientras espero al fontanero si el grifo no para?', respuesta: 'Cierra la llave de paso del tramo afectado. Si no puedes cerrarla o no la encuentras, cierra la llave de paso general de la vivienda o del local. Si hay agua en el suelo, retira los objetos que puedan dañarse y pon toallas para contener el agua. No intentes cerrar la válvula a la fuerza si nota resistencia excesiva.' },
+      { pregunta: '¿Cuánto me puede costar la factura de agua si el grifo lleva horas corriendo?', respuesta: 'Depende del caudal y del tiempo. Un grifo de cocina abierto al mínimo puede gastar 6 litros por minuto. En 4 horas son 1.440 litros — el consumo de varios días de una persona. En tarifa progresiva del Canal de Isabel II, los bloques altos pueden costar 3–5€/m³, así que 1.400 litros pueden facturarse a 4–7€ de agua, más cuota fija. Para calcular el daño exacto, el Canal de Isabel II puede aplicar una bonificación si acreditas con factura del fontanero que fue una avería y no consumo voluntario.' },
+      { pregunta: '¿El seguro del hogar cubre la factura de agua por grifo roto?', respuesta: 'Depende del seguro. Algunos seguros de hogar incluyen cobertura de daños por escape de agua y pueden cubrir parte del sobreconsumo en factura si se acredita que fue una avería. Lo más importante es documentar la avería con el informe del fontanero antes de reclamar. Consulta las condiciones de tu póliza o habla con tu corredor de seguros.' },
+      { pregunta: '¿Podéis venir de noche si el grifo no para y no está el suministro cortado?', respuesta: 'Sí, atendemos urgencias los siete días de la semana en cualquier horario. Hay un recargo nocturno que comunicamos al confirmar la visita. Para avisos de agua corriendo sin forma de cortarla, priorizamos la urgencia independientemente de la hora.' },
+    ],
+
+    ctaTitulo: 'El agua no espera. Tampoco nosotros.',
+    ctaDescripcion: 'Reparación de grifo o válvula rota el mismo día. Madrid capital y área metropolitana.',
+  },
+
+  {
+    codigo: 'M09',
+    slug: 'averia-nevera-industrial-camara-frigorifica-madrid',
+    titulo: 'Avería de nevera industrial o cámara frigorífica — Madrid',
+    subtitulo: 'La cámara no enfría. La mercancía está en riesgo. Primer respondedor en horas.',
+    vertical: { codigo: 'M', nombre: 'Urgencias', invSlug: 'urgencias-hosteleria-madrid' },
+    abstract: 'Cuando la cámara frigorífica deja de enfriar, el reloj corre en contra. Por encima de 4ºC empieza el riesgo de contaminación alimentaria. Un día sin cámara operativa puede significar tirar todo el género: entre 500 y 5.000€ de pérdida según el tamaño. Oro Constructores actúa como primer respondedor: diagnosticamos la avería, implementamos soluciones provisionales de frío y coordinamos con técnico de frío certificado F-Gas para la reparación del sistema de refrigeración.',
+
+    stats: [
+      { valor: '4ºC', label: 'temperatura a partir de la cual empieza el riesgo de contaminación alimentaria según normativa APPCC' },
+      { valor: '500–5.000€', label: 'pérdida potencial en género por avería de cámara en un restaurante de tamaño medio' },
+      { valor: 'F-Gas obligatorio', label: 'certificación que exige la normativa europea para intervenir en sistemas de refrigeración con gases fluorados' },
+    ],
+
+    contexto: 'La cámara frigorífica es uno de los equipos más críticos de un local hostelero. Todo lo que no se puede perder está dentro: el género del día, las reservas de la semana, los productos de mayor valor. Cuando la cámara falla, la urgencia es doble: salvar el género y recuperar el frío lo antes posible.\n\nLa particularidad de las averías de refrigeración es que la reparación del sistema de frío propiamente dicha — compresores, gas refrigerante, circuito frigorífico — está regulada por el Reglamento F-Gas (EU 517/2014) y solo puede ejecutarla un técnico con certificación F-Gas. Esta no es una normativa burocrática: los gases refrigerantes son sustancias con potencial de calentamiento global muy alto y su manipulación incorrecta tiene consecuencias medioambientales y sanciones graves. Oro Constructores no trabaja con gas refrigerante porque no tiene la certificación F-Gas requerida.\n\nLo que sí hacemos es actuar como primer respondedor: llegamos a diagnosticar si la avería es del sistema de refrigeración (en cuyo caso coordinamos inmediatamente con técnico F-Gas certificado) o si es de otro elemento — termostato, compresor por problema eléctrico, condensador sucio, puerta que no cierra correctamente — que puede resolverse sin tocar el circuito de gas. Simultáneamente, implementamos soluciones provisionales para preservar el género el máximo tiempo posible mientras llega el técnico de frío.',
+
+    perfiles: [
+      { tipo: 'Cocinero o encargado que llega y la cámara no enfría', descripcion: 'Llega por la mañana y la cámara está a 12ºC. El género del día está en riesgo. Necesita saber inmediatamente qué puede salvarse, qué hay que tirar y cuándo va a poder tener la cámara operativa. No conoce la diferencia entre un problema de termostato y un problema de gas, pero sabe que tiene que actuar ya.' },
+      { tipo: 'Propietario de restaurante que recibe la alarma de temperatura alta de la cámara', descripcion: 'Su sistema de monitorización de temperaturas le ha mandado una alerta de madrugada: la cámara está por encima de la temperatura de seguridad. Necesita que alguien vaya al local, evalúe la situación y tome las decisiones de emergencia para el género.' },
+    ],
+
+    queEs: 'Urgencia de cámara frigorífica es cualquier situación en que el sistema de refrigeración no mantiene la temperatura correcta: cámara que sube de temperatura progresivamente, cámara que no arranca, cámara que hace ruido anormal, o cámara que no responde al termostato. También incluye averías en neveras industriales de mostrador, vitrinas refrigeradas y cámaras de congelación.',
+
+    trabajoDetalle: 'El diagnóstico de una cámara frigorífica averiada tiene varias posibles causas con soluciones muy diferentes. Las causas que no requieren técnico F-Gas y que podemos resolver directamente son: termostato defectuoso, problema eléctrico en el compresor o en el ventilador, condensador sucio que no evacúa el calor correctamente, puerta que no cierra herméticamente por junta deteriorada, o equipo que ha hecho un ciclo de deshielo y no ha arrancado de nuevo. Estas causas representan un porcentaje significativo de las averías.\n\nLas causas que requieren técnico F-Gas certificado son: fuga de gas refrigerante (la más frecuente en cámaras de más de 5 años), compresor averiado mecánicamente, válvula de expansión defectuosa o problemas en el circuito frigorífico. En estos casos, nuestra actuación es el diagnóstico inicial y la coordinación con el técnico certificado, que en Madrid puede estar disponible en pocas horas para urgencias.\n\nMientras se espera la reparación definitiva, las medidas provisionales para preservar el género son: cajas isotérmicas con hielo para los productos más sensibles, traslado del género a otra instalación de frío si está disponible, y minimizar la apertura de la cámara para conservar el frío residual.',
+
+    pasosEjecucion: [
+      { numero: '01', titulo: 'Evaluación del género y medidas de emergencia', descripcion: 'A la llegada verificamos la temperatura actual y el tiempo estimado que lleva la avería. Clasificamos el género por riesgo: lo que está por encima de 4ºC y ha estado más de 2 horas necesita decisión inmediata. Implementamos medidas provisionales de frío: cajas isotérmicas, hielo, traslado a otra instalación.' },
+      { numero: '02', titulo: 'Diagnóstico de la causa de la avería', descripcion: 'Inspeccionamos el equipo: estado del compresor, limpieza del condensador, funcionamiento del termostato, estado de la junta de puerta y verificación eléctrica del sistema. Identificamos si la causa es resoluble sin gas refrigerante o si requiere técnico F-Gas.' },
+      { numero: '03', titulo: 'Reparación directa o coordinación con técnico F-Gas', descripcion: 'Si la avería está en el termostato, el condensador, la junta de puerta o en el sistema eléctrico, lo reparamos directamente. Si la causa es el gas refrigerante o el compresor, contactamos inmediatamente con técnico F-Gas certificado de nuestra red en Madrid y coordinamos la llegada más rápida posible.' },
+      { numero: '04', titulo: 'Verificación de temperatura y documentación', descripcion: 'Una vez reparada la avería, verificamos que la cámara alcanza la temperatura correcta y que se estabiliza. Emitimos informe de la intervención con descripción de la causa, trabajo realizado y temperatura de recuperación. Este informe puede ser necesario para el seguro o para el registro APPCC del local.' },
+    ],
+
+    materiales: [
+      { tipo: 'Termostato defectuoso', tecnica: 'Sustitución por termostato equivalente', cuandoUsarla: 'La cámara tiene frío pero no regula correctamente, o no arranca aunque la temperatura sea alta. Resoluble sin técnico F-Gas.' },
+      { tipo: 'Condensador sucio', tecnica: 'Limpieza con compresor de aire y desengrasante', cuandoUsarla: 'Cámara que no enfría eficientemente pero el compresor arranca. El condensador sucio es la causa más frecuente de rendimiento reducido y no requiere F-Gas.' },
+      { tipo: 'Junta de puerta deteriorada', tecnica: 'Sustitución de la junta perimetral', cuandoUsarla: 'La cámara trabaja continuamente pero no mantiene la temperatura. La junta rota o deformada permite la entrada de aire caliente.' },
+      { tipo: 'Gas refrigerante fugado o bajo nivel', tecnica: 'Detección de fuga + recarga por técnico F-Gas certificado', cuandoUsarla: 'Requiere técnico certificado. Oro Constructores diagnostica y coordina — no manipula el gas.' },
+    ],
+
+    queIncluye: [
+      'Desplazamiento urgente el mismo día en Madrid capital y área metropolitana',
+      'Evaluación del género en riesgo y medidas provisionales de frío',
+      'Diagnóstico completo: eléctrico, mecánico y de los elementos no frigoríficos',
+      'Reparación directa de los elementos que no requieren F-Gas (termostato, condensador, junta, eléctrico)',
+      'Coordinación inmediata con técnico F-Gas certificado cuando la avería lo requiere',
+      'Informe de la intervención con temperatura de recuperación',
+    ],
+    queNoIncluye: [
+      'Manipulación de gas refrigerante — requiere técnico F-Gas certificado (Oro Constructores coordina y supervisa)',
+      'Sustitución de compresor mecánico (requiere técnico especializado en refrigeración)',
+      'Reposición del género perdido por la avería',
+    ],
+
+    precios: [
+      { trabajo: 'Desplazamiento urgente + diagnóstico + medidas provisionales de frío', precio: '200–400€', nota: 'Sin IVA. Incluye evaluación del género, implementación de cajas isotérmicas si disponibles y diagnóstico completo.' },
+      { trabajo: 'Reparación directa (termostato, condensador, junta, eléctrico)', precio: '150–500€', nota: 'Aparte del desplazamiento. Según el elemento defectuoso.' },
+      { trabajo: 'Técnico F-Gas subcontratado (avería de gas o compresor)', precio: '300–800€', nota: 'Coste del técnico externo. Variable según la avería y la pieza. Gestionado por Oro Constructores.' },
+      { trabajo: 'Solución provisional de frío (cajas isotérmicas y hielo)', precio: '50–150€', nota: 'Para preservar el género mientras se espera la reparación definitiva.' },
+      { trabajo: 'Recargo urgencia fuera de horario y fin de semana', precio: '+50–100%', nota: 'Sobre la tarifa base total.' },
+    ],
+    preciosContexto: 'El coste total de una urgencia de cámara frigorífica depende de la causa de la avería. Las causas reparables directamente (termostato, condensador, eléctrico) son las más económicas. Las averías de gas refrigerante o de compresor tienen un coste mayor porque requieren técnico F-Gas externo más el coste de las piezas. En todos los casos, el coste de la intervención debe compararse con el valor del género en riesgo.',
+
+    errores: [
+      { error: 'No actuar hasta el día siguiente pensando que la cámara se recuperará sola', consecuencia: 'Una cámara que falla no se recupera sola. Si la causa es una fuga de gas, la temperatura seguirá subiendo hasta igualar la del ambiente. Cada hora de retraso aumenta el volumen de género comprometido. Actuar en las primeras 2 horas puede salvar todo el género; actuar 12 horas después puede significar tirar todo.' },
+      { error: 'Intentar reparar la avería de refrigeración sin técnico F-Gas', consecuencia: 'La manipulación de gas refrigerante sin certificación F-Gas es una infracción grave del Reglamento EU 517/2014, con sanciones de hasta 600.000€ para empresas. Además, una recarga de gas mal hecha puede dañar irreparablemente el compresor. No hay ahorro posible que justifique el riesgo legal y técnico.' },
+      { error: 'No documentar las temperaturas para el registro APPCC', consecuencia: 'Los locales hosteleros están obligados por la normativa APPCC a llevar registro de temperaturas de cámaras. Una avería en la que la temperatura ha superado los límites debe documentarse: cuándo ocurrió, hasta qué temperatura llegó, qué género se afectó y qué medidas se tomaron. Sin esta documentación, el local puede tener problemas en la siguiente auditoría sanitaria.' },
+    ],
+
+    porQueOro: [
+      { icon: 'fa-solid fa-bolt', titulo: 'Primer respondedor en horas, no días', texto: 'No somos el técnico de frío que tarda 3 días en dar cita. Somos el primer respondedor que llega el mismo día, evalúa el género, implementa medidas provisionales y diagnostica la causa. Si la avería requiere técnico F-Gas, lo coordinamos inmediatamente desde nuestra red de confianza en Madrid.' },
+      { icon: 'fa-solid fa-box-open', titulo: 'Preservación del género como prioridad', texto: 'Lo primero que hacemos al llegar no es mirar el motor: es evaluar el estado del género y tomar medidas para preservar lo que todavía se puede salvar. Cajas isotérmicas, hielo, traslado a otro equipo de frío — actuamos sobre el problema real antes que sobre el equipo.' },
+      { icon: 'fa-solid fa-file-lines', titulo: 'Documentación para el seguro y para el registro APPCC', texto: 'Emitimos informe de cada intervención con la temperatura registrada, el tiempo estimado de avería, el género afectado y el trabajo realizado. Esta documentación es válida para el registro APPCC del local y para reclamar al seguro si la póliza cubre pérdida de género.' },
+    ],
+
+    proceso: [
+      { numero: '01', titulo: 'Aviso y evaluación telefónica del género', descripcion: 'Cuando llamas, te preguntamos la temperatura actual de la cámara y cuánto tiempo lleva así. Con esta información evaluamos la urgencia del género y te damos instrucciones de medidas inmediatas mientras llegamos.' },
+      { numero: '02', titulo: 'Llegada, evaluación del género y medidas provisionales', descripcion: 'Lo primero al llegar es evaluar el estado del género. Clasificamos lo que se puede salvar de lo que hay que tirar. Implementamos medidas de frío provisional: cajas isotérmicas, hielo, traslado si hay otra instalación disponible.' },
+      { numero: '03', titulo: 'Diagnóstico y reparación o coordinación', descripcion: 'Diagnosticamos la causa de la avería. Si es resoluble sin gas refrigerante, lo hacemos en el acto. Si requiere técnico F-Gas, contactamos con nuestro técnico de red más disponible y coordinamos la llegada más rápida posible.' },
+      { numero: '04', titulo: 'Verificación de temperatura y documentación', descripcion: 'Una vez reparada la avería, monitorizamos la bajada de temperatura hasta confirmar que la cámara alcanza la temperatura correcta. Emitimos informe con todos los datos de la intervención.' },
+    ],
+
+    faq: [
+      { pregunta: '¿Qué hago con el género mientras espero al técnico?', respuesta: 'Minimiza la apertura de la cámara para conservar el frío residual. Si tienes cajas isotérmicas o neveras portátiles, traslada los productos más sensibles (carne, pescado, lácteos) y ponles hielo. Si tienes otro equipo de frío en el local, traslada el género más valioso. Anota la temperatura actual y la hora — lo necesitarás para el informe.' },
+      { pregunta: '¿Vosotros podéis recargar el gas de la cámara?', respuesta: 'No. La recarga de gas refrigerante requiere certificación F-Gas que Oro Constructores no tiene. Lo que sí hacemos es diagnosticar si la avería es de gas y coordinar inmediatamente con técnico F-Gas certificado de nuestra red en Madrid. Es la forma más rápida de tener a alguien competente en tu local.' },
+      { pregunta: '¿El seguro cubre la pérdida de género por avería de cámara?', respuesta: 'Depende de la póliza. Algunos seguros de hostelería incluyen cobertura de pérdida de mercancías refrigeradas por avería del equipo. Para reclamar, necesitas el informe técnico de la avería, el registro de temperaturas si lo tienes y la valoración del género perdido. Consulta las condiciones de tu póliza con tu corredor de seguros.' },
+      { pregunta: '¿Cuánto tarda en llegar el técnico F-Gas si la avería lo requiere?', respuesta: 'Depende de la disponibilidad y del momento del aviso. En Madrid capital, en horario laboral y con nuestra red de técnicos de confianza, el tiempo habitual es de 2–4 horas desde que confirmamos que la avería requiere F-Gas. En fin de semana o festivos puede ser algo más largo, pero siempre comunicamos el tiempo real desde el primer momento.' },
+    ],
+
+    ctaTitulo: 'La cámara averiada tiene un reloj en contra. Nosotros llegamos antes de que se pare.',
+    ctaDescripcion: 'Primer respondedor para urgencias de cámara frigorífica. Madrid capital y área metropolitana.',
+  },
 ]
