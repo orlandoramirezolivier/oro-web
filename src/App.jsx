@@ -20,6 +20,14 @@ import InvHumedadesPage from './pages/InvHumedadesPage'
 import InvCocinaPage from './pages/InvCocinaPage'
 import InvUrgenciasPage from './pages/InvUrgenciasPage'
 import InvPinturaPage from './pages/InvPinturaPage'
+import InvAlbanileriaPage from './pages/InvAlbanileriaPage'
+import InvFontaneriaPage from './pages/InvFontaneriaPage'
+import InvElectricidadPage from './pages/InvElectricidadPage'
+import InvAlicatadoPage from './pages/InvAlicatadoPage'
+import InvSuelosPage from './pages/InvSuelosPage'
+import InvTechosPladurPage from './pages/InvTechosPladurPage'
+import InvResiduosPage from './pages/InvResiduosPage'
+import InvCarpinteriaPage from './pages/InvCarpinteriaPage'
 import CatalogoServiciosPage from './pages/CatalogoServiciosPage'
 import NotFoundPage from './pages/NotFoundPage'
 
@@ -59,6 +67,14 @@ export default function App() {
         <Route path="/investigaciones/reforma-cocina-madrid" element={<InvCocinaPage />} />
         <Route path="/investigaciones/urgencias-hosteleria-madrid" element={<InvUrgenciasPage />} />
         <Route path="/investigaciones/pintura-madrid" element={<InvPinturaPage />} />
+        <Route path="/investigaciones/albanileria-madrid" element={<InvAlbanileriaPage />} />
+        <Route path="/investigaciones/fontaneria-madrid" element={<InvFontaneriaPage />} />
+        <Route path="/investigaciones/electricidad-madrid" element={<InvElectricidadPage />} />
+        <Route path="/investigaciones/alicatado-ceramica-madrid" element={<InvAlicatadoPage />} />
+        <Route path="/investigaciones/suelos-tarimas-madrid" element={<InvSuelosPage />} />
+        <Route path="/investigaciones/techos-pladur-madrid" element={<InvTechosPladurPage />} />
+        <Route path="/investigaciones/residuos-obra-madrid" element={<InvResiduosPage />} />
+        <Route path="/investigaciones/carpinteria-madrid" element={<InvCarpinteriaPage />} />
         <Route path="/catalogo-servicios" element={<CatalogoServiciosPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

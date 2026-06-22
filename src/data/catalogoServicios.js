@@ -4,13 +4,21 @@
 
 // Slug de cada investigación publicada — usado por CatalogoServiciosPage y otros
 export const INV_SLUGS = {
-  'inv-1': '/investigaciones/hosteleria-madrid',
-  'inv-3': '/investigaciones/reforma-bano-madrid',
-  'inv-4': '/investigaciones/reforma-piso-madrid',
-  'inv-5': '/investigaciones/humedades-madrid',
-  'inv-6': '/investigaciones/reforma-cocina-madrid',
-  'inv-7': '/investigaciones/urgencias-hosteleria-madrid',
-  'inv-8': '/investigaciones/pintura-madrid',
+  'inv-1':  '/investigaciones/hosteleria-madrid',
+  'inv-3':  '/investigaciones/reforma-bano-madrid',
+  'inv-4':  '/investigaciones/reforma-piso-madrid',
+  'inv-5':  '/investigaciones/humedades-madrid',
+  'inv-6':  '/investigaciones/reforma-cocina-madrid',
+  'inv-7':  '/investigaciones/urgencias-hosteleria-madrid',
+  'inv-8':  '/investigaciones/pintura-madrid',
+  'inv-9':  '/investigaciones/albanileria-madrid',
+  'inv-10': '/investigaciones/fontaneria-madrid',
+  'inv-11': '/investigaciones/electricidad-madrid',
+  'inv-12': '/investigaciones/alicatado-ceramica-madrid',
+  'inv-13': '/investigaciones/suelos-tarimas-madrid',
+  'inv-14': '/investigaciones/techos-pladur-madrid',
+  'inv-15': '/investigaciones/residuos-obra-madrid',
+  'inv-16': '/investigaciones/carpinteria-madrid',
 }
 
 export const VERTICALES = [
@@ -42,7 +50,7 @@ export const VERTICALES = [
     nombre: 'Albañilería y Estructura',
     descripcion: 'Oficio base del equipo. El maestro fundador lleva 30+ años. Base de cualquier reforma.',
     icon: 'fa-trowel-bricks',
-    investigacion: null,
+    investigacion: 'inv-9',
     landingCandidatas: ['/albanileria-madrid'],
     servicios: [
       { codigo: 'B01', nombre: 'Derribo de tabiques y paredes interiores', estado: 'ACT', precio: 'Presupuesto a medida' },
@@ -105,7 +113,7 @@ export const VERTICALES = [
     nombre: 'Fontanería',
     descripcion: 'Oficio propio del equipo. Alta demanda de urgencias. Puerta de entrada a proyectos mayores.',
     icon: 'fa-droplet',
-    investigacion: null,
+    investigacion: 'inv-10',
     landingCandidatas: ['/fontaneria-urgente-madrid'],
     servicios: [
       { codigo: 'E01', nombre: 'Detección y reparación de fuga urgente (vivienda)', estado: 'ACT', precio: 'Desde 600 € (sin IVA)' },
@@ -128,7 +136,7 @@ export const VERTICALES = [
     nombre: 'Electricidad',
     descripcion: 'Oficio propio con electricistas certificados. Normativa BT vigente.',
     icon: 'fa-bolt',
-    investigacion: null,
+    investigacion: 'inv-11',
     landingCandidatas: ['/electricista-madrid'],
     servicios: [
       { codigo: 'F01', nombre: 'Instalación eléctrica completa (vivienda desde cero)', estado: 'ACT', precio: 'Presupuesto a medida' },
@@ -170,8 +178,8 @@ export const VERTICALES = [
     nombre: 'Alicatado y Cerámica',
     descripcion: 'Oficio propio. Muy presente en reformas de baños y cocinas. También suelos.',
     icon: 'fa-table-cells-large',
-    investigacion: null,
-    landingCandidatas: [],
+    investigacion: 'inv-12',
+    landingCandidatas: ['/alicatado-ceramica-madrid'],
     servicios: [
       { codigo: 'H01', nombre: 'Alicatado de baño completo (paredes)', estado: 'ACT', precio: 'Presupuesto a medida (por m²)' },
       { codigo: 'H02', nombre: 'Alicatado de cocina completo (paredes)', estado: 'ACT', precio: 'Presupuesto a medida (por m²)' },
@@ -189,7 +197,7 @@ export const VERTICALES = [
     nombre: 'Suelos y Tarimas',
     descripcion: 'Alta demanda residencial. Ciclo de cierre corto. Diferente al alicatado.',
     icon: 'fa-rug',
-    investigacion: null,
+    investigacion: 'inv-13',
     landingCandidatas: ['/suelos-tarimas-madrid'],
     servicios: [
       { codigo: 'I01', nombre: 'Instalación de tarima flotante laminada', estado: 'ACT', precio: 'Presupuesto a medida (por m²)' },
@@ -207,8 +215,8 @@ export const VERTICALES = [
     nombre: 'Techos y Pladur',
     descripcion: 'Pladur combina partición, techo y aislamiento. Alta presencia en reformas integrales.',
     icon: 'fa-grid-2',
-    investigacion: null,
-    landingCandidatas: [],
+    investigacion: 'inv-14',
+    landingCandidatas: ['/techos-pladur-madrid'],
     servicios: [
       { codigo: 'J01', nombre: 'Falso techo continuo de escayola', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'J02', nombre: 'Falso techo registrable tipo Armstrong', estado: 'CAP', precio: 'Presupuesto a medida' },
@@ -245,8 +253,8 @@ export const VERTICALES = [
     nombre: 'Gestión de Residuos',
     descripcion: 'Servicio diferenciador: el cliente no tiene que preocuparse de nada al finalizar.',
     icon: 'fa-trash-can',
-    investigacion: null,
-    landingCandidatas: [],
+    investigacion: 'inv-15',
+    landingCandidatas: ['/gestion-residuos-obra-madrid'],
     servicios: [
       { codigo: 'L01', nombre: 'Retirada de escombros con contenedor (obra grande)', estado: 'ACT', precio: 'Incluido en reforma' },
       { codigo: 'L02', nombre: 'Retirada de escombros sin contenedor (obra pequeña)', estado: 'ACT', precio: 'Incluido en reforma' },
@@ -304,7 +312,7 @@ export const VERTICALES = [
     nombre: 'Carpintería',
     descripcion: 'Puertas, armarios, ventanas, mobiliario. Oficio que aparece en toda reforma — propio o coordinado.',
     icon: 'fa-hammer',
-    investigacion: null,
+    investigacion: 'inv-16',
     landingCandidatas: ['/carpinteria-madrid'],
     servicios: [
       { codigo: 'O01', nombre: 'Instalación de puertas interiores de madera (incluye marco y tapajuntas)', estado: 'ACT', precio: 'Presupuesto a medida' },
