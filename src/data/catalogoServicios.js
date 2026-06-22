@@ -1,5 +1,5 @@
 // Catálogo completo de servicios — Oro Constructores
-// 157 micro-servicios · 15 verticales (A–O)
+// 165 micro-servicios · 15 verticales (A–O)
 // Estados: ACT=Activo | CAP=Capacidad disponible | ESP=Especialización | INV=Pendiente investigación
 
 // Slug de cada investigación publicada — usado por CatalogoServiciosPage y otros
@@ -64,6 +64,7 @@ export const VERTICALES = [
       { codigo: 'B09', nombre: 'Resanados y saneados de superficie', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'B10', nombre: 'Reparación de escalones y escaleras interiores', estado: 'CAP', precio: 'Presupuesto a medida' },
       { codigo: 'B11', nombre: 'Reconstrucción de pequeños elementos (peldaños, jambas)', estado: 'CAP', precio: 'Presupuesto a medida' },
+      { codigo: 'B12', nombre: 'Reparación de desprendimiento de revestimiento en techo o pared (enlucido, yeso, escayola)', estado: 'ACT', precio: 'Presupuesto a medida' },
     ]
   },
   {
@@ -129,6 +130,7 @@ export const VERTICALES = [
       { codigo: 'E11', nombre: 'Resolución de atascos industriales (hostelería)', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'E12', nombre: 'Instalación de fontanería cocina industrial', estado: 'ESP', precio: 'Presupuesto a medida' },
       { codigo: 'E13', nombre: 'Instalación de filtro de agua / descalcificador', estado: 'INV', precio: 'Presupuesto a medida' },
+      { codigo: 'E14', nombre: 'Mantenimiento preventivo de desagüe de cocina industrial — limpieza periódica de grasas (hostelería)', estado: 'CAP', precio: 'A negociar' },
     ]
   },
   {
@@ -150,6 +152,8 @@ export const VERTICALES = [
       { codigo: 'F09', nombre: 'Preparación eléctrica para aire acondicionado', estado: 'CAP', precio: 'Presupuesto a medida' },
       { codigo: 'F10', nombre: 'Instalación de cargador para vehículo eléctrico', estado: 'INV', precio: 'Presupuesto a medida' },
       { codigo: 'F11', nombre: 'Avería eléctrica urgente (cuadro, fusibles, corte general)', estado: 'ACT', precio: 'Desde 600 € (sin IVA)' },
+      { codigo: 'F12', nombre: 'Tramitación de boletín eléctrico REBT (certificado de instalación eléctrica)', estado: 'ACT', precio: 'Incluido en instalación' },
+      { codigo: 'F13', nombre: 'Ampliación de potencia eléctrica (gestión con distribuidora + instalación)', estado: 'CAP', precio: 'Presupuesto a medida' },
     ]
   },
   {
@@ -208,6 +212,7 @@ export const VERTICALES = [
       { codigo: 'I06', nombre: 'Nivelación de base para nuevo suelo (autonivelante)', estado: 'ACT', precio: 'Incluido en instalación' },
       { codigo: 'I07', nombre: 'Instalación de rodapiés de madera o MDF', estado: 'ACT', precio: 'Incluido en instalación' },
       { codigo: 'I08', nombre: 'Instalación de suelo técnico elevado (oficinas)', estado: 'INV', precio: 'Presupuesto a medida' },
+      { codigo: 'I09', nombre: 'Levantado y retirada de suelo existente previo a nueva instalación (moqueta, terrazo, parquet viejo)', estado: 'ACT', precio: 'Incluido en instalación' },
     ]
   },
   {
@@ -224,8 +229,9 @@ export const VERTICALES = [
       { codigo: 'J04', nombre: 'Iluminación integrada en techo (empotrables LED)', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'J05', nombre: 'Trasdosado de pared con pladur (aislamiento acústico / térmico)', estado: 'CAP', precio: 'Presupuesto a medida' },
       { codigo: 'J06', nombre: 'Tabiquería interior de pladur', estado: 'ACT', precio: 'Presupuesto a medida' },
-      { codigo: 'J07', nombre: 'Techo acústico / sistema de insonorización básica', estado: 'INV', precio: 'Presupuesto a medida' },
+      { codigo: 'J07', nombre: 'Techo acústico / sistema de insonorización básica', estado: 'CAP', precio: 'Presupuesto a medida' },
       { codigo: 'J08', nombre: 'Pladur ignífugo (locales hostelería, cocinas industriales)', estado: 'ESP', precio: 'Presupuesto a medida' },
+      { codigo: 'J09', nombre: 'Insonorización de habitación completa — sistema avanzado (doble placa + lana mineral + montantes desvinculados)', estado: 'CAP', precio: 'Presupuesto a medida' },
     ]
   },
   {
@@ -261,6 +267,7 @@ export const VERTICALES = [
       { codigo: 'L03', nombre: 'Limpieza final de obra (entrega de espacio impoluto)', estado: 'ACT', precio: 'Incluido en reforma' },
       { codigo: 'L04', nombre: 'Gestión documental de residuos RCDs (cumplimiento normativa)', estado: 'ACT', precio: 'Incluido en reforma' },
       { codigo: 'L05', nombre: 'Retirada de muebles y enseres (previa a reforma)', estado: 'CAP', precio: 'Presupuesto a medida' },
+      { codigo: 'L06', nombre: 'Gestión de residuos especiales — retirada de fibrocemento / uralita con amianto (empresa RERA certificada)', estado: 'ESP', precio: 'Presupuesto a medida' },
     ]
   },
   {
@@ -327,6 +334,7 @@ export const VERTICALES = [
       { codigo: 'O10', nombre: 'Fabricación e instalación de mobiliario de madera a medida', estado: 'INV', precio: 'Presupuesto a medida' },
       { codigo: 'O11', nombre: 'Instalación de molduras y cornisas decorativas de madera / MDF', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'O12', nombre: 'Carpintería para hostelería — barras, mostradores y frentes de madera', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'O13', nombre: 'Instalación de tarima exterior / decking de madera para terraza (residencial o hostelería)', estado: 'INV', precio: 'Presupuesto a medida' },
     ]
   },
 ]
@@ -338,12 +346,12 @@ export const ESTADO_META = {
   INV: { label: 'Investigación pendiente', desc: 'En estudio antes de activar', color: 'var(--ink-5)', bg: 'var(--paper)', text: 'var(--ink-4)' },
 }
 
-// Recuento real: 157 servicios · ACT=108 · CAP=34 · ESP=5 · INV=10
+// Recuento real: 165 servicios · ACT=111 · CAP=38 · ESP=6 · INV=10
 export const TOTALES = {
-  servicios: 157,
+  servicios: 165,
   verticales: 15,
-  ACT: 108,
-  CAP: 34,
-  ESP: 5,
+  ACT: 111,
+  CAP: 38,
+  ESP: 6,
   INV: 10,
 }
