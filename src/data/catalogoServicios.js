@@ -1,6 +1,17 @@
 // Catálogo completo de servicios — Oro Constructores
-// 153 micro-servicios · 15 verticales (A–O)
+// 157 micro-servicios · 15 verticales (A–O)
 // Estados: ACT=Activo | CAP=Capacidad disponible | ESP=Especialización | INV=Pendiente investigación
+
+// Slug de cada investigación publicada — usado por CatalogoServiciosPage y otros
+export const INV_SLUGS = {
+  'inv-1': '/investigaciones/hosteleria-madrid',
+  'inv-3': '/investigaciones/reforma-bano-madrid',
+  'inv-4': '/investigaciones/reforma-piso-madrid',
+  'inv-5': '/investigaciones/humedades-madrid',
+  'inv-6': '/investigaciones/reforma-cocina-madrid',
+  'inv-7': '/investigaciones/urgencias-hosteleria-madrid',
+  'inv-8': '/investigaciones/pintura-madrid',
+}
 
 export const VERTICALES = [
   {
@@ -8,7 +19,7 @@ export const VERTICALES = [
     nombre: 'Reformas Integrales',
     descripcion: 'El servicio flagship. El proyecto completo de principio a fin, coordinando todos los oficios.',
     icon: 'fa-building',
-    investigacion: null,
+    investigacion: 'inv-4',
     landingCandidatas: ['/reforma-integral-madrid', '/reforma-local-comercial'],
     servicios: [
       { codigo: 'A01', nombre: 'Reforma integral de vivienda (piso completo)', estado: 'ACT', precio: 'Desde 6.500 € + IVA' },
@@ -65,6 +76,7 @@ export const VERTICALES = [
       { codigo: 'C08', nombre: 'Revestimiento cerámico de cocina', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'C09', nombre: 'Instalación de campana extractora', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'C10', nombre: 'Fontanería de cocina (fregadero, lavavajillas)', estado: 'ACT', precio: 'Incluido en reforma' },
+      { codigo: 'C11', nombre: 'Cocina abierta al salón (derribo de tabique + integración)', estado: 'ACT', precio: 'Presupuesto a medida' },
     ]
   },
   {
@@ -84,7 +96,7 @@ export const VERTICALES = [
       { codigo: 'D07', nombre: 'Alicatado de baño (cambio completo de azulejos)', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'D08', nombre: 'Impermeabilización de baño (zona de ducha)', estado: 'ACT', precio: 'Incluido en reforma' },
       { codigo: 'D09', nombre: 'Reforma parcial de baño (solo suelo o solo paredes)', estado: 'ACT', precio: 'Presupuesto a medida' },
-      { codigo: 'D10', nombre: 'Adaptación de baño para movilidad reducida', estado: 'INV', precio: 'Presupuesto a medida' },
+      { codigo: 'D10', nombre: 'Adaptación de baño para movilidad reducida (barras, ducha a ras de suelo)', estado: 'ESP', precio: 'Presupuesto a medida' },
       { codigo: 'D11', nombre: 'Instalación de radiador toallero', estado: 'CAP', precio: 'Presupuesto a medida' },
     ]
   },
@@ -150,6 +162,7 @@ export const VERTICALES = [
       { codigo: 'G08', nombre: 'Preparación de superficie (lijado, masilla, relleno)', estado: 'ACT', precio: 'Incluido en servicio' },
       { codigo: 'G09', nombre: 'Pintura con textura o acabados especiales (microcemento pintado, estucos)', estado: 'INV', precio: 'Presupuesto a medida' },
       { codigo: 'G10', nombre: 'Pintura antihumedad / impermeabilizante', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'G11', nombre: 'Pintura de escaleras y zonas comunes de comunidad de propietarios', estado: 'ACT', precio: 'Presupuesto a medida' },
     ]
   },
   {
@@ -224,6 +237,7 @@ export const VERTICALES = [
       { codigo: 'K07', nombre: 'Tratamiento antihumedad de fachada', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'K08', nombre: 'Impermeabilización de sótano o garaje', estado: 'INV', precio: 'Presupuesto a medida' },
       { codigo: 'K09', nombre: 'Tratamiento de manchas de humedad (solo cosmético)', estado: 'ACT', precio: 'Presupuesto a medida' },
+      { codigo: 'K10', nombre: 'Tratamiento de humedad accidental por rotura de tubería', estado: 'ACT', precio: 'Presupuesto a medida' },
     ]
   },
   {
@@ -257,13 +271,14 @@ export const VERTICALES = [
       { codigo: 'M06', nombre: 'Campana de extracción averiada (hostelería)', estado: 'ACT', precio: 'Desde 600 € (sin IVA)' },
       { codigo: 'M07', nombre: 'Baños fuera de servicio — local hostelero', estado: 'ACT', precio: 'Desde 600 € (sin IVA)' },
       { codigo: 'M08', nombre: 'Grifo o válvula rota con agua corriendo', estado: 'ACT', precio: 'Desde 600 € (sin IVA)' },
+      { codigo: 'M09', nombre: 'Avería de nevera industrial o cámara frigorífica (hostelería)', estado: 'CAP', precio: 'Desde 600 € (sin IVA)' },
     ]
   },
   {
     codigo: 'N',
     nombre: 'Hostelería',
     descripcion: 'Segmento estratégico. 10.336 restaurantes en Madrid. Decisor único. Alta urgencia. Ciclo corto.',
-    icon: 'fa-utensils',
+    icon: 'fa-store',
     investigacion: 'inv-1',
     landingCandidatas: ['/restaurantes', '/reforma-restaurante-madrid', '/urgencias-hosteleria-madrid'],
     servicios: [
@@ -277,7 +292,7 @@ export const VERTICALES = [
       { codigo: 'N08', nombre: 'Cubrición / techado de terraza', estado: 'CAP', precio: 'Presupuesto a medida' },
       { codigo: 'N09', nombre: 'Reforma de fachada — nueva imagen exterior (pintura, rótulos, acceso)', estado: 'ACT', precio: 'Presupuesto a medida' },
       { codigo: 'N10', nombre: 'Reforma de aseos de local hostelero', estado: 'ACT', precio: 'Presupuesto a medida' },
-      { codigo: 'N11', nombre: 'Mantenimiento preventivo recurrente (contrato mensual / trimestral)', estado: 'INV', precio: 'A negociar' },
+      { codigo: 'N11', nombre: 'Mantenimiento preventivo recurrente (contrato mensual / trimestral)', estado: 'CAP', precio: 'A negociar' },
       { codigo: 'N12', nombre: 'Adecuación a normativa sanitaria (apertura nueva actividad)', estado: 'ESP', precio: 'Presupuesto a medida' },
       { codigo: 'N13', nombre: 'Instalación de sumideros industriales y desengrasadores', estado: 'ESP', precio: 'Presupuesto a medida' },
       { codigo: 'N14', nombre: 'Reforma de zona de recepción / entrada del local', estado: 'CAP', precio: 'Presupuesto a medida' },
@@ -309,17 +324,18 @@ export const VERTICALES = [
 ]
 
 export const ESTADO_META = {
-  ACT: { label: 'Activo', desc: 'En catálogo web', color: 'var(--ink)', bg: 'var(--ink)', text: 'var(--oro)' },
+  ACT: { label: 'Activo', desc: 'En oferta activa', color: 'var(--ink)', bg: 'var(--ink)', text: 'var(--oro)' },
   CAP: { label: 'Capacidad', desc: 'Disponible, no anunciado', color: 'var(--ink-3)', bg: 'var(--ink-7)', text: 'var(--ink-2)' },
   ESP: { label: 'Especialización', desc: 'Se hace, no se vende proactivamente', color: '#C77400', bg: '#FFF4CC', text: '#C77400' },
-  INV: { label: 'Investigación', desc: 'Pendiente investigación de mercado', color: 'var(--ink-5)', bg: 'var(--paper)', text: 'var(--ink-4)' },
+  INV: { label: 'Investigación pendiente', desc: 'En estudio antes de activar', color: 'var(--ink-5)', bg: 'var(--paper)', text: 'var(--ink-4)' },
 }
 
+// Recuento real: 157 servicios · ACT=108 · CAP=34 · ESP=5 · INV=10
 export const TOTALES = {
-  servicios: 153,
+  servicios: 157,
   verticales: 15,
-  ACT: 115,
-  CAP: 25,
-  ESP: 4,
-  INV: 13,
+  ACT: 108,
+  CAP: 34,
+  ESP: 5,
+  INV: 10,
 }

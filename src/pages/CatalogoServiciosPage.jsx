@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { VERTICALES, ESTADO_META, TOTALES } from '../data/catalogoServicios'
+import { VERTICALES, ESTADO_META, TOTALES, INV_SLUGS } from '../data/catalogoServicios'
 
 export default function CatalogoServiciosPage() {
   const [filtroVertical, setFiltroVertical] = useState('TODOS')
@@ -19,14 +19,14 @@ export default function CatalogoServiciosPage() {
       <section className="page-hero" style={{ paddingTop: '80px', paddingBottom: '60px' }}>
         <div className="container">
           <div className="section-label">
-            <i className="fa-solid fa-list-check"></i> CATÁLOGO DE SERVICIOS
+            <i className="fa-solid fa-list-check"></i> TODOS LOS SERVICIOS
           </div>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', maxWidth: '720px', margin: '0 0 24px' }}>
             Todo lo que hacemos,<br />
             <span style={{ color: 'var(--oro)' }}>sin letra pequeña.</span>
           </h1>
           <p style={{ fontSize: '1.15rem', color: 'var(--ink-3)', maxWidth: '560px', marginBottom: '40px' }}>
-            {TOTALES.servicios} servicios · {TOTALES.verticales} áreas de trabajo · Madrid y comunidad.
+            {TOTALES.servicios} servicios · {TOTALES.verticales} verticales · Madrid y comunidad.
             Presupuesto cerrado, sin sorpresas.
           </p>
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -149,14 +149,11 @@ export default function CatalogoServiciosPage() {
                       <span className="cat-count-badge">{vertical.servicios.length} servicios</span>
                     </div>
                     <p className="cat-vertical-desc">{vertical.descripcion}</p>
-                    {vertical.investigacion && (
+                    {vertical.investigacion && INV_SLUGS[vertical.investigacion] && (
                       <div style={{ marginTop: '8px' }}>
-                        <Link
-                          to={vertical.investigacion === 'inv-1' ? '/investigaciones/hosteleria-madrid' : '/investigaciones'}
-                          className="cat-inv-link"
-                        >
-                          <i className="fa-solid fa-magnifying-glass-chart"></i>
-                          Ver investigación de mercado asociada ({vertical.investigacion})
+                        <Link to={INV_SLUGS[vertical.investigacion]} className="cat-inv-link">
+                          <i className="fa-solid fa-microscope"></i>
+                          Investigación de mercado disponible — {vertical.investigacion}
                         </Link>
                       </div>
                     )}
@@ -167,8 +164,9 @@ export default function CatalogoServiciosPage() {
                   <table className="cat-table">
                     <thead>
                       <tr>
-                        <th style={{ width: '80px' }}>Código</th>
+                        <th style={{ width: '72px' }}>Código</th>
                         <th>Servicio</th>
+                        <th style={{ width: '44px', textAlign: 'center' }} title="Investigación de mercado disponible para este área">Inv.</th>
                         <th style={{ width: '120px' }}>Estado</th>
                         <th style={{ width: '220px' }}>Precio de referencia</th>
                       </tr>
@@ -178,6 +176,20 @@ export default function CatalogoServiciosPage() {
                         <tr key={srv.codigo} className={`cat-row cat-row-${srv.estado.toLowerCase()}`}>
                           <td className="cat-codigo">{srv.codigo}</td>
                           <td className="cat-nombre">{srv.nombre}</td>
+                          <td style={{ textAlign: 'center' }}>
+                            {vertical.investigacion && INV_SLUGS[vertical.investigacion]
+                              ? (
+                                <Link
+                                  to={INV_SLUGS[vertical.investigacion]}
+                                  title="Ver investigación de mercado de este área"
+                                  style={{ color: 'var(--oro)', fontSize: '12px', lineHeight: 1 }}
+                                >
+                                  <i className="fa-solid fa-microscope"></i>
+                                </Link>
+                              )
+                              : <span style={{ color: 'var(--ink-6)', fontSize: '11px' }}>—</span>
+                            }
+                          </td>
                           <td>
                             <span className="cat-badge" data-estado={srv.estado}>
                               {ESTADO_META[srv.estado].label}
