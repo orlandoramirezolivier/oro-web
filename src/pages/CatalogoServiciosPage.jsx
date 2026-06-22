@@ -10,30 +10,27 @@ export default function CatalogoServiciosPage() {
     ? VERTICALES
     : VERTICALES.filter(v => v.codigo === filtroVertical)
 
-  const contarEstado = (estado) =>
-    VERTICALES.flatMap(v => v.servicios).filter(s => s.estado === estado).length
-
   return (
     <main>
       {/* Hero */}
-      <section className="page-hero" style={{ paddingTop: '80px', paddingBottom: '60px' }}>
+      <section className="hero-mini">
         <div className="container">
-          <div className="section-label">
-            <i className="fa-solid fa-list-check"></i> TODOS LOS SERVICIOS
+          <div className="hero-label">
+            <i className="fa-solid fa-list-check"></i> Todos los servicios
           </div>
-          <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', maxWidth: '720px', margin: '0 0 24px' }}>
+          <h1>
             Todo lo que hacemos,<br />
             <span style={{ color: 'var(--oro)' }}>sin letra pequeña.</span>
           </h1>
-          <p style={{ fontSize: '1.15rem', color: 'var(--ink-3)', maxWidth: '560px', marginBottom: '40px' }}>
+          <p>
             {TOTALES.servicios} servicios · {TOTALES.verticales} verticales · Madrid y comunidad.
             Presupuesto cerrado, sin sorpresas.
           </p>
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-            <Link to="/presupuesto" className="btn-primary">
-              <i className="fa-solid fa-file-invoice"></i> Pedir presupuesto
+          <div style={{ display: 'flex', gap: '12px', marginTop: '28px', flexWrap: 'wrap' }}>
+            <Link to="/presupuesto" className="btn btn-primary">
+              <i className="fa-solid fa-file-invoice"></i> Pedir presupuesto gratis
             </Link>
-            <a href="https://wa.me/34643795099" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <a href="https://wa.me/34643795099" className="btn btn-ghost-inv">
               <i className="fa-brands fa-whatsapp"></i> WhatsApp directo
             </a>
           </div>
@@ -41,7 +38,7 @@ export default function CatalogoServiciosPage() {
       </section>
 
       {/* Resumen de totales */}
-      <section style={{ background: 'var(--ink)', padding: '40px 0' }}>
+      <section style={{ background: 'var(--ink)', padding: '40px 0', borderTop: '1px solid rgba(255,255,255,.08)' }}>
         <div className="container">
           <div className="cat-totales">
             <div className="cat-total-item">
@@ -53,11 +50,11 @@ export default function CatalogoServiciosPage() {
               <span className="cat-total-label">En oferta activa</span>
             </div>
             <div className="cat-total-item">
-              <span className="cat-total-num" style={{ color: '#fff' }}>{TOTALES.CAP}</span>
+              <span className="cat-total-num" style={{ color: 'rgba(255,255,255,.6)' }}>{TOTALES.CAP}</span>
               <span className="cat-total-label">Capacidad disponible</span>
             </div>
             <div className="cat-total-item">
-              <span className="cat-total-num" style={{ color: '#fff' }}>{TOTALES.verticales}</span>
+              <span className="cat-total-num" style={{ color: 'rgba(255,255,255,.6)' }}>{TOTALES.verticales}</span>
               <span className="cat-total-label">Verticales de trabajo</span>
             </div>
           </div>
@@ -65,7 +62,7 @@ export default function CatalogoServiciosPage() {
       </section>
 
       {/* Leyenda de estados */}
-      <section style={{ background: 'var(--ink-8)', borderBottom: '1px solid var(--ink-7)', padding: '24px 0' }}>
+      <section style={{ background: 'var(--paper)', borderBottom: '1px solid var(--ink-7)', padding: '24px 0' }}>
         <div className="container">
           <div className="cat-leyenda">
             {Object.entries(ESTADO_META).map(([key, meta]) => (
@@ -164,10 +161,9 @@ export default function CatalogoServiciosPage() {
                   <table className="cat-table">
                     <thead>
                       <tr>
-                        <th style={{ width: '72px' }}>Código</th>
+                        <th style={{ width: '80px' }}>Código</th>
                         <th>Servicio</th>
-                        <th style={{ width: '44px', textAlign: 'center' }} title="Investigación de mercado disponible para este área">Inv.</th>
-                        <th style={{ width: '120px' }}>Estado</th>
+                        <th style={{ width: '140px' }}>Estado</th>
                         <th style={{ width: '220px' }}>Precio de referencia</th>
                       </tr>
                     </thead>
@@ -176,20 +172,6 @@ export default function CatalogoServiciosPage() {
                         <tr key={srv.codigo} className={`cat-row cat-row-${srv.estado.toLowerCase()}`}>
                           <td className="cat-codigo">{srv.codigo}</td>
                           <td className="cat-nombre">{srv.nombre}</td>
-                          <td style={{ textAlign: 'center' }}>
-                            {vertical.investigacion && INV_SLUGS[vertical.investigacion]
-                              ? (
-                                <Link
-                                  to={INV_SLUGS[vertical.investigacion]}
-                                  title="Ver investigación de mercado de este área"
-                                  style={{ color: 'var(--oro)', fontSize: '12px', lineHeight: 1 }}
-                                >
-                                  <i className="fa-solid fa-microscope"></i>
-                                </Link>
-                              )
-                              : <span style={{ color: 'var(--ink-6)', fontSize: '11px' }}>—</span>
-                            }
-                          </td>
                           <td>
                             <span className="cat-badge" data-estado={srv.estado}>
                               {ESTADO_META[srv.estado].label}
@@ -208,21 +190,16 @@ export default function CatalogoServiciosPage() {
       </section>
 
       {/* CTA final */}
-      <section style={{ background: 'var(--ink)', padding: '80px 0' }}>
+      <section className="cta-section">
         <div className="container" style={{ textAlign: 'center' }}>
-          <h2 style={{ color: 'var(--paper)', marginBottom: '16px' }}>
-            ¿No encuentras lo que buscas?
-          </h2>
-          <p style={{ color: 'rgba(255,255,255,.65)', maxWidth: '520px', margin: '0 auto 32px', fontSize: '1.05rem' }}>
-            Cuéntanos el trabajo. Si podemos hacerlo, te lo presupuestamos.
-            Si no es para nosotros, te decimos quién puede ayudarte.
-          </p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/presupuesto" className="btn-primary">
+          <h2>¿No encuentras lo que buscas?</h2>
+          <p>Cuéntanos el trabajo. Si podemos hacerlo, te lo presupuestamos. Si no es para nosotros, te decimos quién puede ayudarte.</p>
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to="/presupuesto" className="btn btn-secondary btn-lg">
               <i className="fa-solid fa-paper-plane"></i> Solicitar presupuesto
             </Link>
-            <a href="https://wa.me/34643795099" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '14px 28px', background: 'transparent', border: '2px solid rgba(255,255,255,.25)', borderRadius: '8px', color: '#fff', textDecoration: 'none', fontSize: '15px', fontWeight: 600 }}>
-              <i className="fa-brands fa-whatsapp" style={{ color: 'var(--oro)' }}></i> Escribir por WhatsApp
+            <a href="https://wa.me/34643795099" className="btn btn-ghost btn-lg">
+              <i className="fa-brands fa-whatsapp"></i> WhatsApp directo
             </a>
           </div>
         </div>
