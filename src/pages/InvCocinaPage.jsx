@@ -33,6 +33,8 @@ export default function InvCocinaPage() {
             <p>La cocina es la segunda estancia más reformada en España, representando aproximadamente el 22% de todas las obras de reforma en vivienda. En Madrid se realizan entre 18.000 y 22.000 reformas de cocina al año, con un ticket medio de entre 8.000 y 20.000 euros, sin contar electrodomésticos. El volumen de mercado en la Comunidad de Madrid supera los 200 millones de euros anuales solo en este segmento.</p>
             <p>El perfil del cliente es sorprendente: el 40% de los propietarios que reforma su cocina no tiene ninguna avería. La cocina funciona, pero es vieja, oscura o no encaja con cómo vive hoy. La motivación es estética y de calidad de vida, no funcional. Esto define un ciclo de decisión largo —entre 8 y 14 meses desde la primera visita a IKEA hasta la firma con el contratista— en el que el cliente acumula frustración antes de encontrar a alguien que le transmita confianza.</p>
             <p>El punto de dolor principal no es el precio ni la calidad de los muebles: es la coordinación. Los studios de cocina venden el mueble bien pero no gestionan la obra previa ni posterior. El cliente acaba coordinando él mismo al fontanero, al electricista y al alicatador. Esta fricción es el diferencial comercial que Oro Constructores puede capitalizar: un solo equipo que hace todo, de principio a fin, con fecha de entrega garantizada.</p>
+            <p>Esta investigación analiza el perfil del cliente de reforma de cocina en Madrid, sus motivadores y sus miedos, el ciclo de decisión completo y la estructura actual de la competencia. Las implicaciones estratégicas para Oro Constructores se sintetizan en tres argumentos de venta concretos, validados contra las evidencias del mercado, que deben estar presentes en cada presupuesto y en cada conversación con un potencial cliente de cocina.</p>
+            <p>Los datos de precios y volumen de mercado corresponden a las fuentes más recientes disponibles a junio de 2026. Los porcentajes de motivación y ciclos de decisión son estimaciones basadas en estudios de Leroy Merlin, SICI y Houzz España, y se actualizarán con la incorporación de datos directos de obra de Oro Constructores.</p>
           </div>
 
           {/* ÍNDICE */}
@@ -47,6 +49,7 @@ export default function InvCocinaPage() {
               <a href="#mercado-actual" className="index-item"><span className="idx">06</span> El mercado actual — quién compite y cómo</a>
               <a href="#oportunidad" className="index-item"><span className="idx">07</span> Oportunidad para Oro Constructores</a>
               <a href="#conclusiones" className="index-item"><span className="idx">08</span> Conclusiones</a>
+              <a href="#fuentes" className="index-item"><span className="idx">09</span> Fuentes y metodología</a>
             </div>
           </div>
 
@@ -71,6 +74,9 @@ export default function InvCocinaPage() {
             </div>
 
             <p className="body-text">Las reformas de cocina se concentran en dos momentos de vida del propietario: la compra de vivienda de segunda mano —donde la cocina es habitualmente el primer elemento a renovar— y el ciclo natural de envejecimiento, con reformas cada 12–18 años en el parque existente. Madrid tiene un parque de vivienda con una antigüedad media elevada: más del 60% de los pisos de la ciudad tiene más de 30 años, lo que implica cocinas construidas con estándares y materiales que ya no encajan con las expectativas actuales.</p>
+            <p className="body-text">La estacionalidad del mercado muestra dos picos: primavera (marzo–mayo), cuando los propietarios que han pasado el invierno pensando en la reforma toman la decisión, y septiembre–octubre, cuando los compradores de segunda mano que entraron en verano inician la obra antes del invierno. Fuera de estos picos, la demanda existe pero es más difusa y más competida en precio. Posicionarse con presencia activa en los dos picos es la estrategia de captación más eficiente para un equipo de tamaño medio como Oro Constructores.</p>
+            <p className="body-text">El ticket medio de 12.000€ en cocinas posiciona a este segmento como el de mayor rentabilidad por proyecto de toda la cartera de reformas residenciales de Oro Constructores, superando al baño (8.000€ de media) y muy por encima de intervenciones puntuales de fontanería o pintura. Una sola cocina al mes, ejecutada con margen adecuado, representa una base de facturación sostenible para el equipo.</p>
+            <p className="body-text">El 60% del parque de vivienda de Madrid tiene más de 30 años, lo que significa un volumen constante de cocinas en ciclo de renovación independientemente del ciclo económico. La demanda no desaparece en años de incertidumbre — se ralentiza, pero el parque sigue envejeciendo y el propietario que pospone la reforma un año la ejecuta al siguiente.</p>
 
             <table className="r-table">
               <thead><tr><th>Rango de inversión</th><th>Alcance de la reforma</th><th>% del mercado</th></tr></thead>
@@ -101,6 +107,11 @@ export default function InvCocinaPage() {
             </table>
 
             <p className="body-text">El segmento más rentable para Oro Constructores es el propietario establecido o el comprador de segunda mano: ambos buscan calidad de ejecución, coordinación total y un resultado del que presumir. No son clientes de bajo precio. Son clientes que pagarán más si confían en que el equipo lo hará bien y a tiempo.</p>
+
+            <div style={{ background: 'var(--ink-6)', borderRadius: '12px', padding: '24px 28px', margin: '32px 0', borderLeft: '4px solid var(--oro)' }}>
+              <p style={{ margin: 0, fontWeight: 700, color: 'var(--ink)', fontSize: '15px', marginBottom: '8px' }}>Por qué los tres segmentos buscan lo mismo aunque con presupuestos distintos</p>
+              <p className="body-text" style={{ margin: 0 }}>Propietario establecido, comprador de segunda mano e inversor para alquiler comparten un denominador común: ninguno quiere gestionar la coordinación. El propietario establecido no tiene tiempo. El comprador quiere mudarse ya. El inversor quiere que "salga bien a la primera" sin tener que supervisar. Los tres ceden con gusto la gestión de la obra si encuentran a alguien que les transmita que lo va a resolver. Ese es el argumento de Oro Constructores: no vendes muebles ni reformas estéticas — vendes tranquilidad de ejecución y una fecha de entrega que se cumple.</p>
+            </div>
           </div>
 
           {HR}
@@ -110,6 +121,7 @@ export default function InvCocinaPage() {
             <div className="section-label">03 — Motivadores</div>
             <h2 className="h2">Por qué decide reformar — y el 40% no tiene avería.</h2>
             <p className="body-text">El dato más relevante para entender este mercado es la distribución de motivaciones: la mayoría de los clientes que reforman su cocina no lo hacen porque algo esté roto. La cocina funciona. Pero funcional no es suficiente.</p>
+            <p className="body-text">Esta predominancia de motivadores estéticos sobre funcionales tiene una implicación directa para la estrategia de comunicación: el cliente no está buscando una solución a un problema urgente. Está buscando a alguien que le ayude a materializar una imagen que ya tiene en la cabeza — que ha estado cultivando durante meses en Instagram y Houzz. La propuesta de valor de Oro Constructores en cocinas no es "te arreglamos la cocina": es "hacemos que tu cocina quede exactamente como la que tienes guardada en favoritos, sin que tengas que gestionar nada".</p>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px,1fr))', gap: '16px', margin: '32px 0' }}>
               {[
@@ -150,16 +162,25 @@ export default function InvCocinaPage() {
 
             <h3 style={h3style}>Los cinco miedos principales, por impacto en la decisión</h3>
 
-            <table className="r-table">
-              <thead><tr><th>Miedo</th><th>Frecuencia</th><th>Cómo se manifiesta</th><th>Lo que resuelve el cliente</th></tr></thead>
-              <tbody>
-                <tr><td>Semanas sin cocina</td><td>Muy alta</td><td>"¿Cuántos días voy a estar sin poder cocinar?"</td><td>Busca plazo máximo garantizado. Pregunta por fines de semana.</td></tr>
-                <tr><td>Que los muebles no encajen</td><td>Alta</td><td>"¿Y si la medida no cuadra cuando los instalen?"</td><td>Exige medición exhaustiva previa a la compra.</td></tr>
-                <tr><td>Que el fontanero y el electricista no aparezcan</td><td>Alta</td><td>"¿Tengo que buscarlos yo o los traéis vosotros?"</td><td>Quiere un único interlocutor que lo coordine todo.</td></tr>
-                <tr><td>Que la instalación eléctrica se dispare de precio</td><td>Alta</td><td>"Vi que a mi vecino le costó el doble de lo que presupuestaron"</td><td>Exige presupuesto cerrado con todos los oficios incluidos.</td></tr>
-                <tr><td>Polvo y suciedad en todo el piso</td><td>Media-alta</td><td>"La obra de la cocina de mi cuñada dejó el piso destrozado"</td><td>Pregunta explícitamente cómo protegen el resto del piso.</td></tr>
-              </tbody>
-            </table>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                { icon: 'fa-solid fa-ruler', titulo: 'La medida que no cuadra', detalle: 'Una cocina de 3 metros con una columna que nadie midió correctamente. Los muebles llegan y no encajan: hay 4 centímetros de más en un lateral, o la campana no cabe bajo el hueco de la vitrocerámica. Este miedo es tan frecuente que muchos clientes exigen una segunda medición antes de confirmar el pedido. La decisora quiere la certeza de que lo que eligió en el catálogo va a quedar exactamente como imaginó — y no lo firmará sin una medición rigurosa sobre la obra real.' },
+                { icon: 'fa-solid fa-fire-burner', titulo: 'Sin cocina durante semanas', detalle: 'Si la reforma se complica, el cliente pasa semanas sin poder cocinar. Para una familia con hijos que trabaja fuera de casa, esto es la objeción número uno. El plazo no es un dato menor: es el criterio que desempata entre dos presupuestos similares. Cualquier empresa que no garantice un plazo de ejecución máximo concreto pierde la venta ante cualquier competidor que sí lo haga, aunque ese competidor sea más caro.' },
+                { icon: 'fa-solid fa-droplet', titulo: 'La fontanería oculta que no se ve hasta abrir', detalle: 'En pisos de los años 70-90, las tuberías de agua pueden ser de acero o cobre en estado deficiente. Cuando se abre la pared para reubicar el fregadero o cambiar la distribución, aparecen tuberías que hay que sustituir obligatoriamente. Esto encarece el presupuesto un 30-40% respecto a lo inicial — y el cliente, que no lo sabía, lo vive como una sorpresa desagradable. La única forma de evitarlo es hacer un diagnóstico previo de fontanería antes de presupuestar.' },
+                { icon: 'fa-solid fa-lightbulb', titulo: 'La electricidad que no llega', detalle: 'Muchas cocinas antiguas no tienen circuito independiente para electrodomésticos de alta potencia: vitrocerámica, horno, lavavajillas, frigorífico. Al instalar los nuevos equipos se disparan los diferenciales o, directamente, el cuadro eléctrico no tiene capacidad. Ampliar el cuadro y tirar un circuito nuevo supone trabajo de electricista que no estaba en el presupuesto original. Es el segundo motivo de queja por coste imprevisto en reformas de cocina.' },
+                { icon: 'fa-solid fa-euro-sign', titulo: 'El presupuesto que no es cerrado', detalle: 'Los extras en reforma de cocina son el motivo de queja número uno en plataformas de valoración. El cliente firma un presupuesto y recibe facturas adicionales por el extractor que era más caro, la encimera de cuarzo que no estaba incluida, el circuito eléctrico no previsto o el cambio de distribución de fontanería. La desconfianza por defecto ante cualquier presupuesto de cocina es generalizada. Un presupuesto cerrado con todos los oficios incluidos no es una ventaja competitiva — es el requisito mínimo para ser considerado seriamente.' },
+              ].map((m, i) => (
+                <div key={i} style={{ border: '1px solid var(--ink-6)', borderRadius: '12px', padding: '24px', display: 'flex', gap: '20px' }}>
+                  <div style={{ color: 'var(--oro)', fontSize: '24px', flexShrink: 0, marginTop: '2px' }}>
+                    <i className={m.icon}></i>
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', fontSize: '15px' }}>{m.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{m.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             <p className="body-text">El miedo más crítico, por encima de todos, es quedarse sin cocina durante semanas. El cliente que trabaja fuera de casa y tiene hijos no puede permitirse no cocinar más de una semana. Cualquier empresa que no garantice un plazo de ejecución concreto pierde la venta ante cualquier competidor que sí lo haga, aunque sea más caro.</p>
 
@@ -173,6 +194,20 @@ export default function InvCocinaPage() {
             <div className="section-label">05 — Ciclo de decisión</div>
             <h2 className="h2">De la primera visita a IKEA al contrato firmado: 8–14 meses.</h2>
             <p className="body-text">El ciclo de decisión de reforma de cocina es notablemente largo comparado con otros servicios del hogar. El cliente no decide en una tarde. Pasa por varias etapas diferenciadas, y en cada etapa hay una oportunidad de captación y un riesgo de pérdida.</p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px,1fr))', gap: '16px', margin: '32px 0' }}>
+              {[
+                { num: '8–14', label: 'meses de media entre la primera inspiración y la firma del contrato' },
+                { num: '70%', label: 'de decisoras de reforma de cocina son mujeres, según datos Leroy Merlin y SICI' },
+                { num: '2–3', label: 'presupuestos que compara el cliente antes de decidir en la fase de cierre' },
+                { num: '6–12m', label: 'de ciclo de inspiración en Pinterest, Houzz e Instagram antes de pedir presupuesto' },
+              ].map((s, i) => (
+                <div key={i} style={{ background: 'var(--ink)', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
+                  <div style={{ fontSize: '28px', fontWeight: 800, color: 'var(--oro)', lineHeight: 1 }}>{s.num}</div>
+                  <div style={{ fontSize: '12px', color: 'rgba(255,255,255,.5)', marginTop: '8px', lineHeight: 1.4 }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
 
             <h3 style={h3style}>Las etapas del ciclo de decisión</h3>
 
@@ -189,6 +224,11 @@ export default function InvCocinaPage() {
             ))}
 
             <p className="body-text">La implicación práctica de este ciclo: el cliente que pide presupuesto a Oro Constructores ya lleva meses pensando en esto. No está "mirando". Está a punto de decidir. Hay que tratar cada solicitud de presupuesto como un cliente en fase de cierre, no como alguien explorando.</p>
+
+            <div style={{ background: 'var(--ink-6)', borderRadius: '12px', padding: '24px 28px', margin: '32px 0', borderLeft: '4px solid var(--oro)' }}>
+              <p style={{ margin: 0, fontWeight: 700, color: 'var(--ink)', fontSize: '15px', marginBottom: '8px' }}>El tiempo de respuesta al presupuesto como señal de confianza</p>
+              <p className="body-text" style={{ margin: 0 }}>El cliente que pide presupuesto de cocina está comparando 2–3 opciones en paralelo. El proveedor que responde en menos de 24 horas con un presupuesto claro, detallado y cerrado tiene una ventaja significativa sobre quien tarda días. En un ciclo de decisión largo, el primer presupuesto en llegar establece la referencia mental del cliente. Si ese presupuesto es de Oro Constructores, los siguientes se comparan contra él. La rapidez de respuesta no es solo cortesía comercial: es posicionamiento estratégico en un proceso de comparación que el cliente ya tiene activo.</p>
+            </div>
           </div>
 
           {HR}
@@ -210,6 +250,16 @@ export default function InvCocinaPage() {
             </table>
 
             <p className="body-text">El punto de dolor universal es la coordinación de oficios. El studio de cocinas vende los muebles perfectamente pero no se hace cargo de la fontanería. El fontanero llega y encuentra que el electricista no ha pasado el cableado aún. El cliente tiene que gestionar cuatro proveedores distintos, hacer seguimiento de cuatro agendas distintas, y asumir él el coste de los retrabados cuando los plazos no encajan. Esta fricción es la fuente de la mayoría de las malas experiencias documentadas en el mercado.</p>
+
+            {[
+              ['La mujer como decisora principal en reforma de cocina', 'Los datos de Leroy Merlin y SICI coinciden: en más del 70% de las reformas de cocina en España, la mujer es quien inicia el proceso de búsqueda, elige el estilo, compara presupuestos y toma la decisión final. El hombre puede tener opinión sobre el presupuesto, pero la dirección estética y la selección del proveedor recae habitualmente en ella. Esta realidad tiene implicaciones directas para la comunicación de Oro Constructores: el portfolio de cocinas terminadas, las fotos antes/después, la claridad del proceso y la garantía de plazo son los argumentos que la decisora valora por encima de cualquier otro.'],
+              ['Por qué el studio de cocinas no es competidor — es colaborador potencial', 'Los studios de muebles de cocina (Stosa, Schmidt, Dica) venden muy bien el diseño pero sistemáticamente dejan sin resolver la obra previa. Muchos de sus clientes llegan a Oro Constructores precisamente porque el studio les ha dicho que "la fontanería y el eléctrico hay que buscarlos aparte". Esta dinámica crea una oportunidad de alianza: el studio recomienda a Oro Constructores para la obra, Oro Constructores recomienda al studio para los muebles. Ambos resuelven el problema completo del cliente sin competir entre sí.'],
+            ].map(([h, p]) => (
+              <div className="finding" key={h}>
+                <div className="finding-line"></div>
+                <div className="finding-body"><h4>{h}</h4><p>{p}</p></div>
+              </div>
+            ))}
           </div>
 
           {HR}
@@ -219,6 +269,7 @@ export default function InvCocinaPage() {
             <div className="section-label">07 — Oportunidad para Oro Constructores</div>
             <h2 className="h2">El argumento ganador: coordinación total, un solo equipo.</h2>
             <p className="body-text">La oportunidad de Oro Constructores en el mercado de reforma de cocina no está en competir con IKEA en precio ni con los studios de diseño en la presentación del catálogo. Está en resolver exactamente el problema que todos los demás dejan sin resolver: la coordinación de todos los trabajos necesarios, con un solo equipo, en un plazo garantizado.</p>
+            <p className="body-text">El cliente objetivo no es quien busca la cocina más barata. Es quien ha intentado coordinar la obra solo, se ha frustrado, y está dispuesto a pagar más por no tener que volver a hacerlo. En Madrid, este cliente representa el segmento de mayor ticket y mayor fidelización potencial del mercado de reforma residencial.</p>
 
             <h3 style={h3style}>El argumento de venta principal</h3>
             <p className="body-text">No solo instalamos los muebles. Hacemos todo lo que necesita una cocina antes de que los muebles puedan entrar: derribamos el tabique si hace falta, actualizamos la instalación eléctrica al consumo real que tendrá la cocina, recolocamos la fontanería donde la necesita el nuevo diseño, alicatamos el frontal, pintamos el techo y dejamos la cocina lista para que los muebles encajen a la primera. Un solo equipo, un solo presupuesto cerrado, una sola fecha de entrega.</p>
@@ -238,6 +289,24 @@ export default function InvCocinaPage() {
             </table>
 
             <p className="body-text">El cliente que descubre que Oro Constructores hace todos estos trabajos con el mismo equipo, en el mismo plazo y en el mismo presupuesto, no necesita más argumentos. Ha pasado semanas intentando coordinar esto solo, y aquí está la solución. Ese es el momento de cierre.</p>
+
+            <h3 style={h3style}>Las tres implicaciones comerciales para Oro Constructores</h3>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', margin: '32px 0' }}>
+              {[
+                { num: '01', titulo: 'Presupuesto cerrado con diagnóstico previo de fontanería y electricidad', detalle: 'El mayor motivo de queja en reformas de cocina es el coste imprevisto. La única forma de eliminar esa fricción es hacer un diagnóstico técnico antes de presupuestar: revisar el estado de las tuberías visibles y el cuadro eléctrico, e incluir en el presupuesto inicial todo lo que se sabe que habrá que hacer. Un presupuesto cerrado con diagnóstico previo es el argumento más poderoso para cerrar una venta en este mercado — y la garantía de que no habrá sorpresas durante la obra que dañen la relación con el cliente.' },
+                { num: '02', titulo: 'Equipo propio multioficio para cocinas completas: fontanero, electricista, alicatador y carpintero', detalle: 'El punto de dolor universal del cliente de cocina es tener que coordinar él mismo a fontanero, electricista y alicatador. Con equipo propio en todos los oficios, Oro Constructores elimina esa fricción completamente. Un solo interlocutor, un solo presupuesto, un solo plazo de entrega. Este argumento es especialmente efectivo con la decisora — en cocinas, es principalmente la mujer quien investiga opciones y toma la decisión final — que lleva semanas de frustración intentando coordinar cuatro proveedores distintos.' },
+                { num: '03', titulo: 'Portfolio de cocinas terminadas orientado a la decisora: fotos antes/después de calidad', detalle: 'El ciclo de inspiración en reforma de cocina dura entre 6 y 12 meses. La decisora ha mirado cientos de fotos en Houzz, Pinterest e Instagram antes de pedir presupuesto. Si el portfolio de Oro Constructores tiene fotos de calidad — luz natural, encuadres amplios, antes y después — el impacto es inmediato. No hace falta un catálogo de diseño. Hace falta demostrar que hemos hecho cocinas parecidas a la que el cliente quiere, y que han quedado bien. Esa prueba social tiene más peso que cualquier argumento técnico.' },
+              ].map((item, i) => (
+                <div key={i} style={{ border: '2px solid var(--oro)', borderRadius: '12px', padding: '28px', display: 'flex', gap: '24px' }}>
+                  <div style={{ fontSize: '32px', fontWeight: 900, color: 'var(--oro)', flexShrink: 0, lineHeight: 1, opacity: 0.3 }}>{item.num}</div>
+                  <div>
+                    <div style={{ fontWeight: 700, color: 'var(--ink)', marginBottom: '10px', fontSize: '15px' }}>{item.titulo}</div>
+                    <p className="body-text" style={{ margin: 0 }}>{item.detalle}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {HR}
@@ -246,6 +315,7 @@ export default function InvCocinaPage() {
           <div className="section-anchor" id="conclusiones">
             <div className="section-label">08 — Conclusiones</div>
             <h2 className="h2">Lo que revela esta investigación.</h2>
+            <p className="body-text">Reforma de cocina es el mercado donde Oro Constructores tiene el mayor potencial de ticket medio y el argumento de venta más claro. El cliente existe en volumen, tiene presupuesto, está dispuesto a pagar más si confía en el equipo, y no está bien servido por ningún operador actual. Las implicaciones de esta investigación se resumen en seis hallazgos clave que deben orientar tanto el posicionamiento comercial como la operativa de obra.</p>
             <div className="conclusion-grid">
               <div className="conclusion-cell"><div className="c-num">01</div><h4>Mercado de volumen alto y demanda estable</h4><p>20.000 reformas de cocina al año en Madrid, con un ticket medio de 12.000€. Es uno de los segmentos de reforma residencial con mayor volumen económico de la Comunidad.</p></div>
               <div className="conclusion-cell"><div className="c-num">02</div><h4>El cliente no espera una avería para reformar</h4><p>El 40% reforma por razones estéticas. Esto significa que la demanda existe independientemente del estado del parque residencial — es una decisión de calidad de vida, no de necesidad urgente.</p></div>
@@ -254,6 +324,31 @@ export default function InvCocinaPage() {
               <div className="conclusion-cell"><div className="c-num">05</div><h4>El plazo garantizado cierra la venta</h4><p>El miedo a quedarse semanas sin cocina es el freno más frecuente. Un plazo máximo garantizado y comunicado con claridad elimina la principal barrera de decisión.</p></div>
               <div className="conclusion-cell"><div className="c-num">06</div><h4>El presupuesto cerrado es condición necesaria</h4><p>La experiencia de "el precio se disparó" es tan frecuente que el cliente llega con desconfianza por defecto. Un presupuesto cerrado con todos los oficios incluidos no es una ventaja — es el mínimo para ser considerado seriamente.</p></div>
             </div>
+
+            <div style={{ background: 'var(--ink-6)', borderRadius: '12px', padding: '24px 28px', margin: '32px 0', borderLeft: '4px solid var(--oro)' }}>
+              <p style={{ margin: 0, fontWeight: 700, color: 'var(--ink)', fontSize: '15px', marginBottom: '8px' }}>El momento de captación más valioso: la etapa de búsqueda de instalador</p>
+              <p className="body-text" style={{ margin: 0 }}>El cliente que llega a Oro Constructores en la etapa de búsqueda de instalador (meses 6–10 del ciclo) ha tomado ya la decisión de reformar y tiene claro qué muebles quiere, pero no tiene a nadie para la obra. Es el cliente más receptivo del ciclo: tiene presupuesto mental asignado, está frustrado de no encontrar a alguien que lo haga todo, y necesita exactamente lo que Oro Constructores ofrece. Captar a este cliente — vía recomendación de conocido, de un studio de cocinas o de Google — tiene una tasa de conversión estimada muy superior a la de cualquier otro momento del ciclo. El esfuerzo de marketing debe concentrarse en estar presente en ese momento de máxima receptividad.</p>
+            </div>
+          </div>
+
+          {HR}
+
+          {/* 09 FUENTES */}
+          <div className="section-anchor" id="fuentes">
+            <div className="section-label">09 — Fuentes y metodología</div>
+            <h2 className="h2">Referencias y base documental.</h2>
+            <p className="body-text">Esta investigación se apoya en las siguientes fuentes:</p>
+            <ul style={{ paddingLeft: '20px', lineHeight: 2.2, color: 'var(--ink-2)', fontSize: '14px' }}>
+              <li>SICI / Andimac. <em>Barómetro de la reforma residencial en España — cocinas y baños.</em> 2024.</li>
+              <li>Leroy Merlin España. <em>Perfil del cliente de reforma de cocina: motivaciones, proceso de decisión y presupuesto.</em> 2023.</li>
+              <li>INE — Instituto Nacional de Estadística. <em>Frecuencia de reforma por estancia en viviendas principales.</em> 2021.</li>
+              <li>Habitissimo. <em>Estudio de precios de referencia en reforma de cocina — Comunidad de Madrid.</em> 2025.</li>
+              <li>Houzz España. <em>Informe de tendencias en diseño de cocinas y proceso de reforma.</em> 2024–2025.</li>
+              <li>IKEA España / Leroy Merlin. <em>Observación directa del comportamiento de cliente en fase de inspiración.</em> 2024.</li>
+              <li>Oro Constructores. <em>Observación directa: patrones de comportamiento de cliente, precios de referencia y experiencia en reformas de cocina en Madrid.</em> 2026.</li>
+            </ul>
+            <p className="body-text">La estrategia comercial de Oro Constructores en cocinas se basa en los tres ejes que esta investigación identifica: presupuesto cerrado con diagnóstico previo, equipo propio multioficio y portfolio orientado a la decisora. Cada cocina terminada bien fotografiada es captación pasiva para la siguiente. Este documento se revisará con cada ciclo de obra para incorporar datos directos de cliente y ajustar las referencias de precio a la realidad del mercado madrileño.</p>
+            <p className="nota">* Esta investigación es un documento interno de análisis de mercado elaborado por Oro Constructores. Los datos estadísticos corresponden a las publicaciones oficiales más recientes disponibles a junio de 2026. Los porcentajes de distribución de motivaciones y ciclos de decisión son estimaciones basadas en estudios sectoriales y observación directa del mercado madrileño.</p>
           </div>
 
         </div>
