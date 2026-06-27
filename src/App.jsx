@@ -28,6 +28,7 @@ import InvSuelosPage from './pages/InvSuelosPage'
 import InvTechosPladurPage from './pages/InvTechosPladurPage'
 import InvResiduosPage from './pages/InvResiduosPage'
 import InvCarpinteriaPage from './pages/InvCarpinteriaPage'
+import InvOroAppPage from './pages/InvOroAppPage'
 import CatalogoServiciosPage from './pages/CatalogoServiciosPage'
 import ServiceInvestigationPage from './pages/ServiceInvestigationPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -76,6 +77,7 @@ export default function App() {
         <Route path="/investigaciones/techos-pladur-madrid" element={<InvTechosPladurPage />} />
         <Route path="/investigaciones/residuos-obra-madrid" element={<InvResiduosPage />} />
         <Route path="/investigaciones/carpinteria-madrid" element={<InvCarpinteriaPage />} />
+        <Route path="/investigaciones/oro-app" element={<InvOroAppPage />} />
         <Route path="/catalogo-servicios" element={<CatalogoServiciosPage />} />
         <Route path="/investigaciones/servicio/:slug" element={<ServiceInvestigationPage />} />
         <Route path="*" element={<NotFoundPage />} />
